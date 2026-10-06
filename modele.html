@@ -727,6 +727,102 @@ abbr.lx:hover::after,abbr.lx:focus::after,abbr.lx:hover::before,abbr.lx:focus::b
 @keyframes shellfall{to{transform:translateY(calc(100vh + 120px)) rotate(var(--rot))}}
 @media (prefers-reduced-motion: reduce){.bottle{animation:none;left:62%}.sky .wx-rain{animation:none}.fireflies,.plankton{animation:none}}
 
+/* ---------- ambiance supplémentaire ---------- */
+.hero .sun{translate:0 calc(var(--sy,0) * .35px)}
+.hero .hero-logo{margin-top:calc(var(--sy,0) * .18px)}
+.plane{position:absolute;top:9%;left:0;z-index:2;display:flex;align-items:center;flex-direction:row-reverse;gap:0;pointer-events:none;animation:plane 46s linear 3s infinite;translate:-110% 0}
+.plane .pl{width:54px;display:block;rotate:45deg;filter:drop-shadow(0 6px 6px rgba(0,40,60,.25))}
+.plane .pl img{width:100%;display:block}
+.plane .rope{width:40px;height:1.5px;background:rgba(40,60,70,.55)}
+.plane .flag{padding:6px 16px 6px 12px;background:#fff;color:#e2611c;font:800 15px var(--display);letter-spacing:.02em;white-space:nowrap;border-radius:3px 12px 12px 3px;box-shadow:0 6px 12px -6px rgba(0,40,60,.4);animation:flagwave 1.2s ease-in-out infinite alternate;transform-origin:100% 50%}
+@keyframes plane{0%{left:0;translate:-110% 0}55%,100%{left:110%;translate:0 0}}
+@keyframes flagwave{from{transform:skewY(-2deg) scaleY(.96)}to{transform:skewY(2deg) scaleY(1.04)}}
+.parrotfly{position:absolute;top:30%;left:0;width:46px;z-index:2;pointer-events:none;animation:parrotfly 28s linear 12s infinite;translate:-120% 0}
+.parrotfly span{display:block;animation:pflap .35s ease-in-out infinite alternate}
+.parrotfly img{width:100%;display:block;transform:scaleX(-1)}
+@keyframes parrotfly{0%{left:0;translate:-120% 0;top:34%}25%{top:24%}40%,100%{left:112%;translate:0 0;top:30%}}
+@keyframes pflap{from{transform:translateY(0) rotate(-6deg) scaleY(1)}to{transform:translateY(-6px) rotate(4deg) scaleY(.88)}}
+.kite{position:absolute;right:6%;top:30%;z-index:2;width:58px;pointer-events:none;animation:kite 5s ease-in-out infinite alternate;transform-origin:50% 100%}
+.kite .k{display:block;position:relative;z-index:1}
+.kite .k img{width:100%;display:block;filter:drop-shadow(0 6px 6px rgba(0,40,60,.25))}
+.kite .string{position:absolute;left:46%;top:80%;width:1.5px;height:400px;background:linear-gradient(rgba(60,60,60,.55),rgba(60,60,60,0));rotate:16deg;transform-origin:top}
+.kite .tail{position:absolute;left:30%;top:86%;width:24px;height:60px;background:radial-gradient(circle 4px at 50% 10%,#ff5a5a 98%,transparent),radial-gradient(circle 4px at 30% 40%,#ffd93d 98%,transparent),radial-gradient(circle 4px at 60% 70%,#4fc3f7 98%,transparent);animation:ktail 1.4s ease-in-out infinite alternate}
+@keyframes kite{from{transform:translate(0,0) rotate(-8deg)}to{transform:translate(-26px,-18px) rotate(10deg)}}
+@keyframes ktail{to{transform:rotate(14deg) translateX(4px)}}
+.shoot{position:absolute;z-index:1;width:120px;height:2px;border-radius:2px;background:linear-gradient(90deg,rgba(255,255,255,0),#fff);opacity:0;pointer-events:none;rotate:-24deg;display:none}
+.shoot.s1{top:10%;left:20%;animation:shoot 7s ease-in 2s infinite}
+.shoot.s2{top:18%;left:55%;animation:shoot 9s ease-in 5s infinite}
+.shoot.s3{top:6%;left:72%;animation:shoot 11s ease-in 8s infinite}
+@keyframes shoot{0%{opacity:0;transform:translateX(0)}2%{opacity:1}9%{opacity:0;transform:translateX(260px)}100%{opacity:0;transform:translateX(260px)}}
+.hero.tod-nuit .shoot{display:block}
+.hero.tod-nuit .plane,.hero.tod-nuit .parrotfly,.hero.tod-nuit .kite,.hero.tod-nuit .surfer,.hero.tod-nuit .fly,.hero.wx-pluie .plane,.hero.wx-pluie .kite,.hero.wx-pluie .parrotfly,.hero.wx-pluie .fly{display:none}
+.surfer{position:absolute;bottom:20px;width:62px;z-index:5;pointer-events:none;animation:surf 34s linear 6s infinite;left:-10%}
+.surfer span{display:block;animation:surfbob 1.6s ease-in-out infinite alternate}
+.surfer img{width:100%;display:block;filter:drop-shadow(0 8px 6px rgba(0,40,60,.3))}
+.surfer .spray{position:absolute;left:-18px;bottom:6px;width:30px;height:14px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.95),rgba(255,255,255,0));animation:spray .5s ease-in-out infinite alternate}
+@keyframes surf{from{left:-10%}to{left:108%}}
+@keyframes surfbob{from{transform:translateY(0) rotate(-6deg)}to{transform:translateY(-10px) rotate(5deg)}}
+@keyframes spray{to{transform:scale(1.4);opacity:.6}}
+.canoe{position:absolute;bottom:48px;width:56px;z-index:3;pointer-events:none;animation:canoe 70s linear 20s infinite;left:108%;opacity:.9}
+.canoe span{display:block;animation:kbob 3s ease-in-out infinite}
+.canoe img{width:100%;display:block;transform:scaleX(-1)}
+@keyframes canoe{from{left:108%}to{left:-10%}}
+.fly{position:absolute;width:28px;z-index:140;pointer-events:none}
+.fly img{width:100%;display:block;animation:bflap .25s ease-in-out infinite alternate;transform-origin:50% 60%}
+.fly.b1{left:8%;top:90px;animation:bfly1 12s ease-in-out infinite}
+.fly.b2{left:90%;top:110px;width:22px;animation:bfly2 15s ease-in-out infinite}
+@keyframes bflap{from{transform:scaleX(1)}to{transform:scaleX(.35)}}
+@keyframes bfly1{0%,100%{transform:translate(0,0)}25%{transform:translate(60px,-30px)}50%{transform:translate(110px,10px)}75%{transform:translate(40px,30px)}}
+@keyframes bfly2{0%,100%{transform:translate(0,0)}30%{transform:translate(-70px,-20px)}60%{transform:translate(-30px,30px)}}
+.hib{position:absolute;z-index:120;pointer-events:none;filter:drop-shadow(0 4px 4px rgba(90,60,20,.25))}
+.hib img{width:100%;display:block}
+.hib.h1{left:11%;top:208px;width:34px}.hib.h2{left:14%;top:224px;width:26px;rotate:30deg}.hib.h3{left:92%;top:196px;width:30px;rotate:-20deg}
+.camp{position:absolute;left:68%;top:150px;width:46px;z-index:130;pointer-events:none;display:none}
+.camp .f{display:block;position:relative;z-index:2;transform-origin:50% 100%;animation:flame .25s ease-in-out infinite alternate}
+.camp .f img{width:100%;display:block}
+.camp .glow{position:absolute;left:50%;top:60%;width:340px;height:200px;translate:-50% -50%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,170,70,.55),rgba(255,120,40,.18) 50%,transparent);mix-blend-mode:screen;animation:glow 1.6s ease-in-out infinite alternate;z-index:1}
+.camp .spark{position:absolute;left:50%;bottom:70%;width:4px;height:4px;border-radius:50%;background:#ffd36a;box-shadow:0 0 6px #ffb347;opacity:0;animation:spark 1.8s ease-out infinite}
+.camp .k2{animation-delay:.6s;left:40%}.camp .k3{animation-delay:1.2s;left:60%}
+@keyframes flame{from{transform:scale(1,1)}to{transform:scale(1.06,.92) skewX(-3deg)}}
+@keyframes glow{from{opacity:.75;transform:scale(1)}to{opacity:1;transform:scale(1.08)}}
+@keyframes spark{0%{opacity:1;transform:translate(0,0)}100%{opacity:0;transform:translate(var(--sx,10px),-60px)}}
+.camp .k1{--sx:-12px}.camp .k3{--sx:16px}
+.hero.tod-nuit .camp,.hero.tod-couchant .camp{display:block}
+.hero.tod-nuit .beach{filter:brightness(.6) saturate(.8) hue-rotate(-12deg)}
+.trail{position:absolute;z-index:4;pointer-events:none;border-radius:50%;translate:-50% -50%;background:radial-gradient(circle at 30% 30%,#fff 0 14%,rgba(255,255,255,.2) 20%,transparent 66%);border:1px solid rgba(255,255,255,.65);animation:trail 1.6s ease-out forwards}
+@keyframes trail{to{transform:translate(var(--x),-70px);opacity:0}}
+@media (max-width:640px){.plane .flag{font-size:12px}.kite{display:none}.camp{left:72%}}
+@media (prefers-reduced-motion: reduce){.plane,.parrotfly,.surfer,.canoe,.shoot{display:none}}
+
+
+/* pied de page enrichi */
+.foot{padding-bottom:34px}
+.foot-top{position:relative;z-index:5;display:grid;grid-template-columns:minmax(240px,1.4fr) repeat(3,minmax(150px,1fr));gap:30px 40px;align-items:start}
+.fbrand img{height:74px;width:auto;filter:drop-shadow(0 8px 14px rgba(0,0,0,.35))}
+.fbrand p{margin:12px 0 18px;max-width:42ch;line-height:1.6;color:#CFEFEC}
+.fbtns{display:flex;flex-wrap:wrap;gap:10px}
+.fbtn{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);color:#fff;font-weight:700;text-decoration:none;transition:transform .2s,background .2s}
+.fbtn:hover{transform:translateY(-2px);background:rgba(255,255,255,.2)}
+.fbtn.disc{background:#5865F2;border-color:#7C86FF}
+.fbtn .e3,.ftop .e3{width:22px;height:22px}
+.fcol h6{margin:6px 0 12px;font:700 11px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#FFD08A}
+.fcol h6 em{font-style:normal;color:var(--accent);margin-right:8px}
+.fcol a{display:block;padding:4px 0;color:#D8F4F2;text-decoration:none;opacity:.85;transition:opacity .2s,transform .2s}
+.fcol a:hover{opacity:1;transform:translateX(4px);color:#fff}
+.foot-floor{position:relative;z-index:4;height:96px;margin:30px calc(-1*clamp(16px,4vw,52px)) 18px}
+.foot-floor::before{content:"";position:absolute;left:-4%;right:-4%;bottom:0;height:34px;background:linear-gradient(180deg,rgba(244,222,177,.42),rgba(244,222,177,.12));border-radius:50% 50% 0 0/100% 100% 0 0;-webkit-mask-image:linear-gradient(180deg,#000 40%,transparent);mask-image:linear-gradient(180deg,#000 40%,transparent)}
+.ff{position:absolute;bottom:8px;animation:sway 6s ease-in-out infinite alternate;transform-origin:50% 100%}
+.ff .e3{width:100%;height:auto}
+.f1{left:3%;width:70px}.f2{left:16%;width:54px;animation-duration:4s}.f3{left:27%;width:30px}.f4{left:36%;width:48px;animation:none}.f5{left:47%;width:40px;animation:crabwalk 9s ease-in-out infinite alternate}.f6{left:58%;width:62px}.f7{left:67%;width:28px;animation:none}.f8{left:76%;width:46px;animation-duration:5s}.f9{left:87%;width:74px}.f10{left:95%;width:28px}
+@keyframes sway{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+@keyframes crabwalk{from{transform:translateX(-60px)}to{transform:translateX(60px)}}
+.foot-bot{position:relative;z-index:5;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid rgba(255,255,255,.16)}
+.foot-bot p{margin:0;max-width:62ch}
+.ftop{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(3,34,46,.5);color:#fff;font:inherit;font-weight:700;cursor:inherit}
+.ftop:hover{background:rgba(255,255,255,.15)}
+@media (max-width:900px){.foot-top{grid-template-columns:1fr 1fr}.fbrand{grid-column:1/-1}}
+@media (max-width:520px){.foot-top{grid-template-columns:1fr}.f3,.f7,.f10{display:none}}
+@media (prefers-reduced-motion:reduce){.ff{animation:none!important}}
 /* ---------- accueil pleine largeur ---------- */
 body.is-home .shell{max-width:none}
 body.is-home main > *{max-width:1180px;margin-inline:auto}
@@ -1206,7 +1302,16 @@ side.innerHTML = `<div class="grp"><a href="#accueil" data-s="accueil">Accueil<s
 const gull = `<svg viewBox="0 0 30 12"><path d="M1 9 Q8 1 15 8 Q22 1 29 9"/></svg>`;
 const PAY = [['Stagiaire', 500], ['Employé', 600], ['Manager', 700], ['Co-patron', 800], ['Patron', 900]];
 function foot(){
-  return `<footer class="foot">${waves(['var(--w2)', 'var(--w3)', 'var(--deep)', 'var(--deep)'])}<div class="foot-in"><img src="${LOGOM}" alt=""><p>© Mirage WL. Tous droits réservés. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p><span>Règlement V2 · octobre 2026</span></div><p class="credits">Modèles 3D via Poly Pizza : Quaternius (CC0) ; sous licence CC-BY 3.0 : parasol et chaise longue (S. Paul Michael), ambulance (Jarlan Perez), crabe, tortues, crocodile, ara, toucan, capucin, cascade, feu tricolore, voiture, hélisurface, poste de secours, phare et avion (Poly by Google et auteurs Poly Pizza). Oiseaux en vol : exemples three.js. Sons générés en direct.</p></footer>`;
+  const cols = GROUPS.slice(1).map(([g, n]) => `<nav class="fcol"><h6><em>${n}</em>${g}</h6>${P.filter(p => p.group === g).map(p => `<a href="${href(p)}">${esc(p.title)}</a>`).join('')}</nav>`).join('');
+  return `<footer class="foot">${waves(['var(--w2)', 'var(--w3)', 'var(--deep)', 'var(--deep)'])}
+  <div class="foot-top">
+    <div class="fbrand"><img src="${LOGOM}" alt="Mirage WL"><p>Le règlement officiel de Mirage WL. Lis-le avant d'entrer en ville, relis-le dès que tu as un doute : c'est lui qui fait foi.</p>
+      <div class="fbtns"><a class="fbtn disc" href="https://discord.gg/QnwhBmm7AG" target="_blank" rel="noopener">${im('speech_balloon')}Rejoindre le Discord</a><a class="fbtn" href="#quickstart">${im('passport_control')}Préparer sa WhiteList</a></div></div>
+    ${cols}
+  </div>
+  <div class="foot-floor" aria-hidden="true"><span class="ff f1">${im('coral')}</span><span class="ff f2">${im('octopus')}</span><span class="ff f3">${im('spiral_shell')}</span><span class="ff f4">${im('rock')}</span><span class="ff f5">${im('crab')}</span><span class="ff f6">${im('coral')}</span><span class="ff f7">${im('gem_stone')}</span><span class="ff f8">${im('lobster')}</span><span class="ff f9">${im('coral')}</span><span class="ff f10">${im('spiral_shell')}</span></div>
+  <div class="foot-bot"><p>© Mirage WL. Tous droits réservés. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p><span>Règlement V2 · octobre 2026</span><button class="ftop" type="button" onclick="scrollTo({top:0,behavior:'smooth'})">${im('dolphin')}Remonter à la surface</button></div>
+  <p class="credits">Illustrations : Fluent Emoji de Microsoft (licence MIT). Photos : Mirage WL. Sons générés en direct.</p></footer>`;
 }
 
 /* ---------- galerie de photos (dossier images/galerie du dépôt) ---------- */
@@ -1708,12 +1813,39 @@ function shellRain(){
 }
 let typed = '';
 addEventListener('keydown', e => { if (e.target.closest('input,textarea')) return; typed = (typed + (e.key.length === 1 ? e.key.toLowerCase() : '')).slice(-12); if (typed.endsWith('coquillage')){ typed = ''; shellRain(); } else if (typed.endsWith('tortue')){ typed = ''; document.querySelectorAll('.turtlewalk').forEach(t => t.classList.toggle('zoom')); toast('🐢 Les tortues font la fête !'); } });
+/* ---------- ambiance supplémentaire de l'accueil ---------- */
+function moreLife(hero){
+  const sky = hero.querySelector('.sky'), waves = hero.querySelector('.hero-waves'), beach = hero.querySelector('.beach'), oc = hero.querySelector('.ocean');
+  sky.insertAdjacentHTML('beforeend', `
+    <div class="plane" aria-hidden="true"><span class="pl">${im('airplane')}</span><span class="rope"></span><span class="flag">Mirage WL · V2</span></div>
+    <div class="parrotfly" aria-hidden="true"><span>${im('parrot')}</span></div>
+    <div class="kite" aria-hidden="true"><span class="k">${im('kite')}</span><span class="tail"></span><span class="string"></span></div>
+    <i class="shoot s1" aria-hidden="true"></i><i class="shoot s2" aria-hidden="true"></i><i class="shoot s3" aria-hidden="true"></i>`);
+  waves.insertAdjacentHTML('beforeend', `<span class="surfer" aria-hidden="true"><span>${im('person_surfing')}</span><i class="spray"></i></span><span class="canoe" aria-hidden="true"><span>${im('canoe')}</span></span>`);
+  beach.insertAdjacentHTML('beforeend', `
+    <span class="fly b1" aria-hidden="true">${im('butterfly')}</span><span class="fly b2" aria-hidden="true">${im('butterfly')}</span>
+    <span class="hib h1" aria-hidden="true">${im('hibiscus')}</span><span class="hib h2" aria-hidden="true">${im('hibiscus')}</span><span class="hib h3" aria-hidden="true">${im('hibiscus')}</span>
+    <span class="camp" aria-hidden="true"><i class="glow"></i><span class="f">${im('fire')}</span><i class="spark k1"></i><i class="spark k2"></i><i class="spark k3"></i></span>`);
+  /* bulles qui suivent la souris sous l'eau */
+  if (!CALM.matches && !matchMedia('(pointer: coarse)').matches){
+    let last = 0;
+    oc.addEventListener('pointermove', e => { const now = performance.now(); if (now - last < 70) return; last = now;
+      const r = oc.getBoundingClientRect(), b = document.createElement('span'); b.className = 'trail'; const s = 4 + Math.random() * 9;
+      b.style.cssText = `left:${e.clientX - r.left}px;top:${e.clientY - r.top}px;width:${s}px;height:${s}px;--x:${(Math.random() - .5) * 30}px`;
+      oc.appendChild(b); setTimeout(() => b.remove(), 1600); });
+  }
+  /* léger relief au défilement */
+  const par = () => { const y = Math.min(scrollY, 900); hero.style.setProperty('--sy', y.toFixed(0)); };
+  addEventListener('scroll', par, {passive: true}); par();
+}
+
 function wakeHome(){
   const hero = main.querySelector('.hero'); if (!hero || hero.dataset.awake) return; hero.dataset.awake = 1;
   const sky = hero.querySelector('.sky');
   sky.insertAdjacentHTML('afterbegin', `<div class="stars" aria-hidden="true"></div><div class="wx-rain" aria-hidden="true"></div><svg class="rainbow" viewBox="0 0 400 200" aria-hidden="true">${['#ff5a5a','#ff9f43','#ffd93d','#5ee36a','#4fc3f7','#7c6cff','#c56cf0'].map((c, i) => `<path d="M${20 + i * 9} 200 A${180 - i * 9} ${180 - i * 9} 0 0 1 ${380 - i * 9} 200" stroke="${c}" stroke-width="9" fill="none"/>`).join('')}</svg>`);
   const oc = hero.querySelector('.ocean'); oc.insertAdjacentHTML('afterbegin', '<div class="nightveil" aria-hidden="true"></div><div class="plankton" aria-hidden="true"></div>');
   hero.querySelector('.beach').insertAdjacentHTML('beforeend', '<div class="fireflies" aria-hidden="true"></div>');
+  moreLife(hero);
   const m = momentNow(); const w = weatherNow(m); hero.classList.add('wx-' + w); setMoment(hero, m);
   const waves = hero.querySelector('.hero-waves'); const b = document.createElement('button'); b.className = 'bottle'; b.type = 'button'; b.setAttribute('aria-label', 'Ouvrir le message dans la bouteille'); b.innerHTML = BOTTLE_SVG + '<span class="b-hint">Un message !</span>'; b.onclick = openBottle; waves.appendChild(b);
   const sun = hero.querySelector('.sun'); sun.title = 'Changer le moment de la journée';
