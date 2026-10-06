@@ -226,9 +226,13 @@ for f in sorted((IMGS / 'icones').glob('*.svg')):
     inner = re.search(r'<svg[^>]*>(.*)</svg>', f.read_text(), re.S).group(1)
     inner = re.sub(r'\s+', ' ', inner).strip().replace(' />', ' pathLength="1"/>')
     if re.search(r"['\"]" + f.stem + r"['\"]", tplsrc): ICO[f.stem] = inner
-out = dict(pages=pages, emb=EMB, emo=EMO, ico=ICO, three={}, models={})
+import shutil
+GAL = sorted(f.name for f in (IMGS / 'galerie').glob('*') if f.suffix.lower() in ('.jpg', '.jpeg', '.png', '.webp')) if (IMGS / 'galerie').exists() else []
+out = dict(pages=pages, emb=EMB, emo=EMO, ico=ICO, three={}, models={}, galerie=['galerie/' + n for n in GAL])
 page = tplsrc.replace('__LOGO__', LOGO).replace('__LOGOM__', LOGOM).replace('__DATA__', json.dumps(out, ensure_ascii=False).replace('</', '<\\/'))
 site = S / 'site'
 site.mkdir(exist_ok=True)
+if GAL:
+    shutil.copytree(IMGS / 'galerie', site / 'galerie', dirs_exist_ok=True)
 (site / 'index.html').write_text(page, encoding='utf-8')
 print('Site généré :', len(page) // 1024, 'Ko,', len(pages), 'pages')

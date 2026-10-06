@@ -599,13 +599,36 @@ svg *{transform-box:fill-box}
 .hero .ocean > h1,.hero .ocean > p{text-shadow:0 2px 14px rgba(2,30,40,.65)}
 
 /* ---------- tortues sur la plage ---------- */
-.turtlewalk .tw{display:block;animation:twalk 26s linear infinite}
-.turtlewalk.t2 .tw{animation-duration:34s;animation-delay:-12s}
-.turtlewalk.t3 .tw{animation-duration:30s;animation-delay:-20s}
-.turtlewalk .tw img{animation:twaddle .9s ease-in-out infinite alternate}
-@keyframes twalk{0%{transform:translateX(-90px) scaleX(-1)}48%{transform:translateX(90px) scaleX(-1)}50%{transform:translateX(90px) scaleX(1)}98%{transform:translateX(-90px) scaleX(1)}100%{transform:translateX(-90px) scaleX(-1)}}
-@keyframes twaddle{from{transform:rotate(-4deg) translateY(0)}to{transform:rotate(4deg) translateY(-2px)}}
+.turtlewalk .tw{display:block;animation:twalk 40s linear infinite}
+.turtlewalk.t2 .tw{animation-duration:50s;animation-delay:-18s}
+.turtlewalk.t3 .tw{animation-duration:46s;animation-delay:-30s}
+.turtlewalk .tw img{animation:twaddle 1.4s ease-in-out infinite alternate;transform-origin:50% 100%}
+@keyframes twalk{0%{transform:translateX(-70px) scaleX(-1)}44%{transform:translateX(70px) scaleX(-1)}50%{transform:translateX(70px) scaleX(1)}94%{transform:translateX(-70px) scaleX(1)}100%{transform:translateX(-70px) scaleX(-1)}}
+@keyframes twaddle{from{transform:rotate(-1.5deg) translateY(0)}to{transform:rotate(1.5deg) translateY(-1px)}}
 @media (prefers-reduced-motion: reduce){.turtlewalk .tw,.turtlewalk .tw img{animation:none}}
+
+/* ---------- galerie ---------- */
+.gallery{margin:0 0 60px;overflow:hidden}
+body.is-home main > .gallery{max-width:none;margin-inline:calc(-1 * clamp(16px,4vw,52px));padding-inline:0}
+body.is-home main > .gallery > .eyebrow,body.is-home main > .gallery > .h-sec{max-width:1180px;margin-inline:auto;padding-inline:clamp(16px,4vw,52px)}
+.g-row{overflow:hidden;padding:14px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.g-track{display:flex;gap:22px;width:max-content;animation:gscroll 70s linear infinite}
+.g-row.rev .g-track{animation-direction:reverse;animation-duration:80s}
+.g-row:hover .g-track{animation-play-state:paused}
+@keyframes gscroll{to{transform:translateX(-50%)}}
+.g-ph{flex:none;width:clamp(240px,26vw,380px);aspect-ratio:16/9;padding:6px;border:0;border-radius:18px;background:#fff;box-shadow:0 16px 30px -18px rgba(8,50,60,.55);rotate:var(--r);cursor:inherit;transition:rotate .3s,scale .3s}
+.g-ph:hover{rotate:0deg;scale:1.05;z-index:2}
+.g-ph img{width:100%;height:100%;object-fit:cover;border-radius:13px;display:block}
+[data-theme="dark"] .g-ph{background:#173a44}
+.lightbox{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:rgba(2,18,24,.86);backdrop-filter:blur(6px);animation:lbin .25s ease}
+.lightbox img{max-width:92vw;max-height:86vh;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lightbox button{position:absolute;top:18px;right:22px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;font:700 26px/1 sans-serif;color:#0e2a33}
+@keyframes lbin{from{opacity:0}}
+@media (prefers-reduced-motion: reduce){.g-track{animation:none}.g-row{overflow-x:auto}}
+/* ---------- curseur coquillage ---------- */
+html,body,a,button,label,summary,[role="button"]{cursor:url(data:image/png;base64,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) 3 3,auto}
+a,button,summary,[role="button"],.g-ph{cursor:url(data:image/png;base64,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) 3 3,pointer}
+input,textarea{cursor:text}
 /* ---------- accueil pleine largeur ---------- */
 body.is-home .shell{max-width:none}
 body.is-home main > *{max-width:1180px;margin-inline:auto}
@@ -1087,6 +1110,20 @@ const PAY = [['Stagiaire', 500], ['Employé', 600], ['Manager', 700], ['Co-patro
 function foot(){
   return `<footer class="foot">${waves(['var(--w2)', 'var(--w3)', 'var(--deep)', 'var(--deep)'])}<div class="foot-in"><img src="${LOGOM}" alt=""><p>© Mirage WL. Tous droits réservés. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p><span>Règlement V2 · octobre 2026</span></div><p class="credits">Modèles 3D via Poly Pizza : Quaternius (CC0) ; sous licence CC-BY 3.0 : parasol et chaise longue (S. Paul Michael), ambulance (Jarlan Perez), crabe, tortues, crocodile, ara, toucan, capucin, cascade, feu tricolore, voiture, hélisurface, poste de secours, phare et avion (Poly by Google et auteurs Poly Pizza). Oiseaux en vol : exemples three.js. Sons générés en direct.</p></footer>`;
 }
+
+/* ---------- galerie de photos (dossier images/galerie du dépôt) ---------- */
+function gallery(){
+  const G = DATA.galerie || []; if (!G.length) return '';
+  const half = Math.ceil(G.length / 2), rows = [G.slice(0, half), G.slice(half)].filter(r => r.length);
+  const strip = (r, k) => `<div class="g-row ${k % 2 ? 'rev' : ''}"><div class="g-track">${[...r, ...r].map((f, i) => `<button class="g-ph" data-src="${f}" style="--r:${((i * 37) % 7) - 3}deg" aria-label="Agrandir la photo"><img src="${f}" alt="" loading="lazy"></button>`).join('')}</div></div>`;
+  return `<section class="gallery rv"><p class="eyebrow">La vie sur l'île</p><h2 class="h-sec">Mirage en images</h2>${rows.map(strip).join('')}</section>`;
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('.g-ph'); if (!b) return;
+  const lb = document.createElement('div'); lb.className = 'lightbox'; lb.innerHTML = `<img src="${b.dataset.src}" alt=""><button aria-label="Fermer">×</button>`;
+  lb.onclick = () => lb.remove(); document.body.appendChild(lb);
+  const esc = ev => { if (ev.key === 'Escape'){ lb.remove(); removeEventListener('keydown', esc); } }; addEventListener('keydown', esc);
+});
 function home(){
   main.innerHTML = `
   <section class="hero">
@@ -1108,6 +1145,7 @@ function home(){
   </section>
   <p class="staff rv"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M2 12c2.5-3 5-3 7.5 0s5 3 7.5 0 3.5-2 5-1M2 17c2.5-3 5-3 7.5 0s5 3 7.5 0 3.5-2 5-1M2 7c2.5-3 5-3 7.5 0s5 3 7.5 0 3.5-2 5-1"/></svg><b>Conseil du staff</b><span>Le respect entre joueurs est primordial. Soyez courtois et bienveillants, en jeu comme en dehors.</span></p>
 
+  ${gallery()}
   <p class="eyebrow">Nouveautés</p>
   <h2 class="h-sec">Ce qui change avec la V2</h2>
   <div class="bento">
@@ -1283,7 +1321,7 @@ function reef(sand = true){
     ${sand ? '<div class="floor"></div>' : '<div class="seabed"></div>'}</div>`;
 }
 function underwater(){
-  const ff = [['turtle', 90, -8, 52, ''], ['fish', 70, 0, 38, 'r'], ['shark', 150, -12, 60, ''], ['fish', 50, -20, 30, ''], ['spouting_whale', 220, -30, 80, 'r'], ['fish', 60, -6, 34, 'r']];
+  const ff = [['fish', 70, 0, 38, 'r'], ['shark', 150, -12, 60, ''], ['fish', 50, -20, 30, ''], ['spouting_whale', 220, -30, 80, 'r'], ['fish', 60, -6, 34, 'r']];
   const kelp = (side) => `<div class="kelp ${side}">${[150, 210, 120, 180].map((h, i) => `<span style="--w:${h * .45}px;--t:${3 + i * .7}s;--d:${-i}s">${im('herb')}</span>`).join('')}</div>`;
   return `<div class="vig"></div><div class="far" aria-hidden="true">${ff.map(([n, w, d, t, r], i) => `<span class="ff ${r}" style="top:${18 + i * 13}%;--w:${w}px;--t:${t}s;--d:${d}s">${im(n)}</span>`).join('')}</div>
   <div class="uw" aria-hidden="true"><div class="snow"></div><div class="rays"></div></div>${kelp('l')}${kelp('r')}
@@ -1490,17 +1528,12 @@ function wakeLife(){
     {n:'tropical_fish', size:54, y:[.15, .5], speed:46, wander:true, count:2},
     {n:'fish', size:30, y:[.2, .55], speed:60, school:6},
     {n:'blowfish', size:46, y:[.55, .7], speed:18, wander:true, amp:20},
-    {n:'turtle', size:84, y:[.12, .3], speed:22, layer:0},
-    {n:'turtle', size:76, y:[.35, .55], speed:28},
-    {n:'turtle', size:58, y:[.58, .72], speed:34, layer:0},
     {n:'fish', size:40, y:[.6, .75], speed:38, wander:true},
   ]);
   pool(main.querySelector('.foot .uw'), [
     {n:'shark', size:140, y:[.35, .45], speed:46, layer:0, orbit:true},
     {n:'fish', size:28, y:[.3, .6], speed:58, school:5},
     {n:'tropical_fish', size:46, y:[.4, .7], speed:40, wander:true, count:2},
-    {n:'turtle', size:70, y:[.2, .4], speed:20, layer:0},
-    {n:'turtle', size:50, y:[.45, .6], speed:26},
   ]);
   const tk = document.querySelector('.aqua .tank'); if (tk && !tk.dataset.on){ tk.dataset.on = 1; pool(tk, [
     {n:'tropical_fish', size:34, y:[.25, .55], speed:24, wander:true},
@@ -2334,6 +2367,7 @@ const SOUND = {defcon: {city: 1, siren: 1, wind: .3}, home: {waves: 1, wind: .4,
   'reglementation-espace-aerien': {wind: 1, birds: .3}, 'nos-reseaux': {waves: .7, birds: .5}, boutique: {waves: .6, city: .3, birds: .5}, 'reprise-d-entreprise': {city: .6, waves: .4}};
 function route(){
   const h = decodeURIComponent(location.hash.slice(1)), slug = h.split('--')[0], p = bySlug[slug];
+  document.querySelectorAll('.lightbox').forEach(l => l.remove());
   document.body.classList.toggle('is-home', !p || slug === 'readme');
   if (!p || slug === 'readme'){ home(); setCurrent('accueil'); heads = []; window.scrollTo(0, 0); onScroll(); }
   else { page(p, h.includes('--') ? h : null); setCurrent(p.slug); }

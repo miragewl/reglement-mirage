@@ -31,6 +31,12 @@ C'est tout : le site est à jour une à deux minutes plus tard. L'onglet **Actio
 1. Ouvre le dossier **images**, clique sur **Add file** puis **Upload files**, et dépose ton image (par exemple `carte.png`).
 2. Dans la page, écris `![](images/carte.png)` à l'endroit voulu.
 
+## Changer les photos de la galerie (accueil)
+
+La galerie « Mirage en images » montre toutes les photos du dossier **images/galerie**.
+- Ajouter : ouvre `images/galerie`, **Add file** puis **Upload files**, et dépose tes photos (jpg ou png, idéalement moins de 1 Mo chacune).
+- Retirer : clique sur la photo dans `images/galerie`, puis sur les **trois points** en haut à droite, et **Delete file**.
+
 ## Ajouter une page
 
 1. Dans le dossier **pages**, clique sur **Add file** puis **Create new file**. Donne-lui un nom simple, sans espace ni accent, terminé par `.md` (par exemple `casino.md`).
