@@ -37,6 +37,13 @@ La galerie « Mirage en images » montre toutes les photos du dossier **images/g
 - Ajouter : ouvre `images/galerie`, **Add file** puis **Upload files**, et dépose tes photos (jpg ou png, idéalement moins de 1 Mo chacune).
 - Retirer : clique sur la photo dans `images/galerie`, puis sur les **trois points** en haut à droite, et **Delete file**.
 
+## Lexique, conseils de la bouteille et moment de la journée
+
+- **Lexique** : la page `pages/lexique.md`. Chaque ligne « - **Mot** : définition » est expliquée automatiquement (bulle au survol) dans toutes les pages.
+- **Bouteille à la mer** (accueil) : les messages sont dans `conseils.txt`, un conseil par ligne.
+- **Jour, coucher de soleil, nuit** : l'accueil suit l'heure de la personne qui visite. Pour tester, ajoute `?moment=nuit` (ou `couchant`, `jour`) à la fin de l'adresse, et `?meteo=pluie` (ou `arcenciel`, `beau`) pour la météo.
+- **Lien vers une règle** : survole un titre, clique sur la petite icône de lien, et colle le lien où tu veux.
+
 ## Ajouter une page
 
 1. Dans le dossier **pages**, clique sur **Add file** puis **Create new file**. Donne-lui un nom simple, sans espace ni accent, terminé par `.md` (par exemple `casino.md`).

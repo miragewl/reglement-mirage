@@ -227,8 +227,17 @@ for f in sorted((IMGS / 'icones').glob('*.svg')):
     inner = re.sub(r'\s+', ' ', inner).strip().replace(' />', ' pathLength="1"/>')
     if re.search(r"['\"]" + f.stem + r"['\"]", tplsrc): ICO[f.stem] = inner
 import shutil
+LEX = []
+lp = PAGES / 'lexique.md'
+if lp.exists():
+    for m in re.finditer(r'^\s*[-*]\s+\*\*(.+?)\*\*\s*:\s*(.+)$', lp.read_text(encoding='utf-8'), re.M):
+        LEX.append([m.group(1).strip(), m.group(2).strip()])
+CONSEILS = []
+cp = S / 'conseils.txt'
+if cp.exists():
+    CONSEILS = [l.strip() for l in cp.read_text(encoding='utf-8').splitlines() if l.strip() and not l.strip().startswith('#')]
 GAL = sorted(f.name for f in (IMGS / 'galerie').glob('*') if f.suffix.lower() in ('.jpg', '.jpeg', '.png', '.webp')) if (IMGS / 'galerie').exists() else []
-out = dict(pages=pages, emb=EMB, emo=EMO, ico=ICO, three={}, models={}, galerie=['galerie/' + n for n in GAL])
+out = dict(pages=pages, emb=EMB, emo=EMO, ico=ICO, three={}, models={}, galerie=['galerie/' + n for n in GAL], lexique=LEX, conseils=CONSEILS)
 page = tplsrc.replace('__LOGO__', LOGO).replace('__LOGOM__', LOGOM).replace('__DATA__', json.dumps(out, ensure_ascii=False).replace('</', '<\\/'))
 site = S / 'site'
 site.mkdir(exist_ok=True)

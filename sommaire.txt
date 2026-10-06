@@ -3,6 +3,8 @@
 readme | Bienvenue | Accueil
 patch-note-du-reglement | Patch note | Accueil
 quickstart | Préparer sa WhiteList | Bien débuter
+essentiel | L'essentiel en 2 minutes | Bien débuter
+lexique | Lexique | Bien débuter
 nos-reseaux | Nos réseaux | Bien débuter
 les-fondamentaux-du-rp | Les bases | Règlement général
 general-legal-et-illegal | Général (légal et illégal) | Règlement général
