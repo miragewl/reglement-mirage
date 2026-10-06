@@ -577,6 +577,35 @@ svg *{transform-box:fill-box}
 
 
 
+
+/* ---------- récif et plage remplis en grand écran ---------- */
+.hero .reef{height:200px}
+.reef .seabed{position:absolute;left:0;right:0;bottom:-2px;height:40px;z-index:-1;background:linear-gradient(180deg,transparent,rgba(214,182,120,.35) 45%,rgba(226,196,140,.65));
+  -webkit-mask-image:radial-gradient(120% 140% at 50% 100%,#000 60%,transparent 100%);mask-image:radial-gradient(120% 140% at 50% 100%,#000 60%,transparent 100%)}
+.r-back{filter:saturate(.8) brightness(.85)}
+.r-back .pin{opacity:.9}
+.beach .spot.wide{display:none}
+@media (min-width:1500px){.beach .spot.wide,.reef .wide{display:block}}
+.reef .crabwalk.wide{display:none}
+@media (min-width:1500px){.reef .crabwalk.wide{display:block}}
+.beach::after{content:"";position:absolute;inset:70px 0 0;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(1.2px 1.2px at 12% 30%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 38% 60%,#fff 50%,transparent 51%),radial-gradient(1.4px 1.4px at 66% 40%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 84% 72%,#fff 50%,transparent 51%);
+  background-size:180px 120px;animation:twinkle 2.6s ease-in-out infinite alternate}
+
+/* ---------- boutons lisibles par-dessus les poissons ---------- */
+.hero .ocean > .cta{z-index:8}
+.hero .btn-ghost{background:rgba(3,34,46,.62);border:1.5px solid rgba(255,255,255,.7);color:#fff;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 10px 24px -12px rgba(0,0,0,.6)}
+.hero .btn-ghost:hover{background:rgba(3,34,46,.8)}
+.hero .ocean > h1,.hero .ocean > p{text-shadow:0 2px 14px rgba(2,30,40,.65)}
+
+/* ---------- tortues sur la plage ---------- */
+.turtlewalk .tw{display:block;animation:twalk 26s linear infinite}
+.turtlewalk.t2 .tw{animation-duration:34s;animation-delay:-12s}
+.turtlewalk.t3 .tw{animation-duration:30s;animation-delay:-20s}
+.turtlewalk .tw img{animation:twaddle .9s ease-in-out infinite alternate}
+@keyframes twalk{0%{transform:translateX(-90px) scaleX(-1)}48%{transform:translateX(90px) scaleX(-1)}50%{transform:translateX(90px) scaleX(1)}98%{transform:translateX(-90px) scaleX(1)}100%{transform:translateX(-90px) scaleX(-1)}}
+@keyframes twaddle{from{transform:rotate(-4deg) translateY(0)}to{transform:rotate(4deg) translateY(-2px)}}
+@media (prefers-reduced-motion: reduce){.turtlewalk .tw,.turtlewalk .tw img{animation:none}}
 /* ---------- accueil pleine largeur ---------- */
 body.is-home .shell{max-width:none}
 body.is-home main > *{max-width:1180px;margin-inline:auto}
@@ -1207,7 +1236,7 @@ function beach(){
     return `<i class="fp" style="left:${x}%;top:${top}px;width:${10 * s}px;height:${5 * s}px;opacity:${.12 + y * .2}"></i>`; }).join('');
   return `<div class="beach" aria-hidden="true">
     <svg class="wash" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path class="wet" d="M0 30 C200 60 380 20 600 44 S1000 66 1200 40 1440 52 1440 52 V70 H0Z"/><path class="lip" d="M0 30 C200 60 380 20 600 44 S1000 66 1200 40 1440 52 1440 52 V56 C1200 46 1000 72 600 50 S200 66 0 36Z"/></svg>
-    <svg class="shoreline" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 0 H1440 V22 C1300 48 1180 10 1020 30 S760 54 600 28 300 8 160 34 40 44 0 26Z" style="fill:var(--w4)"/>
+    <svg class="shoreline" viewBox="0 0 1440 70" preserveAspectRatio="none"><defs><linearGradient id="shg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--w4)"/><stop offset=".55" style="stop-color:#2a9fa8"/><stop offset="1" style="stop-color:#6fd6d2"/></linearGradient></defs><path d="M0 0 H1440 V22 C1300 48 1180 10 1020 30 S760 54 600 28 300 8 160 34 40 44 0 26Z" style="fill:url(#shg)"/>
       <path class="foam" d="M0 26 C40 44 160 34 300 8 S600 28 760 54 1020 30 1300 48 1380 30 1440 22" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
       <path class="foam f2" d="M0 40 C60 54 180 46 320 24 S620 42 780 66 1040 44 1300 60 1380 44 1440 36" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3" stroke-linecap="round" stroke-dasharray="40 26" vector-effect="non-scaling-stroke"/></svg>
     <div class="ripples"></div>${steps}
@@ -1220,30 +1249,41 @@ function beach(){
     ${spot('sunglasses', 93, .93, 56, '', 0, 'opt')}
     ${spot('watermelon', 66, .96, 54, '', 0, 'opt')}
     ${spot('palm_tree', 5, 1, 190, 'k-sway')}
+    ${spot('turtle', 36, .58, 84, '', 0, 'turtlewalk', `<span class="tw">${im('turtle')}</span>`)}
+    ${spot('turtle', 58, .38, 66, '', 0, 'turtlewalk t2', `<span class="tw">${im('turtle')}</span>`)}
+    ${spot('turtle', 78, .5, 60, '', 0, 'turtlewalk t3 opt', `<span class="tw">${im('turtle')}</span>`)}
+    ${spot('spiral_shell', 40, .2, 34, '', 0, 'opt')}${spot('spiral_shell', 70, .3, 28, '', 0, 'opt wide')}
+    ${spot('coconut', 13, .7, 44, '', 0, 'opt')}
+    ${spot('umbrella_on_ground', 50, .7, 160, 'k-sway', -1, 'wide')}
+    ${spot('sunglasses', 55, .9, 50, '', 0, 'wide')}
+    ${spot('tropical_drink', 44, .95, 46, 'k-idle', -2, 'wide')}
+    ${spot('lobster', 78, .18, 44, 'k-bob', -1, 'wide')}
+    ${spot('palm_tree', 97, .55, 170, 'k-sway', -1.5, 'wide')}
   </div>`;
 }
 
 const base = (n, x, w, b = 0, cls = '', anim = '', d = 0) => `<span class="pin base ${cls}" style="left:${x}%;bottom:${b}px;width:${w}px"><span class="${anim}" style="animation-delay:${d}s">${im(n)}</span></span>`;
+const sr = (i) => { const x = Math.sin(i * 12.9898 + 78.233) * 43758.5453; return x - Math.floor(x); };
+/* récif généré : rangées denses sur toute la largeur, quelle que soit la taille de l'écran */
 function reef(sand = true){
+  const C = ['', 'hue-pink', 'hue-gold', 'flip', 'flip hue-pink', 'hue-gold flip'];
+  const row = (step, from, seed, pick) => { let h = ''; for (let x = from, i = 0; x < 101; x += step, i++) h += pick(x + (sr(seed + i) - .5) * step * .6, seed + i, i); return h; };
+  const back = row(3.2, 1, 100, (x, k, i) => { const r = sr(k * 3); return r < .55 ? base('coral', x, 46 + sr(k) * 34, 18 + sr(k + 1) * 6, C[i % 6]) : r < .85 ? base('herb', x, 36 + sr(k) * 24, 16, '', 'k-sway', -sr(k) * 3) : base('rock', x, 34 + sr(k) * 18, 14); });
+  const mid = row(5.5, 3, 300, (x, k, i) => { const r = sr(k * 5); const o = i % 3 === 2 ? ' opt' : '';
+    return r < .5 ? base('coral', x, 72 + sr(k) * 44, 4 + sr(k + 2) * 6, C[(i + 2) % 6] + o) : r < .72 ? base('herb', x, 56 + sr(k) * 30, 6, o, 'k-sway', -sr(k) * 2) : r < .88 ? base('rock', x, 44 + sr(k) * 22, 3, o) : base(['spiral_shell', 'shrimp', 'octopus', 'lobster'][i % 4], x, 36 + sr(k) * 16, 6, 'opt', 'k-bob', -sr(k) * 2); });
+  const front = row(8.5, 2, 500, (x, k, i) => { const r = sr(k * 7);
+    return r < .45 ? base('coral', x, 110 + sr(k) * 60, -10 - sr(k) * 4, C[(i + 4) % 6]) : r < .75 ? base('herb', x, 70 + sr(k) * 30, -4, '', 'k-sway', -sr(k) * 2) : base('rock', x, 56 + sr(k) * 24, -6, i % 2 ? 'flip' : ''); });
   return `<div class="reef" aria-hidden="true">
-    <div class="r-back">
-      ${base('coral', 6, 70, 18, 'hue-pink')}${base('herb', 14, 50, 16, '', 'k-sway', -1)}${base('coral', 23, 64, 18, 'flip')}${base('coral', 38, 58, 20, 'hue-gold')}
-      ${base('herb', 47, 46, 18, '', 'k-sway', -2)}${base('coral', 58, 72, 18, 'flip hue-pink')}${base('coral', 76, 62, 18, 'hue-gold flip')}${base('herb', 86, 54, 16, '', 'k-sway')}${base('coral', 94, 70, 18)}
-    </div>
-    <div class="r-mid">
-      ${base('coral', 12, 104, 8, 'flip')}${base('rock', 20, 54, 4)}${base('herb', 27, 70, 6, '', 'k-sway', -.8)}${base('coral', 33, 86, 6, 'hue-pink')}
-      ${base('octopus', 50, 56, 4, 'opt', 'k-float', -1)}${base('coral', 66, 96, 6, 'hue-gold')}${base('herb', 73, 64, 6, 'opt', 'k-sway', -1.6)}${base('rock', 80, 50, 4, 'opt')}${base('coral', 88, 110, 6, 'flip')}
-    </div>
-    <div class="r-front">
-      ${base('coral', 2, 150, -10, 'hue-pink')}${base('herb', 9, 80, -4, '', 'k-sway', -.3)}${base('rock', 17, 64, -6)}
+    <div class="r-back">${back}</div>
+    <div class="r-mid">${mid}</div>
+    <div class="r-front">${front}
       <span class="crabwalk pin base" style="left:42%;bottom:0;width:54px">${im('crab')}</span>
-      ${base('shrimp', 58, 40, 10, 'opt', 'k-bob', -1)}
-      ${base('rock', 84, 70, -8, 'flip')}${base('herb', 91, 86, -4, '', 'k-sway', -1.2)}${base('coral', 98, 160, -12, 'flip')}
+      <span class="crabwalk pin base wide" style="left:78%;bottom:0;width:46px">${im('crab')}</span>
     </div>
-    ${sand ? '<div class="floor"></div>' : ''}</div>`;
+    ${sand ? '<div class="floor"></div>' : '<div class="seabed"></div>'}</div>`;
 }
 function underwater(){
-  const ff = [['fish', 70, 0, 38, 'r'], ['shark', 150, -12, 60, ''], ['fish', 50, -20, 30, ''], ['spouting_whale', 220, -30, 80, 'r'], ['fish', 60, -6, 34, 'r']];
+  const ff = [['turtle', 90, -8, 52, ''], ['fish', 70, 0, 38, 'r'], ['shark', 150, -12, 60, ''], ['fish', 50, -20, 30, ''], ['spouting_whale', 220, -30, 80, 'r'], ['fish', 60, -6, 34, 'r']];
   const kelp = (side) => `<div class="kelp ${side}">${[150, 210, 120, 180].map((h, i) => `<span style="--w:${h * .45}px;--t:${3 + i * .7}s;--d:${-i}s">${im('herb')}</span>`).join('')}</div>`;
   return `<div class="vig"></div><div class="far" aria-hidden="true">${ff.map(([n, w, d, t, r], i) => `<span class="ff ${r}" style="top:${18 + i * 13}%;--w:${w}px;--t:${t}s;--d:${d}s">${im(n)}</span>`).join('')}</div>
   <div class="uw" aria-hidden="true"><div class="snow"></div><div class="rays"></div></div>${kelp('l')}${kelp('r')}
@@ -1451,6 +1491,8 @@ function wakeLife(){
     {n:'fish', size:30, y:[.2, .55], speed:60, school:6},
     {n:'blowfish', size:46, y:[.55, .7], speed:18, wander:true, amp:20},
     {n:'turtle', size:84, y:[.12, .3], speed:22, layer:0},
+    {n:'turtle', size:76, y:[.35, .55], speed:28},
+    {n:'turtle', size:58, y:[.58, .72], speed:34, layer:0},
     {n:'fish', size:40, y:[.6, .75], speed:38, wander:true},
   ]);
   pool(main.querySelector('.foot .uw'), [
@@ -1458,6 +1500,7 @@ function wakeLife(){
     {n:'fish', size:28, y:[.3, .6], speed:58, school:5},
     {n:'tropical_fish', size:46, y:[.4, .7], speed:40, wander:true, count:2},
     {n:'turtle', size:70, y:[.2, .4], speed:20, layer:0},
+    {n:'turtle', size:50, y:[.45, .6], speed:26},
   ]);
   const tk = document.querySelector('.aqua .tank'); if (tk && !tk.dataset.on){ tk.dataset.on = 1; pool(tk, [
     {n:'tropical_fish', size:34, y:[.25, .55], speed:24, wander:true},
