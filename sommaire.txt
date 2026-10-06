@@ -1,0 +1,23 @@
+# Ordre des pages du site. Une ligne par page : fichier | titre affiché | partie
+# Le fichier est dans le dossier pages/ (sans le .md). Les parties possibles : Accueil, Bien débuter, Règlement général, Règlement en jeu
+readme | Bienvenue | Accueil
+patch-note-du-reglement | Patch note | Accueil
+quickstart | Préparer sa WhiteList | Bien débuter
+nos-reseaux | Nos réseaux | Bien débuter
+les-fondamentaux-du-rp | Les bases | Règlement général
+general-legal-et-illegal | Général (légal et illégal) | Règlement général
+groupes-illegaux | Groupes illégaux | Règlement général
+police | Police (SASP) | Règlement général
+defcon | Defcon | Règlement général
+ems | EMS | Règlement général
+mort-rp | Mort RP, Wipe, Fédéral | Règlement général
+reprise-d-entreprise | Entreprises | Règlement général
+boutique | Boutique | Règlement général
+code-civil | Code civil | Règlement en jeu
+code-penal | Code pénal | Règlement en jeu
+code-du-travail | Code du travail | Règlement en jeu
+code-de-la-route | Code de la route | Règlement en jeu
+permis-de-port-darmes | Permis de port d'armes | Règlement en jeu
+bureau-du-procureur | Bureau du Procureur | Règlement en jeu
+reglementation-de-la-peche | Réglementation de la pêche | Règlement en jeu
+reglementation-espace-aerien | Espace aérien | Règlement en jeu
