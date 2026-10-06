@@ -19,8 +19,8 @@ def logo(name, w, q=88):
     im = Image.open(IMGS / 'logos' / name).convert('RGBA')
     im = im.crop(im.split()[3].getbbox())
     return webp_uri(im, w, q)
-LOGO = logo('logo.png', 900)
-LOGOM = logo('logo-petit.png', 160)
+LOGO = logo('logo.png', 1028, 90)
+LOGOM = logo('logo-petit.png', 300, 90)
 EMB = {k: logo(f, 300, 80) for k, f in [('sasp', 'sasp.png'), ('ems', 'ems.png'), ('gouv', 'gouv.png'), ('avocat', 'avocat.png'), ('interim', 'jobsinterims.png')]}
 
 # images des pages : chemin dans le dépôt (images/xxx.jpg) ou adresse web
