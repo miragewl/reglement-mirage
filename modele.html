@@ -576,6 +576,14 @@ svg *{transform-box:fill-box}
 
 
 
+
+/* ---------- accueil pleine largeur ---------- */
+body.is-home .shell{max-width:none}
+body.is-home main > *{max-width:1180px;margin-inline:auto}
+body.is-home main > .hero{max-width:none;margin:-28px calc(-1 * clamp(16px,4vw,52px)) 26px;border-radius:0;box-shadow:none}
+body.is-home main > .foot{max-width:none}
+body.is-home .hero .sky{height:clamp(320px,34vw,520px)}
+body.is-home .hero .hero-logo{width:min(620px,70%)}
 /* ---------- pirates (partie illégale) ---------- */
 .pship{position:absolute;left:58%;bottom:30px;width:200px;z-index:1;transform-origin:50% 85%;animation:pship 4.2s ease-in-out infinite}
 .pship .hull img{width:100%;display:block;filter:sepia(.6) hue-rotate(-28deg) saturate(1.1) brightness(.62) contrast(1.15) drop-shadow(0 10px 14px rgba(0,0,0,.45))}
@@ -2283,6 +2291,7 @@ const SOUND = {defcon: {city: 1, siren: 1, wind: .3}, home: {waves: 1, wind: .4,
   'reglementation-espace-aerien': {wind: 1, birds: .3}, 'nos-reseaux': {waves: .7, birds: .5}, boutique: {waves: .6, city: .3, birds: .5}, 'reprise-d-entreprise': {city: .6, waves: .4}};
 function route(){
   const h = decodeURIComponent(location.hash.slice(1)), slug = h.split('--')[0], p = bySlug[slug];
+  document.body.classList.toggle('is-home', !p || slug === 'readme');
   if (!p || slug === 'readme'){ home(); setCurrent('accueil'); heads = []; window.scrollTo(0, 0); onScroll(); }
   else { page(p, h.includes('--') ? h : null); setCurrent(p.slug); }
   reveal(); wakeLife();
