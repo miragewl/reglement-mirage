@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Règlement Mirage V2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -306,7 +311,7 @@ body.diff .tbl.v2::before{display:none}
 .ref a:hover,.embed:hover{border-color:var(--sea);transform:translateY(-2px)}
 .ref p{margin:0}
 .embed-k{font:700 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
-.embed-t{font:700 16px var(--display)}
+.embed-t{font:700 16px var(--display);min-width:0;max-width:100%;overflow-wrap:anywhere}
 .embed-u{font:500 13px var(--mono);color:var(--muted);overflow-wrap:anywhere}
 .tbl{position:relative;overflow-x:auto;margin:22px 0;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
 .tbl table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:15px}
@@ -643,6 +648,7 @@ abbr.lx{text-decoration:underline dotted color-mix(in srgb,var(--sea) 70%,transp
 abbr.lx::after{content:attr(data-def);position:absolute;left:50%;bottom:calc(100% + 10px);translate:-50% 6px;width:max-content;max-width:min(280px,80vw);padding:10px 13px;border-radius:12px;background:#0e2a33;color:#eafcfb;font:500 13px/1.45 var(--body);text-align:left;white-space:normal;box-shadow:0 14px 30px -12px rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .18s,translate .18s;z-index:50}
 abbr.lx::before{content:"";position:absolute;left:50%;bottom:calc(100% + 4px);translate:-50% 6px;border:6px solid transparent;border-top-color:#0e2a33;opacity:0;transition:opacity .18s,translate .18s;z-index:50}
 abbr.lx:hover::after,abbr.lx:focus::after,abbr.lx:hover::before,abbr.lx:focus::before{opacity:1;translate:-50% 0}
+abbr.lx:not(:hover):not(:focus)::after,abbr.lx:not(:hover):not(:focus)::before{display:none}
 /* ---------- moment de la journée ---------- */
 .sky .stars{position:absolute;inset:0;z-index:0;opacity:0;transition:opacity 1.2s;pointer-events:none;
   background-image:radial-gradient(1.6px 1.6px at 8% 18%,#fff 50%,transparent 52%),radial-gradient(1.2px 1.2px at 22% 40%,#fff 50%,transparent 52%),radial-gradient(1.8px 1.8px at 35% 12%,#fff 50%,transparent 52%),radial-gradient(1px 1px at 48% 30%,#fff 50%,transparent 52%),radial-gradient(1.4px 1.4px at 61% 16%,#fff 50%,transparent 52%),radial-gradient(1.2px 1.2px at 72% 44%,#fff 50%,transparent 52%),radial-gradient(1.7px 1.7px at 90% 26%,#fff 50%,transparent 52%),radial-gradient(1px 1px at 15% 62%,#fff 50%,transparent 52%),radial-gradient(1.3px 1.3px at 56% 58%,#fff 50%,transparent 52%),radial-gradient(1px 1px at 82% 64%,#fff 50%,transparent 52%);
@@ -901,6 +907,85 @@ abbr.lx:hover::after,abbr.lx:focus::after,abbr.lx:hover::before,abbr.lx:focus::b
 .hero .oseam{position:absolute;left:0;right:0;bottom:0;height:70px;z-index:9;pointer-events:none;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--w4) 55%,#021c28) 92%)}
 .hero.tod-couchant .oseam{filter:saturate(1.15) brightness(.97) sepia(.18) hue-rotate(-8deg)}
 .hero.tod-nuit .oseam{filter:brightness(.6) saturate(.8) hue-rotate(-12deg)}
+/* ---------- v32 : encore plus de détails ---------- */
+.fworks{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+/* reflet du logo sur l'eau, ondulé */
+.logorefl{position:absolute;left:50%;top:44px;width:min(540px,80%);height:80px;translate:-50% 0;z-index:5;pointer-events:none;overflow:hidden;opacity:.3;
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 85%);mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.logorefl img{width:100%;display:block;transform:scaleY(-.42) translateY(-100%);transform-origin:50% 0;filter:blur(2px) saturate(1.3);animation:xrefl 3.2s ease-in-out infinite alternate}
+@keyframes xrefl{0%{translate:0 0;scale:1 1}50%{translate:-6px 0;scale:1.02 .94}100%{translate:5px 0;scale:.99 1.05}}
+.logorefl::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,transparent 0 5px,rgba(10,90,110,.55) 5px 7px);animation:xreflines 2.4s linear infinite}
+@keyframes xreflines{to{background-position:0 14px}}
+.hero.wx-pluie .logorefl{opacity:.15}
+.hero.tod-nuit .logorefl{opacity:.22}
+@media (max-width:640px){.logorefl{width:84%;height:56px}}
+/* paquebot à l'horizon, vedette avec sillage */
+.ship{position:absolute;bottom:92px;width:46px;z-index:1;pointer-events:none;animation:xship 140s linear infinite;left:-8%;opacity:.85;filter:saturate(.8) brightness(.95)}
+.ship .s .e3{width:100%;display:block}
+.ship .lights{position:absolute;left:20%;right:24%;top:52%;height:3px;border-radius:2px;background:repeating-linear-gradient(90deg,#FFE7A3 0 3px,transparent 3px 6px);opacity:0;box-shadow:0 0 8px 2px rgba(255,220,140,.6)}
+.hero.tod-nuit .ship .lights,.hero.tod-couchant .ship .lights{opacity:1}
+.hero.tod-nuit .ship{filter:brightness(.55)}
+@keyframes xship{from{left:-8%}to{left:108%}}
+.mboat{position:absolute;bottom:30px;width:58px;z-index:6;pointer-events:none;left:110%;animation:xmboat 26s linear 9s infinite}
+.mboat .s{display:block;transform:scaleX(-1);animation:xbounce .5s ease-in-out infinite alternate}
+.mboat .s .e3{width:100%;display:block}
+.mboat .wake{position:absolute;left:70%;top:58%;width:170px;height:16px;border-radius:50%;background:linear-gradient(90deg,rgba(255,255,255,.85),rgba(255,255,255,0));filter:blur(2px);
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 40%,#000 60%,transparent);mask-image:linear-gradient(180deg,transparent,#000 40%,#000 60%,transparent)}
+@keyframes xmboat{0%{left:110%}38%,100%{left:-20%}}
+@keyframes xbounce{from{transform:scaleX(-1) translateY(0) rotate(2deg)}to{transform:scaleX(-1) translateY(-3px) rotate(-2deg)}}
+.hero.tod-nuit .mboat{display:none}
+/* plage */
+.sandcastle .sc{position:relative;display:block}
+.sandcastle .e3{filter:sepia(1) saturate(.75) hue-rotate(-8deg) brightness(1.08) contrast(.95)}
+.sandcastle .flag{position:absolute;left:48%;top:-14px;width:2px;height:16px;background:#8a6a3a}
+.sandcastle .flag::after{content:"";position:absolute;left:2px;top:0;width:13px;height:8px;background:var(--accent);clip-path:polygon(0 0,100% 50%,0 100%);transform-origin:0 50%;animation:xflag 1s ease-in-out infinite alternate}
+@keyframes xflag{from{transform:scaleX(1)}to{transform:scaleX(.7) skewY(8deg)}}
+.radio .rd{display:block;animation:xradio .45s ease-in-out infinite alternate;transform-origin:50% 100%}
+.radio .rd .e3{width:100%;display:block}
+@keyframes xradio{from{transform:scale(1,1)}to{transform:scale(1.04,.96)}}
+.radio .notes{position:absolute;left:30%;bottom:80%;width:60%;height:80px;pointer-events:none}
+.radio .notes b{position:absolute;bottom:0;left:0;width:22px;opacity:0;animation:xnote 3.6s ease-out infinite}
+.radio .notes b .e3{width:100%;display:block}
+.radio .notes b:nth-child(2){animation-delay:1.2s;left:30%;width:18px}.radio .notes b:nth-child(3){animation-delay:2.4s;left:55%;width:20px}
+@keyframes xnote{0%{opacity:0;transform:translate(0,0) rotate(-10deg)}15%{opacity:1}100%{opacity:0;transform:translate(16px,-70px) rotate(14deg)}}
+.flamingo .fl{display:block;transform-origin:50% 100%;animation:xflam 5s ease-in-out infinite}
+.flamingo .fl .e3,.flamingo .flr .e3{width:100%;display:block}
+.flamingo .flr{position:absolute;left:0;top:100%;width:100%;transform:scaleY(-.6);transform-origin:50% 0;opacity:.25;filter:blur(1px);-webkit-mask-image:linear-gradient(0deg,transparent,#000);mask-image:linear-gradient(0deg,transparent,#000)}
+.flamingo .shadow{display:none}
+@keyframes xflam{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(-12deg) translateY(2px)}80%{transform:rotate(-12deg) translateY(2px)}}
+.towel{position:absolute;width:120px;height:46px;transform:translate(-50%,-50%) perspective(300px) rotateX(55deg) rotate(-8deg);border-radius:6px;
+  background:repeating-linear-gradient(90deg,#FF7A22 0 14px,#FFF6E6 14px 26px,#24B3BE 26px 40px,#FFF6E6 40px 52px);box-shadow:0 6px 10px -4px rgba(80,50,20,.35);pointer-events:none}
+.towel::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,.25),transparent 60%)}
+@media (max-width:640px){.towel,.radio .notes{display:none}}
+.wetsparkle{position:absolute;left:0;right:0;top:0;height:60px;z-index:8;pointer-events:none}
+.wetsparkle i{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;box-shadow:0 0 6px 2px rgba(255,255,255,.8);opacity:0;animation:xspark var(--t) ease-in-out var(--d) infinite}
+@keyframes xspark{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:1;transform:scale(1)}}
+.hero.tod-nuit .wetsparkle i{background:#9ff;box-shadow:0 0 8px 2px rgba(120,255,240,.8)}
+/* bouée de retour en haut */
+.buoy{position:fixed;right:22px;bottom:22px;z-index:70;width:58px;height:58px;padding:0;border:0;background:none;cursor:inherit;opacity:0;transform:translateY(30px) scale(.6);transition:opacity .3s,transform .4s cubic-bezier(.3,1.5,.5,1);pointer-events:none;filter:drop-shadow(0 8px 12px rgba(0,40,60,.35))}
+.buoy.on{opacity:1;transform:none;pointer-events:auto;animation:xfloat 3s ease-in-out infinite}
+.buoy .e3{width:100%;height:100%;display:block}
+.buoy:hover .e3{transform:rotate(-20deg) scale(1.08);transition:transform .25s}
+.buoy.spin .e3{animation:xspin .8s ease-out}
+@keyframes xfloat{0%,100%{translate:0 0}50%{translate:0 -6px}}
+@keyframes xspin{to{transform:rotate(-360deg)}}
+body.is-home .buoy{right:22px}
+/* surfeur au bout de la barre de lecture */
+.surfprog{position:absolute;top:-6px;left:calc(var(--pp,0) * 100%);width:26px;translate:-70% 0;pointer-events:none;transition:left .15s linear;filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))}
+.surfprog .e3{width:100%;display:block}
+body.is-home .surfprog{display:none}
+/* rideau d'ouverture */
+.intro{position:fixed;inset:0;z-index:9999;pointer-events:auto;overflow:hidden}
+.intro .ibg{position:absolute;inset:0;background:radial-gradient(80% 70% at 50% 40%,#24B3BE,#0A7183 70%)}
+.intro .iwave{position:absolute;left:0;top:100%;width:100%;height:121px;margin-top:-1px}
+.intro img{position:absolute;left:50%;top:44%;width:min(560px,78%);translate:-50% -50%;animation:xilogo 1s cubic-bezier(.3,1.5,.5,1) both;filter:drop-shadow(0 20px 30px rgba(0,40,60,.45))}
+.intro .ibubbles i{position:absolute;bottom:-20px;width:var(--s);height:var(--s);border-radius:50%;border:1.5px solid rgba(255,255,255,.7);animation:xibub var(--t) ease-in var(--d) infinite}
+@keyframes xilogo{from{opacity:0;transform:scale(.6) translateY(40px)}to{opacity:1;transform:none}}
+@keyframes xibub{to{transform:translateY(-110vh)}}
+.intro.go{animation:xiup 1.3s cubic-bezier(.7,0,.3,1) forwards;pointer-events:none}
+@keyframes xiup{to{transform:translateY(calc(-100% - 130px))}}
+@media (prefers-reduced-motion:reduce){.intro{display:none}.ship,.mboat,.flamingo .fl,.radio .rd,.radio .notes b,.wetsparkle i,.logorefl img,.logorefl::after,.buoy.on{animation:none!important}}
+
 /* ---------- accueil pleine largeur ---------- */
 body.is-home .shell{max-width:none}
 body.is-home main > *{max-width:1180px;margin-inline:auto}
@@ -1904,7 +1989,7 @@ function shellRain(){
   toast('🐚 Pluie de coquillages !');
 }
 let typed = '';
-addEventListener('keydown', e => { if (e.target.closest('input,textarea')) return; typed = (typed + (e.key.length === 1 ? e.key.toLowerCase() : '')).slice(-12); if (typed.endsWith('coquillage')){ typed = ''; shellRain(); } else if (typed.endsWith('tortue')){ typed = ''; document.querySelectorAll('.turtlewalk').forEach(t => t.classList.toggle('zoom')); toast('🐢 Les tortues font la fête !'); } });
+addEventListener('keydown', e => { if (e.target.closest('input,textarea')) return; typed = (typed + (e.key.length === 1 ? e.key.toLowerCase() : '')).slice(-12); if (typed.endsWith('coquillage')){ typed = ''; shellRain(); } else if (typed.endsWith('mirage') && FW){ typed = ''; FW.show(8); toast('🎆 Bienvenue sur Mirage !'); } else if (typed.endsWith('tortue')){ typed = ''; document.querySelectorAll('.turtlewalk').forEach(t => t.classList.toggle('zoom')); toast('🐢 Les tortues font la fête !'); } });
 /* ---------- ambiance supplémentaire de l'accueil ---------- */
 let RAINTEX = null;
 function rainTex(){
@@ -1917,6 +2002,80 @@ function rainTex(){
   }
   return (RAINTEX = `url(${c.toDataURL()})`);
 }
+/* ---------- v32 : encore plus de détails ---------- */
+let FW = null;
+function fireworks(sky){
+  if (!sky || CALM.matches) return null;
+  const c = document.createElement('canvas'); c.className = 'fworks'; c.setAttribute('aria-hidden', 'true'); sky.prepend(c);
+  const x = c.getContext('2d'); let W = 0, H = 0, parts = [], rockets = [], next = 1.5, last = 0, auto = false;
+  const fit = () => { const r = sky.getBoundingClientRect(), d = Math.min(2, devicePixelRatio || 1); W = r.width; H = r.height; c.width = W * d; c.height = H * d; x.setTransform(d, 0, 0, d, 0, 0); };
+  fit(); addEventListener('resize', fit);
+  const COLS = [['#FF7A22', '#FFD08A'], ['#3FE0E4', '#E9FBFA'], ['#FF5FA2', '#FFD1E8'], ['#FFE36E', '#FFFFFF'], ['#9B7CFF', '#E2D8FF']];
+  function launch(tx, ty){ const [a, b] = COLS[Math.floor(Math.random() * COLS.length)];
+    rockets.push({x: tx ?? W * (.12 + Math.random() * .76), y: H - 90, ty: ty ?? H * (.12 + Math.random() * .3), a, b, vy: -(H * 1.5)}); }
+  function burst(r){ const n = 70 + Math.floor(Math.random() * 40), ring = Math.random() < .35;
+    for (let i = 0; i < n; i++){ const ang = (i / n) * Math.PI * 2 + Math.random() * .1, sp = (ring ? 120 : 40 + Math.random() * 110) * (H / 500);
+      parts.push({x: r.x, y: r.y, vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp, life: 1, dec: .45 + Math.random() * .35, c: Math.random() < .7 ? r.a : r.b, s: 1.4 + Math.random() * 1.6}); }
+    if (typeof AUDIO !== 'undefined' && AUDIO.bloop) try { AUDIO.bloop(.25); } catch (e) {} }
+  function frame(now){
+    if (!c.isConnected) return;
+    const dt = Math.min(.05, (now - last) / 1000 || 0); last = now;
+    if (auto){ next -= dt; if (next <= 0){ launch(); next = 1.6 + Math.random() * 3.2; } }
+    x.globalCompositeOperation = 'destination-out'; x.fillStyle = 'rgba(0,0,0,.22)'; x.fillRect(0, 0, W, H); x.globalCompositeOperation = 'lighter';
+    rockets = rockets.filter(r => { r.y += r.vy * dt; r.vy = Math.min(r.vy * .99, -H * .25); x.fillStyle = r.b; x.beginPath(); x.arc(r.x + Math.sin(now / 60) * .6, r.y, 1.8, 0, 7); x.fill();
+      x.fillStyle = 'rgba(255,220,170,.35)'; x.fillRect(r.x - .6, r.y, 1.2, 14); if (r.y <= r.ty){ burst(r); return false; } return true; });
+    parts = parts.filter(p => { p.vx *= .985; p.vy = p.vy * .985 + 60 * dt; p.x += p.vx * dt; p.y += p.vy * dt; p.life -= p.dec * dt;
+      if (p.life <= 0) return false; x.globalAlpha = Math.min(1, p.life * 1.4); x.fillStyle = p.c; x.beginPath(); x.arc(p.x, p.y, p.s * (.6 + p.life * .6), 0, 7); x.fill();
+      if (Math.random() < .08){ x.fillStyle = '#fff'; x.fillRect(p.x, p.y, 1.2, 1.2); } x.globalAlpha = 1; return true; });
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  return {launch, setAuto: v => { auto = v; next = 1; }, show: (n = 6) => { for (let i = 0; i < n; i++) setTimeout(() => launch(), i * 380); }};
+}
+function moreDetails(hero, m){
+  const sky = hero.querySelector('.sky'), waves = hero.querySelector('.hero-waves'), beach = hero.querySelector('.beach'), oc = hero.querySelector('.ocean');
+  /* feux d'artifice : la nuit tout seuls, et au clic dans le ciel la nuit */
+  FW = fireworks(sky);
+  if (FW){ FW.setAuto(hero.classList.contains('tod-nuit') && !hero.classList.contains('wx-pluie'));
+    sky.addEventListener('click', e => { if (!hero.classList.contains('tod-nuit') || e.target.closest('.hero-logo,.sun,.bottle,a,button')) return; const r = sky.getBoundingClientRect(); FW.launch(e.clientX - r.left, e.clientY - r.top); }); }
+  /* reflet du logo sur l'eau */
+  const lg = hero.querySelector('.hero-logo');
+  if (lg) waves.insertAdjacentHTML('beforeend', `<div class="logorefl" aria-hidden="true"><img src="${lg.src}" alt=""></div>`);
+  /* au loin : un paquebot qui passe (hublots allumés la nuit), une vedette avec son sillage */
+  waves.insertAdjacentHTML('beforeend', `<span class="ship" aria-hidden="true"><span class="s">${im('ship')}</span><i class="lights"></i></span>
+    <span class="mboat" aria-hidden="true"><i class="wake"></i><span class="s">${im('motor_boat')}</span></span>`);
+  /* sur la plage : château de sable, radio qui joue, flamant rose au bord de l'eau, serviette, scintillements du sable mouillé */
+  beach.insertAdjacentHTML('beforeend',
+    spot('castle', 30, .9, 74, '', 0, 'sandcastle', `<span class="sc">${im('castle')}<i class="flag"></i></span>`) +
+    spot('radio', 88, .34, 70, '', 0, 'radio', `<span class="rd">${im('radio')}</span><span class="notes"><b>${im('musical_notes')}</b><b>${im('musical_notes')}</b><b>${im('musical_notes')}</b></span>`) +
+    spot('flamingo', 67, .02, 96, '', 0, 'flamingo', `<span class="fl">${im('flamingo')}</span><span class="flr">${im('flamingo')}</span>`) +
+    `<span class="towel" style="left:39%;top:${BEACH_TOP + .8 * (BEACH_H - BEACH_TOP - 18)}px;z-index:85" aria-hidden="true"></span>` +
+    `<div class="wetsparkle" aria-hidden="true">${Array.from({length: 26}, () => `<i style="left:${(Math.random() * 98).toFixed(1)}%;top:${(Math.random() * 30 + 8).toFixed(0)}px;--t:${(1.5 + Math.random() * 2.5).toFixed(2)}s;--d:${(-Math.random() * 4).toFixed(2)}s"></i>`).join('')}</div>`);
+}
+/* bouée de retour en haut + surfeur sur la barre de lecture (pages du règlement) */
+(function(){
+  const b = document.createElement('button'); b.className = 'buoy'; b.type = 'button'; b.setAttribute('aria-label', 'Remonter en haut de la page');
+  b.innerHTML = im('ring_buoy'); document.body.appendChild(b);
+  b.addEventListener('click', () => { b.classList.remove('spin'); void b.offsetWidth; b.classList.add('spin'); scrollTo({top: 0, behavior: 'smooth'}); });
+  const s = document.createElement('b'); s.className = 'surfprog'; s.setAttribute('aria-hidden', 'true'); s.innerHTML = im('person_surfing');
+  const pr = document.querySelector('.progress'); if (pr) pr.appendChild(s);
+  const upd = () => { const h = document.documentElement, y = h.scrollTop, max = h.scrollHeight - h.clientHeight;
+    b.classList.toggle('on', y > 700); if (pr) pr.style.setProperty('--pp', max > 0 ? Math.min(1, y / max) : 0); };
+  addEventListener('scroll', upd, {passive: true}); addEventListener('hashchange', () => setTimeout(upd, 60)); upd();
+})();
+/* rideau d'ouverture : une vague qui dévoile l'accueil (une fois par session) */
+(function(){
+  let seen = false; try { seen = sessionStorage.getItem('mirage-intro') === '1'; sessionStorage.setItem('mirage-intro', '1'); } catch (e) {}
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (seen || CALM.matches || (h && h !== 'accueil')) return;
+  const d = document.createElement('div'); d.className = 'intro'; d.setAttribute('aria-hidden', 'true');
+  d.innerHTML = `<div class="ibg"></div><img src="${LOGO}" alt=""><svg class="iwave" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 0 H1440 V60 C1260 110 1100 20 900 60 S520 110 360 60 120 30 0 70Z" fill="#0A7183"/><path d="M0 0 H1440 V40 C1300 80 1120 10 940 44 S560 90 380 44 140 20 0 50Z" fill="#14879a"/></svg><div class="ibubbles">${Array.from({length: 18}, () => `<i style="left:${Math.random() * 100}%;--s:${4 + Math.random() * 14}px;--t:${1 + Math.random() * 1.4}s;--d:${Math.random() * .6}s"></i>`).join('')}</div>`;
+  document.body.appendChild(d);
+  setTimeout(() => d.classList.add('go'), 1100);
+  setTimeout(() => d.remove(), 2600);
+  d.addEventListener('click', () => { d.classList.add('go'); setTimeout(() => d.remove(), 900); });
+})();
+
 function moreLife(hero){
   const sky = hero.querySelector('.sky'), waves = hero.querySelector('.hero-waves'), beach = hero.querySelector('.beach'), oc = hero.querySelector('.ocean');
   sky.insertAdjacentHTML('beforeend', `
@@ -1958,6 +2117,7 @@ function wakeHome(){
   moreLife(hero);
   const m = momentNow(); const w = weatherNow(m); hero.classList.add('wx-' + w); setMoment(hero, m);
   if (w === 'pluie') hero.style.setProperty('--rain', rainTex());
+  moreDetails(hero, m);
   const waves = hero.querySelector('.hero-waves'); const b = document.createElement('button'); b.className = 'bottle'; b.type = 'button'; b.setAttribute('aria-label', 'Ouvrir le message dans la bouteille'); b.innerHTML = BOTTLE_SVG + '<span class="b-hint">Un message !</span>'; b.onclick = openBottle; waves.appendChild(b);
   const sun = hero.querySelector('.sun'); sun.title = 'Changer le moment de la journée';
   sun.addEventListener('click', () => { const n = MOMENTS[(MOMENTS.indexOf(hero.dataset.moment) + 1) % 3]; setMoment(hero, n); toast({jour: '☀️ Grand soleil sur l\'île', couchant: '🌅 Coucher de soleil', nuit: '🌙 La nuit tombe sur Mirage'}[n]); });
