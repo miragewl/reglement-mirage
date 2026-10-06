@@ -1,0 +1,5 @@
+# Date et heure d'ouverture de la V2 (heure de Paris).
+# Écris-la sur une ligne sous ces commentaires, par exemple :
+# 25/10/2026 21h00
+# Tant qu'il n'y a pas de date, le compte à rebours ne s'affiche pas.
+# Une fois l'heure passée, il disparaît tout seul (avec un bouquet de feux d'artifice au moment exact).

@@ -236,8 +236,36 @@ CONSEILS = []
 cp = S / 'conseils.txt'
 if cp.exists():
     CONSEILS = [l.strip() for l in cp.read_text(encoding='utf-8').splitlines() if l.strip() and not l.strip().startswith('#')]
+OUVERTURE = None
+op = S / 'ouverture.txt'
+if op.exists():
+    for l in op.read_text(encoding='utf-8').splitlines():
+        l = l.strip()
+        if not l or l.startswith('#'):
+            continue
+        m = re.match(r'^(\d{1,2})/(\d{1,2})/(\d{4})\s+(\d{1,2})\s*[h:H]\s*(\d{0,2})$', l) or None
+        m2 = re.match(r'^(\d{4})-(\d{1,2})-(\d{1,2})[ T](\d{1,2}):(\d{2})$', l)
+        try:
+            from datetime import datetime, timezone
+            if m:
+                d, mo, y, h, mi = int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4)), int(m.group(5) or 0)
+            elif m2:
+                y, mo, d, h, mi = (int(x) for x in m2.groups())
+            else:
+                print('ouverture.txt : date non reconnue :', l, '(format attendu : 25/10/2026 21h00)')
+                break
+            try:
+                from zoneinfo import ZoneInfo
+                dt = datetime(y, mo, d, h, mi, tzinfo=ZoneInfo('Europe/Paris'))
+            except Exception:
+                dt = datetime(y, mo, d, h, mi, tzinfo=timezone.utc)
+            OUVERTURE = dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+            print('Ouverture V2 :', l, '->', OUVERTURE)
+        except Exception as e:
+            print('ouverture.txt : date invalide :', l, e)
+        break
 GAL = sorted(f.name for f in (IMGS / 'galerie').glob('*') if f.suffix.lower() in ('.jpg', '.jpeg', '.png', '.webp')) if (IMGS / 'galerie').exists() else []
-out = dict(pages=pages, emb=EMB, emo=EMO, ico=ICO, three={}, models={}, galerie=['galerie/' + n for n in GAL], lexique=LEX, conseils=CONSEILS)
+out = dict(pages=pages, emb=EMB, emo=EMO, ico=ICO, three={}, models={}, galerie=['galerie/' + n for n in GAL], lexique=LEX, conseils=CONSEILS, ouverture=OUVERTURE)
 page = tplsrc.replace('__LOGO__', LOGO).replace('__LOGOM__', LOGOM).replace('__DATA__', json.dumps(out, ensure_ascii=False).replace('</', '<\\/'))
 site = S / 'site'
 site.mkdir(exist_ok=True)

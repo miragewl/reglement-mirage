@@ -986,6 +986,142 @@ body.is-home .surfprog{display:none}
 @keyframes xiup{to{transform:translateY(calc(-100% - 130px))}}
 @media (prefers-reduced-motion:reduce){.intro{display:none}.ship,.mboat,.flamingo .fl,.radio .rd,.radio .notes b,.wetsparkle i,.logorefl img,.logorefl::after,.buoy.on{animation:none!important}}
 
+/* ---------- v33 : compte à rebours ---------- */
+.v2cd{position:relative;z-index:6;margin:26px auto 0;max-width:560px;padding:16px 18px 18px;border-radius:22px;background:linear-gradient(180deg,rgba(3,40,54,.55),rgba(3,30,42,.6));border:1px solid rgba(255,255,255,.22);box-shadow:0 20px 40px -24px rgba(0,0,0,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.v2cd .t{margin:0 0 10px;font:700 12px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#FFD08A}
+.v2cd .row{display:flex;justify-content:center;gap:10px}
+.v2cd .u{flex:1;max-width:110px;padding:10px 4px 8px;border-radius:14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18)}
+.v2cd .u b{display:block;font:800 clamp(28px,5vw,44px)/1 var(--display);color:#fff;font-variant-numeric:tabular-nums;text-shadow:0 4px 14px rgba(0,0,0,.35)}
+.v2cd .u b.qtk{animation:qtick .45s cubic-bezier(.3,1.6,.5,1)}
+.v2cd .u small{display:block;margin-top:6px;font:600 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#BFEDEB}
+.v2cd.soon .u b{color:#FFB443}
+.v2cd .open{display:none;margin:0;font:800 20px/1.3 var(--display);color:#fff}
+.v2cd .open .e3{width:28px;height:28px;vertical-align:-6px}
+.v2cd.is-open .row,.v2cd.is-open .t{display:none}
+.v2cd.is-open .open{display:block;animation:qtick .6s ease}
+@keyframes qtick{0%{transform:translateY(-8px) scale(1.15);opacity:.4}100%{transform:none;opacity:1}}
+/* ---------- fêtes ---------- */
+.qbat{position:absolute;top:18%;left:-10%;width:42px;z-index:3;pointer-events:none;animation:qbatfly 18s linear infinite}
+.qbat span{display:block;animation:qflap .25s ease-in-out infinite alternate}
+.qbat .e3{width:100%;display:block}
+.qbat.b1{top:28%;width:30px;animation-duration:23s;animation-delay:-8s}.qbat.b2{top:12%;width:26px;animation-duration:27s;animation-delay:-15s}.qbat.b3{top:34%;width:36px;animation-duration:20s;animation-delay:-4s;animation-direction:reverse}
+@keyframes qbatfly{0%{left:-10%;transform:translateY(0)}25%{transform:translateY(-30px)}50%{transform:translateY(20px)}75%{transform:translateY(-16px)}100%{left:110%;transform:translateY(0)}}
+@keyframes qflap{from{transform:scaleY(1)}to{transform:scaleY(.6) translateY(4px)}}
+.qpump .pk{display:block;animation:qwobble 3s ease-in-out infinite;transform-origin:50% 100%}
+.qpump .pk .e3{width:100%;display:block}
+.qpump .glo{position:absolute;left:50%;top:55%;width:180%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(255,150,40,.55),transparent 65%);opacity:0;animation:qglo 2.2s ease-in-out infinite alternate;pointer-events:none}
+.hero.tod-nuit .qpump .glo,.hero.tod-couchant .qpump .glo{opacity:1}
+@keyframes qglo{from{transform:scale(.85);filter:brightness(.9)}to{transform:scale(1.1);filter:brightness(1.2)}}
+@keyframes qwobble{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.qghost .gh{display:block;opacity:.75;animation:qghost 6s ease-in-out infinite}
+.qghost .gh .e3{width:100%;display:block}
+.qghost .shadow{display:none}
+@keyframes qghost{0%,100%{transform:translate(0,0)}50%{transform:translate(14px,-22px)}}
+.qweb{position:absolute;right:-14px;top:-10px;width:56px;opacity:.8;pointer-events:none}
+.qweb .e3{width:100%;display:block}
+.hero.fete-halloween.tod-nuit .nightveil{background:rgba(42,8,64,.5)}
+.hero.fete-halloween.tod-nuit .hero-waves path[style*="--w1"]{fill:color-mix(in srgb,var(--w1) 52%,rgb(42,8,64))!important}
+.hero.fete-halloween.tod-nuit .hero-waves path[style*="--w2"]{fill:color-mix(in srgb,var(--w2) 52%,rgb(42,8,64))!important}
+.hero.fete-halloween.tod-nuit .hero-waves path[style*="--w3"]{fill:color-mix(in srgb,var(--w3) 52%,rgb(42,8,64))!important}
+.hero.fete-halloween.tod-nuit .hero-waves path[style*="--w4"]{fill:color-mix(in srgb,var(--w4) 50%,rgb(42,8,64))!important}
+.hero.fete-halloween.tod-nuit .oseam{filter:brightness(.6) hue-rotate(40deg)}
+.hero.fete-halloween.tod-nuit .sky{background:linear-gradient(180deg,#120726,#2a0f4a 60%,#4a1f5c)}
+.qhat{position:absolute;left:4%;top:-38%;width:70%;height:70%;pointer-events:none;transform:rotate(-24deg);z-index:2}
+.qhat::before{content:"";position:absolute;left:8%;right:8%;bottom:14%;top:0;background:linear-gradient(160deg,#ff4d4d,#c4161c);clip-path:polygon(50% 0,100% 100%,0 100%);border-radius:4px}
+.qhat::after{content:"";position:absolute;left:0;right:0;bottom:0;height:24%;border-radius:20px;background:#fff;box-shadow:0 0 0 0 #fff,calc(50%) -320% 0 -2px transparent}
+.qhat{filter:drop-shadow(0 4px 6px rgba(0,0,0,.25))}
+.sun .qhat i{display:none}
+.qsnow{position:absolute;inset:0;z-index:4;pointer-events:none;background-image:radial-gradient(2.5px 2.5px at 10% 20%,#fff 50%,transparent 60%),radial-gradient(2px 2px at 30% 60%,#fff 50%,transparent 60%),radial-gradient(3px 3px at 55% 30%,#fff 50%,transparent 60%),radial-gradient(2px 2px at 75% 80%,#fff 50%,transparent 60%),radial-gradient(2.5px 2.5px at 90% 45%,#fff 50%,transparent 60%),radial-gradient(1.8px 1.8px at 45% 90%,#fff 50%,transparent 60%);background-size:220px 220px;animation:qsnowfall 9s linear infinite;opacity:.9}
+.qsnow.s2{background-size:340px 340px;animation-duration:15s;opacity:.6;filter:blur(1px)}
+@keyframes qsnowfall{from{background-position:0 0}to{background-position:60px 220px}}
+.qsnow.s2{animation-name:qsnowfall2}
+@keyframes qsnowfall2{from{background-position:0 0}to{background-position:-50px 340px}}
+.qsnowfloor{position:absolute;inset:0;z-index:6;pointer-events:none}
+.qsnowfloor i{position:absolute;height:14px;border-radius:50%;background:radial-gradient(ellipse at 50% 40%,#fff,rgba(255,255,255,.85) 50%,rgba(255,255,255,0) 72%)}
+.qtree .tr{display:block}
+.qtree .tr .e3{width:100%;display:block}
+.qtree .star{position:absolute;left:50%;top:-4%;width:16px;height:16px;translate:-50% 0;background:#FFE36E;clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);animation:qstar 1.4s ease-in-out infinite alternate;filter:drop-shadow(0 0 6px #ffd84d)}
+@keyframes qstar{from{transform:scale(.85)}to{transform:scale(1.15)}}
+.qgarland{position:absolute;left:-6px;right:-6px;top:34px;height:16px;display:flex;justify-content:space-between;pointer-events:none;border-top:2px solid rgba(40,60,40,.6);border-radius:0 0 50% 50%/0 0 100% 100%}
+.qgarland i{width:9px;height:12px;margin-top:-1px;border-radius:50% 50% 50% 50%/40% 40% 60% 60%;background:var(--c);box-shadow:0 0 8px 2px var(--c);animation:qblink 1.2s ease-in-out var(--d) infinite alternate}
+.qgarland i:nth-child(odd){margin-top:5px}
+@keyframes qblink{from{opacity:.35;box-shadow:none}to{opacity:1}}
+.qny{position:absolute;left:50%;top:7%;translate:-50% 0;z-index:4;padding:8px 18px;border-radius:999px;font:800 clamp(16px,2.4vw,24px)/1 var(--display);color:#fff;background:linear-gradient(90deg,#FF7A22,#FF5FA2,#9B7CFF);box-shadow:0 10px 24px -10px rgba(0,0,0,.4);animation:qtick .8s ease}
+/* ---------- météos rares ---------- */
+.hero.wx-orage .sky{background:linear-gradient(180deg,#1d2733 0%,#3b4856 55%,#66737c 100%)!important}
+.hero.wx-orage.tod-nuit .sky{background:linear-gradient(180deg,#05080d,#121b26 60%,#1f2c38)!important}
+.hero.wx-orage .wave:nth-child(1){animation-duration:9s}.hero.wx-orage .wave:nth-child(2){animation-duration:7s}.hero.wx-orage .wave:nth-child(3){animation-duration:5s}.hero.wx-orage .wave:nth-child(4){animation-duration:4s}
+@keyframes qchop{from{transform:translateY(0) scaleY(1)}to{transform:translateY(-5px) scaleY(1.08)}}
+.hero.wx-orage .sun,.hero.wx-orage .sunpath,.hero.wx-orage .boat,.hero.wx-orage .canoe,.hero.wx-orage .mboat{display:none}
+.qflash{position:absolute;inset:0;z-index:5;pointer-events:none;background:#fff;opacity:0}
+.qflash.go{animation:qflash 1s ease-out}
+@keyframes qflash{0%{opacity:0}5%{opacity:.75}10%{opacity:.1}16%{opacity:.55}100%{opacity:0}}
+.qbolt{position:absolute;top:0;width:60px;height:55%;z-index:5;pointer-events:none;opacity:0;filter:drop-shadow(0 0 12px #fff8c0) drop-shadow(0 0 30px #b8d4ff)}
+.qbolt.go{animation:qbolt .7s ease-out}
+@keyframes qbolt{0%{opacity:0}6%{opacity:1}14%{opacity:.2}20%{opacity:1}100%{opacity:0}}
+.qfog{position:absolute;left:-30%;width:160%;top:-40px;height:150px;z-index:6;pointer-events:none;background:radial-gradient(40% 50% at 30% 50%,rgba(255,255,255,.75),transparent 70%),radial-gradient(35% 45% at 70% 60%,rgba(255,255,255,.65),transparent 70%);filter:blur(10px);animation:qfog 60s linear infinite alternate;opacity:.85}
+.qfog.fg2{top:10px;height:120px;opacity:.6;animation-duration:85s;animation-direction:alternate-reverse}
+.qfog.fg3{top:-20px;height:160px;opacity:.55;z-index:40}
+@keyframes qfog{from{transform:translateX(-10%)}to{transform:translateX(12%)}}
+.hero.wx-brume .sky{filter:saturate(.8)}
+.qwhale{position:absolute;bottom:20px;width:150px;z-index:7;pointer-events:none;animation:qbreach 2.6s cubic-bezier(.35,0,.4,1) forwards;transform-origin:50% 60%}
+.qwhale .w{display:block}
+.qwhale .e3{width:100%;display:block;transform:scaleX(-1)}
+@keyframes qbreach{0%{transform:translate(-40px,140px) rotate(-55deg);opacity:0}10%{opacity:1}45%{transform:translate(40px,-160px) rotate(-12deg)}62%{transform:translate(90px,-170px) rotate(18deg)}100%{transform:translate(170px,150px) rotate(70deg);opacity:1}}
+.qsplash{position:absolute;bottom:40px;width:0;height:0;z-index:8;pointer-events:none}
+.qsplash i{position:absolute;left:0;top:0;width:var(--s);height:var(--s);border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#bff3f5 60%,rgba(140,220,230,.6));opacity:0}
+.qsplash.go i{animation:qdrop 1.2s cubic-bezier(.2,.7,.4,1) forwards}
+@keyframes qdrop{0%{opacity:1;transform:rotate(var(--a)) translateX(0)}60%{opacity:1}100%{opacity:0;transform:rotate(var(--a)) translateX(var(--v)) translateY(40px)}}
+.qdrops{position:fixed;inset:0;z-index:9000;pointer-events:none}
+.qdrops i{position:absolute;width:var(--s);height:calc(var(--s) * 1.25);border-radius:50% 50% 48% 52%/60% 60% 40% 40%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9) 0 12%,rgba(200,240,255,.25) 30%,rgba(120,200,230,.15) 70%,rgba(255,255,255,.5) 90%);box-shadow:inset 0 -3px 6px rgba(0,60,90,.18),0 2px 4px rgba(0,40,60,.15);-webkit-backdrop-filter:blur(2px) saturate(1.3);backdrop-filter:blur(2px) saturate(1.3);opacity:0;animation:qscreen 3s ease-in var(--d) forwards}
+@keyframes qscreen{0%{opacity:0;transform:scale(.4)}8%{opacity:1;transform:scale(1)}70%{opacity:.9}100%{opacity:0;transform:translateY(120px) scaleY(1.4)}}
+/* ---------- pêche ---------- */
+.hero .uw .swimmer{pointer-events:auto}
+.hero .uw .swimmer:hover .e3{filter:drop-shadow(0 0 8px rgba(255,255,255,.9))}
+.qline{position:absolute;top:0;width:2px;z-index:7;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.2),rgba(255,255,255,.9));transform-origin:top}
+.qline::after{content:"";position:absolute;left:-4px;bottom:-6px;width:8px;height:10px;border:2px solid #e8eef0;border-top:0;border-radius:0 0 8px 8px;border-left-color:transparent}
+.qplus{position:absolute;z-index:9;pointer-events:none;font:800 22px/1 var(--display);color:#FFD08A;text-shadow:0 2px 6px rgba(0,0,0,.4);translate:-50% 0;animation:qplus 1.4s ease-out forwards}
+@keyframes qplus{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-50px) scale(1.3)}}
+.qcatch{position:absolute;left:18px;bottom:150px;z-index:8;display:none;align-items:center;gap:6px;padding:6px 12px 6px 8px;border-radius:999px;background:rgba(3,34,46,.6);border:1px solid rgba(255,255,255,.3);color:#fff;font:700 14px/1 var(--mono);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.qcatch.on{display:flex}
+.qcatch .e3{width:24px;height:24px}
+.qcatch span{opacity:.7}
+.qcatch.qpop{animation:qtick .5s cubic-bezier(.3,1.6,.5,1)}
+.qwin{position:fixed;inset:0;z-index:9500;display:grid;place-items:center;background:rgba(2,20,28,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);animation:qfade .3s ease}
+.qwin .card{position:relative;width:min(420px,calc(100vw - 32px));padding:28px 24px 24px;border-radius:24px;text-align:center;background:var(--surface);color:var(--fg);box-shadow:0 30px 60px -20px rgba(0,0,0,.5);animation:qtick .5s cubic-bezier(.3,1.6,.5,1)}
+.qwin .card>.e3{width:96px;height:96px;margin:-70px auto 6px;display:block;filter:drop-shadow(0 10px 16px rgba(0,0,0,.3));animation:qwobble 2s ease-in-out infinite}
+.qwin h3{margin:0 0 8px;font:800 26px/1.1 var(--display)}
+.qwin p{margin:0 0 18px;color:var(--muted)}
+.qwin .x{position:absolute;right:12px;top:10px;width:34px;height:34px;border:0;border-radius:50%;background:var(--bg2);color:var(--fg);font-size:20px;cursor:inherit}
+@keyframes qfade{from{opacity:0}}
+/* ---------- mode pirate ---------- */
+body.pirate{--accent:#C9962B;--accent-2:#E8C75A;--sea:#2F6F73;--sea-deep:#1E4E52;--sea-soft:#E9DCC0;--bg:#F1E4C6;--bg2:#E8D6AE;--surface:#FAF1DC;--line:#D8C08E;--line-2:#C4A66C;--fg:#2A1C0C;--muted:#6E5634;--sand:#D9B97C;--sand-2:#C59E5C}
+@media (prefers-color-scheme:dark){body.pirate:not(.x){--bg:#140E07;--bg2:#1E160C;--surface:#231A0F;--line:#3A2C18;--line-2:#4C3A20;--fg:#F3E6C8;--muted:#BFA77E}}
+:root[data-theme="dark"] body.pirate{--bg:#140E07;--bg2:#1E160C;--surface:#231A0F;--line:#3A2C18;--line-2:#4C3A20;--fg:#F3E6C8;--muted:#BFA77E}
+:root[data-theme="light"] body.pirate{--bg:#F1E4C6;--bg2:#E8D6AE;--surface:#FAF1DC;--line:#D8C08E;--line-2:#C4A66C;--fg:#2A1C0C;--muted:#6E5634}
+body.pirate .hero:not(.tod-nuit):not(.wx-pluie) .sky{background:linear-gradient(180deg,#8fb9bf 0%,#d9d2ad 70%,#efdcae 100%)}
+.qjolly{display:inline-block;width:30px;margin-left:6px;transform-origin:0 70%;animation:jolly 1.2s ease-in-out infinite alternate}
+.qjolly .e3{width:100%;display:block}
+.qpirship{position:absolute;bottom:34px;left:110%;width:170px;z-index:6;pointer-events:none;animation:qpir 60s linear infinite}
+.qpirship .pship{position:relative;left:0;bottom:0;width:100%}
+@keyframes qpir{from{left:110%}to{left:-25%}}
+/* ---------- crabe mascotte ---------- */
+.qcrab{position:fixed;right:96px;bottom:-90px;z-index:65;transition:bottom .6s cubic-bezier(.3,1.5,.5,1);pointer-events:none}
+.qcrab.up{bottom:10px;pointer-events:auto}
+body.is-home .qcrab{display:none}
+.qcrab .me{display:block;width:70px;height:70px;padding:0;border:0;background:none;cursor:inherit;animation:qcrabidle 3s ease-in-out infinite;filter:drop-shadow(0 6px 8px rgba(0,0,0,.25))}
+.qcrab .me .e3{width:100%;height:100%;display:block}
+.qcrab .me:hover{animation:qcrabwave .4s ease-in-out infinite alternate}
+@keyframes qcrabidle{0%,70%,100%{transform:translateX(0) rotate(0)}78%{transform:translateX(-6px) rotate(-6deg)}86%{transform:translateX(6px) rotate(6deg)}}
+@keyframes qcrabwave{from{transform:rotate(-8deg) translateY(0)}to{transform:rotate(8deg) translateY(-4px)}}
+.qcrab .qbub{position:absolute;right:10px;bottom:78px;width:min(300px,calc(100vw - 40px));padding:14px 16px 12px;border-radius:18px 18px 4px 18px;background:var(--surface);color:var(--fg);border:1px solid var(--line);box-shadow:0 18px 36px -18px rgba(0,0,0,.45);font-size:14.5px;line-height:1.5;animation:qtick .35s ease}
+.qcrab .qbub p{margin:0 0 10px}
+.qcrab .act{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.qcrab .nx{border:0;padding:7px 12px;border-radius:999px;background:var(--accent);color:#fff;font:700 12.5px/1 var(--body);cursor:inherit}
+.qcrab .cl{border:0;width:28px;height:28px;border-radius:50%;background:var(--bg2);color:var(--fg);font-size:17px;cursor:inherit}
+@media (max-width:1100px){.qcrab{right:84px}.qcrab .me{width:54px;height:54px}.qcrab .qbub{bottom:62px;right:-60px}}
+@media (prefers-reduced-motion:reduce){.qbat,.qbat span,.qpump .pk,.qghost .gh,.qsnow,.qgarland i,.qfog,.hero.wx-orage .hero-waves,.qpirship,.qcrab .me{animation:none!important}}
+
 /* ---------- accueil pleine largeur ---------- */
 body.is-home .shell{max-width:none}
 body.is-home main > *{max-width:1180px;margin-inline:auto}
@@ -1962,9 +2098,9 @@ function setMoment(hero, m){
   if (typeof AUDIO !== 'undefined' && AUDIO.mood && document.body.classList.contains('is-home')) AUDIO.mood(m === 'nuit' ? {waves: 1, wind: .3, insects: 1} : hero.classList.contains('wx-pluie') ? {waves: 1, rain: 1, wind: .6} : {waves: 1, wind: .4, birds: 1});
 }
 function weatherNow(m){
-  const q = new URLSearchParams(location.search).get('meteo'); if (['pluie', 'arcenciel', 'beau'].includes(q)) return q;
+  const q = new URLSearchParams(location.search).get('meteo'); if (['pluie', 'arcenciel', 'beau', 'orage'].includes(q)) return q;
   let w = null; try { w = sessionStorage.getItem('meteo'); } catch {}
-  if (!w){ const r = Math.random(); w = r < .2 ? 'pluie' : r < .35 ? 'arcenciel' : 'beau'; try { sessionStorage.setItem('meteo', w); } catch {} }
+  if (!w){ const r = Math.random(); w = r < .06 ? 'orage' : r < .22 ? 'pluie' : r < .35 ? 'arcenciel' : 'beau'; try { sessionStorage.setItem('meteo', w); } catch {} }
   if (w === 'arcenciel' && m === 'nuit') w = 'beau';
   return w;
 }
@@ -1989,7 +2125,7 @@ function shellRain(){
   toast('🐚 Pluie de coquillages !');
 }
 let typed = '';
-addEventListener('keydown', e => { if (e.target.closest('input,textarea')) return; typed = (typed + (e.key.length === 1 ? e.key.toLowerCase() : '')).slice(-12); if (typed.endsWith('coquillage')){ typed = ''; shellRain(); } else if (typed.endsWith('mirage') && FW){ typed = ''; FW.show(8); toast('🎆 Bienvenue sur Mirage !'); } else if (typed.endsWith('tortue')){ typed = ''; document.querySelectorAll('.turtlewalk').forEach(t => t.classList.toggle('zoom')); toast('🐢 Les tortues font la fête !'); } });
+addEventListener('keydown', e => { if (e.target.closest('input,textarea')) return; typed = (typed + (e.key.length === 1 ? e.key.toLowerCase() : '')).slice(-12); if (typed.endsWith('coquillage')){ typed = ''; shellRain(); } else if (typed.endsWith('abordage')){ typed = ''; pirateMode(!document.body.classList.contains('pirate')); } else if (typed.endsWith('mirage') && FW){ typed = ''; FW.show(8); toast('🎆 Bienvenue sur Mirage !'); } else if (typed.endsWith('tortue')){ typed = ''; document.querySelectorAll('.turtlewalk').forEach(t => t.classList.toggle('zoom')); toast('🐢 Les tortues font la fête !'); } });
 /* ---------- ambiance supplémentaire de l'accueil ---------- */
 let RAINTEX = null;
 function rainTex(){
@@ -2076,6 +2212,183 @@ function moreDetails(hero, m){
   d.addEventListener('click', () => { d.classList.add('go'); setTimeout(() => d.remove(), 900); });
 })();
 
+/* ---------- v33 : compte à rebours, fêtes, météos rares, pêche, pirates, crabe ---------- */
+const QS = new URLSearchParams(location.search);
+const qget = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+const qset = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+function feteNow(d = new Date()){
+  const f = QS.get('fete'); if (['halloween', 'noel', 'nouvelan', 'aucune'].includes(f)) return f === 'aucune' ? null : f;
+  const m = d.getMonth() + 1, j = d.getDate();
+  if ((m === 10 && j >= 20) || (m === 11 && j <= 2)) return 'halloween';
+  if (m === 12 && j >= 1 && j <= 26) return 'noel';
+  if ((m === 12 && j === 31) || (m === 1 && j === 1)) return 'nouvelan';
+  return null;
+}
+function brumeNow(){
+  if (QS.get('brume') === '1') return true; if (QS.get('brume') === '0') return false;
+  let b = null; try { b = sessionStorage.getItem('brume'); } catch (e) {}
+  if (b === null){ const h = new Date().getHours(); b = (h >= 5 && h < 10 && Math.random() < .5) ? '1' : '0'; try { sessionStorage.setItem('brume', b); } catch (e) {} }
+  return b === '1';
+}
+/* compte à rebours de l'ouverture de la V2 */
+function countdown(hero){
+  if (!DATA.ouverture) return;
+  const T = Date.parse(DATA.ouverture); if (isNaN(T)) return;
+  const oc = hero.querySelector('.ocean'), cta = oc.querySelector('.cta');
+  const now0 = Date.now();
+  if (now0 >= T + 864e5) return;
+  const box = document.createElement('div'); box.className = 'v2cd';
+  const unit = (k, l) => `<div class="u"><b data-k="${k}">00</b><small>${l}</small></div>`;
+  box.innerHTML = `<p class="t">Ouverture de la V2 dans</p><div class="row">${unit('j', 'jours')}${unit('h', 'heures')}${unit('m', 'minutes')}${unit('s', 'secondes')}</div><p class="open">${im('party_popper')} La V2 est ouverte ! Bon jeu sur Mirage ${im('party_popper')}</p>`;
+  (cta || oc.lastElementChild).after(box);
+  let fired = now0 >= T;
+  const set = (k, v) => { const e = box.querySelector(`[data-k="${k}"]`); const s = String(v).padStart(2, '0'); if (e.textContent !== s){ e.textContent = s; e.classList.remove('qtk'); void e.offsetWidth; e.classList.add('qtk'); } };
+  function upd(){
+    if (!box.isConnected) return;
+    const left = T - Date.now();
+    if (left <= 0){
+      box.classList.add('is-open');
+      if (!fired){ fired = true; if (FW) FW.show(16); toast('🎉 La V2 est ouverte !'); }
+      return;
+    }
+    const s = Math.floor(left / 1000);
+    set('j', Math.floor(s / 86400)); set('h', Math.floor(s / 3600) % 24); set('m', Math.floor(s / 60) % 60); set('s', s % 60);
+    box.classList.toggle('soon', left < 60e3);
+    setTimeout(upd, 1000 - (Date.now() % 1000) + 5);
+  }
+  upd();
+}
+/* fêtes de l'année */
+function fetes(hero, m){
+  const f = feteNow(); if (!f) return; hero.classList.add('fete-' + f);
+  const sky = hero.querySelector('.sky'), beach = hero.querySelector('.beach');
+  if (f === 'halloween'){
+    sky.insertAdjacentHTML('beforeend', [0, 1, 2, 3].map(i => `<span class="qbat b${i}" aria-hidden="true"><span>${im('bat')}</span></span>`).join(''));
+    beach.insertAdjacentHTML('beforeend',
+      spot('jack_o_lantern', 18, .62, 58, '', 0, 'qpump', `<span class="pk">${im('jack_o_lantern')}</span><i class="glo"></i>`) +
+      spot('jack_o_lantern', 46, .82, 66, '', 0, 'qpump', `<span class="pk">${im('jack_o_lantern')}</span><i class="glo"></i>`) +
+      spot('jack_o_lantern', 81, .28, 46, '', 0, 'qpump', `<span class="pk">${im('jack_o_lantern')}</span><i class="glo"></i>`) +
+      spot('ghost', 10, .35, 64, '', 0, 'qghost', `<span class="gh">${im('ghost')}</span>`));
+    const k = hero.querySelector('.kiosk'); if (k) k.insertAdjacentHTML('beforeend', `<span class="qweb">${im('spider_web')}</span>`);
+  }
+  if (f === 'noel'){
+    const sun = hero.querySelector('.sun'); if (sun) sun.insertAdjacentHTML('beforeend', '<i class="qhat" aria-hidden="true"></i>');
+    sky.insertAdjacentHTML('beforeend', '<div class="qsnow" aria-hidden="true"></div><div class="qsnow s2" aria-hidden="true"></div>');
+    beach.insertAdjacentHTML('beforeend', `<div class="qsnowfloor" aria-hidden="true">${Array.from({length: 16}, () => `<i style="left:${(Math.random() * 96).toFixed(1)}%;top:${(70 + Math.random() * 190).toFixed(0)}px;width:${(40 + Math.random() * 90).toFixed(0)}px"></i>`).join('')}</div>` +
+      spot('christmas_tree', 14, .55, 110, '', 0, 'qtree', `<span class="tr">${im('christmas_tree')}</span><i class="star"></i>`) +
+      spot('wrapped_gift', 19, .62, 40) + spot('wrapped_gift', 10, .66, 34) +
+      spot('snowman', 60, .48, 70, 'k-idle', 0, 'qsnowman'));
+    const k = hero.querySelector('.kiosk'); if (k) k.insertAdjacentHTML('beforeend', `<div class="qgarland" aria-hidden="true">${Array.from({length: 11}, (_, i) => `<i style="--c:${['#FF4D4D', '#FFD84D', '#4DD2FF', '#7CFF6B'][i % 4]};--d:${(i * .17).toFixed(2)}s"></i>`).join('')}</div>`);
+  }
+  if (f === 'nouvelan'){
+    const d = new Date(), y = d.getMonth() === 0 ? d.getFullYear() : d.getFullYear() + 1;
+    sky.insertAdjacentHTML('beforeend', `<div class="qny" aria-hidden="true">${d.getMonth() === 0 ? 'Bonne année ' + y + ' !' : 'Bientôt ' + y + ' !'}</div>`);
+    beach.insertAdjacentHTML('beforeend', spot('party_popper', 20, .6, 56) + spot('sparkles', 52, .45, 40));
+    if (FW) FW.setAuto(true);
+    if (d.getMonth() === 11){ const mid = new Date(y, 0, 1, 0, 0, 0).getTime() - Date.now(); if (mid > 0 && mid < 864e5) setTimeout(() => { if (FW && hero.isConnected){ FW.show(30); toast('🎆 Bonne année ' + y + ' !'); } }, mid); }
+  }
+}
+/* météos rares : orage, brume, baleine */
+function rareWeather(hero, m){
+  const sky = hero.querySelector('.sky'), waves = hero.querySelector('.hero-waves');
+  if (hero.classList.contains('wx-orage')){
+    sky.insertAdjacentHTML('beforeend', '<div class="qflash" aria-hidden="true"></div><svg class="qbolt" viewBox="0 0 60 220" aria-hidden="true"><path d="M34 0 L12 96 L30 96 L8 220 L52 80 L32 80 L50 0Z" fill="#FFFBE0"/></svg>');
+    const fl = sky.querySelector('.qflash'), bo = sky.querySelector('.qbolt');
+    const strike = () => { if (!hero.isConnected) return;
+      bo.style.left = (12 + Math.random() * 76) + '%'; bo.style.transform = `scale(${.7 + Math.random() * .6}) rotate(${(Math.random() - .5) * 20}deg)`;
+      fl.classList.remove('go'); bo.classList.remove('go'); void fl.offsetWidth; fl.classList.add('go'); bo.classList.add('go');
+      setTimeout(strike, 3500 + Math.random() * 7000); };
+    if (!CALM.matches) setTimeout(strike, 1500);
+  }
+  if (brumeNow() && m !== 'nuit'){ hero.classList.add('wx-brume'); waves.insertAdjacentHTML('beforeend', '<div class="qfog" aria-hidden="true"></div><div class="qfog fg2" aria-hidden="true"></div>'); hero.querySelector('.beach').insertAdjacentHTML('beforeend', '<div class="qfog fg3" aria-hidden="true"></div>'); }
+  /* la baleine qui saute : rare, une fois par visite au plus */
+  let go = QS.get('baleine') === '1';
+  if (!go){ let done = null; try { done = sessionStorage.getItem('baleine'); } catch (e) {} if (!done){ go = Math.random() < .3; try { sessionStorage.setItem('baleine', '1'); } catch (e) {} } }
+  if (go && !CALM.matches) setTimeout(() => whaleBreach(hero), QS.get('baleine') === '1' ? 1800 : 20000 + Math.random() * 40000);
+}
+function whaleBreach(hero){
+  if (!hero.isConnected) return;
+  const waves = hero.querySelector('.hero-waves'), r = hero.getBoundingClientRect();
+  if (r.bottom < 0 || r.top > innerHeight) return;
+  const x = 18 + Math.random() * 60;
+  waves.insertAdjacentHTML('beforeend', `<div class="qwhale" style="left:${x}%" aria-hidden="true"><span class="w">${im('whale')}</span></div><div class="qsplash" style="left:${x + 4}%" aria-hidden="true">${Array.from({length: 22}, (_, i) => `<i style="--a:${(-160 + i * 140 / 21).toFixed(0)}deg;--v:${(60 + Math.random() * 110).toFixed(0)}px;--s:${(5 + Math.random() * 9).toFixed(0)}px"></i>`).join('')}</div>`);
+  const sp = waves.querySelector('.qsplash'), wh = waves.querySelector('.qwhale');
+  setTimeout(() => { sp.classList.add('go'); screenDrops(); if (typeof AUDIO !== 'undefined' && AUDIO.bloop) try { AUDIO.bloop(.6); } catch (e) {} }, 1650);
+  setTimeout(() => { wh.remove(); sp.remove(); }, 4200);
+}
+function screenDrops(){
+  const d = document.createElement('div'); d.className = 'qdrops'; d.setAttribute('aria-hidden', 'true');
+  d.innerHTML = Array.from({length: 16}, () => `<i style="left:${(Math.random() * 96).toFixed(1)}%;top:${(Math.random() * 70).toFixed(1)}%;--s:${(14 + Math.random() * 34).toFixed(0)}px;--d:${(Math.random() * .35).toFixed(2)}s"></i>`).join('');
+  document.body.appendChild(d); setTimeout(() => d.remove(), 3200);
+}
+/* la pêche : clic sur un poisson de l'accueil */
+function fishing(hero){
+  const uw = hero.querySelector('.uw'), oc = hero.querySelector('.ocean'); if (!uw) return;
+  let n = +(qget('mirage-peche') || 0);
+  oc.insertAdjacentHTML('beforeend', `<div class="qcatch${n ? ' on' : ''}" aria-live="polite">${im('fishing_pole')}<b>${Math.min(n, 10)}</b><span>/10</span></div>`);
+  const badge = oc.querySelector('.qcatch');
+  uw.addEventListener('click', e => {
+    const el = e.target.closest('.swimmer'); if (!el || el.dataset.caught) return;
+    e.stopPropagation();
+    const P = [...POOLS].find(p => p.box === uw); if (!P) return;
+    const f = P.list.find(x => x.el === el); if (!f) return;
+    if ((f.sp.size || 0) >= 120){ toast('🦈 Trop gros pour ta canne !'); return; }
+    el.dataset.caught = '1'; P.list.splice(P.list.indexOf(f), 1);
+    const ro = oc.getBoundingClientRect(), re = el.getBoundingClientRect();
+    const cx = re.left + re.width / 2 - ro.left, cy = re.top + re.height / 2 - ro.top;
+    const line = document.createElement('i'); line.className = 'qline'; line.style.left = cx + 'px'; line.style.height = cy + 'px'; oc.appendChild(line);
+    el.classList.add('qhooked');
+    const t0 = performance.now(), sy = re.top - uw.getBoundingClientRect().top;
+    const base = el.style.transform;
+    function up(now){ const k = Math.min(1, (now - t0) / 900); const e2 = k * k;
+      el.style.transform = base.replace(/translate\(([^,]+),\s*([^)]+)\)/, (_, a) => `translate(${a}, ${sy * (1 - e2) - 40 * e2}px)`) + ` rotate(${Math.sin(now / 50) * 18}deg)`;
+      line.style.height = Math.max(0, cy * (1 - e2)) + 'px';
+      if (k < 1) requestAnimationFrame(up); else { el.style.opacity = 0; line.remove(); plus(cx, 30);
+        setTimeout(() => { el.style.opacity = ''; delete el.dataset.caught; el.classList.remove('qhooked'); f.x = Math.random() < .5 ? -40 : P.w + 40; P.list.push(f); }, 6000); } }
+    requestAnimationFrame(up);
+    n += 1; qset('mirage-peche', String(n));
+    badge.classList.add('on'); badge.querySelector('b').textContent = Math.min(n, 10); badge.classList.remove('qpop'); void badge.offsetWidth; badge.classList.add('qpop');
+    if (n === 10) setTimeout(fisherWin, 1100);
+  });
+  function plus(x, y){ const p = document.createElement('b'); p.className = 'qplus'; p.textContent = '+1'; p.style.left = x + 'px'; p.style.top = y + 'px'; oc.appendChild(p); setTimeout(() => p.remove(), 1400); }
+}
+function fisherWin(){
+  const d = document.createElement('div'); d.className = 'qwin'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-label', 'Pêcheur confirmé');
+  d.innerHTML = `<div class="card">${im('trophy')}<h3>Pêcheur confirmé !</h3><p>Dix poissons sortis de l'eau. Avant d'aller pêcher en ville, jette un œil aux règles de la pêche.</p><a class="btn btn-main" href="#reglementation-de-la-peche">Réglementation de la pêche</a><button type="button" class="x" aria-label="Fermer">×</button></div>`;
+  document.body.appendChild(d); if (FW) FW.show(6);
+  const close = () => d.remove(); d.querySelector('.x').onclick = close; d.querySelector('a').addEventListener('click', close); d.addEventListener('click', e => { if (e.target === d) close(); });
+}
+/* mode pirate secret : taper « abordage » */
+function pirateMode(on, quiet){
+  document.body.classList.toggle('pirate', on);
+  try { sessionStorage.setItem('pirate', on ? '1' : '0'); } catch (e) {}
+  const br = document.querySelector('.top .brand');
+  if (on && br && !br.querySelector('.qjolly')) br.insertAdjacentHTML('beforeend', `<span class="qjolly" aria-hidden="true">${im('pirate_flag')}</span>`);
+  if (!on && br){ const j = br.querySelector('.qjolly'); if (j) j.remove(); }
+  const hw = document.querySelector('.hero .hero-waves');
+  if (on && hw && !hw.querySelector('.qpirship')) hw.insertAdjacentHTML('beforeend', `<div class="qpirship" aria-hidden="true"><div class="pship"><span class="hull">${im('sailboat')}</span><span class="jolly">${im('pirate_flag')}</span><span class="perch">${im('parrot')}</span></div></div>`);
+  if (!on){ const s = document.querySelector('.qpirship'); if (s) s.remove(); }
+  if (!quiet) toast(on ? '🏴‍☠️ À l\'abordage ! (retape « abordage » pour revenir)' : '⚓ Retour au port.');
+}
+/* le crabe mascotte des pages du règlement */
+const crab = (function(){
+  const c = document.createElement('div'); c.className = 'qcrab'; c.setAttribute('aria-live', 'polite');
+  c.innerHTML = `<div class="qbub" hidden><p></p><div class="act"><button type="button" class="nx">Une autre astuce</button><button type="button" class="cl" aria-label="Fermer">×</button></div></div><button type="button" class="me" aria-label="Le crabe a une astuce pour toi">${im('crab')}</button>`;
+  document.body.appendChild(c);
+  const bub = c.querySelector('.qbub'), p = bub.querySelector('p');
+  const tips = () => (DATA.conseils && DATA.conseils.length ? DATA.conseils : ['Lis bien le règlement avant ta WhiteList.']);
+  let last = -1;
+  const say = () => { const t = tips(); let i; do { i = Math.floor(Math.random() * t.length); } while (t.length > 1 && i === last); last = i; p.textContent = t[i]; bub.hidden = false; c.classList.add('talk'); };
+  c.querySelector('.me').onclick = () => bub.hidden ? say() : (bub.hidden = true, c.classList.remove('talk'));
+  c.querySelector('.nx').onclick = say;
+  c.querySelector('.cl').onclick = () => { bub.hidden = true; c.classList.remove('talk'); };
+  let tmr = 0;
+  return { page(isHome){ clearTimeout(tmr); c.classList.remove('up', 'talk'); bub.hidden = true; if (!isHome) tmr = setTimeout(() => c.classList.add('up'), 3500); } };
+})();
+addEventListener('hashchange', () => { const h = decodeURIComponent(location.hash.slice(1)).split('--')[0]; crab.page(!h || h === 'accueil' || h === 'readme'); });
+(function(){ let p = null; try { p = sessionStorage.getItem('pirate'); } catch (e) {} if (p === '1') setTimeout(() => pirateMode(true, true), 0); })();
+setTimeout(() => { const h = decodeURIComponent(location.hash.slice(1)).split('--')[0]; crab.page(!h || h === 'accueil' || h === 'readme'); }, 0);
+
 function moreLife(hero){
   const sky = hero.querySelector('.sky'), waves = hero.querySelector('.hero-waves'), beach = hero.querySelector('.beach'), oc = hero.querySelector('.ocean');
   sky.insertAdjacentHTML('beforeend', `
@@ -2115,9 +2428,11 @@ function wakeHome(){
   const oc = hero.querySelector('.ocean'); oc.insertAdjacentHTML('afterbegin', '<div class="nightveil" aria-hidden="true"></div><div class="plankton" aria-hidden="true"></div>');
   hero.querySelector('.beach').insertAdjacentHTML('beforeend', '<div class="fireflies" aria-hidden="true"></div>');
   moreLife(hero);
-  const m = momentNow(); const w = weatherNow(m); hero.classList.add('wx-' + w); setMoment(hero, m);
-  if (w === 'pluie') hero.style.setProperty('--rain', rainTex());
+  const m = momentNow(); const w = weatherNow(m); hero.classList.add('wx-' + w); if (w === 'orage') hero.classList.add('wx-pluie'); setMoment(hero, m);
+  if (w === 'pluie' || w === 'orage') hero.style.setProperty('--rain', rainTex());
   moreDetails(hero, m);
+  rareWeather(hero, m); fetes(hero, m); countdown(hero); fishing(hero);
+  if (document.body.classList.contains('pirate')) pirateMode(true, true);
   const waves = hero.querySelector('.hero-waves'); const b = document.createElement('button'); b.className = 'bottle'; b.type = 'button'; b.setAttribute('aria-label', 'Ouvrir le message dans la bouteille'); b.innerHTML = BOTTLE_SVG + '<span class="b-hint">Un message !</span>'; b.onclick = openBottle; waves.appendChild(b);
   const sun = hero.querySelector('.sun'); sun.title = 'Changer le moment de la journée';
   sun.addEventListener('click', () => { const n = MOMENTS[(MOMENTS.indexOf(hero.dataset.moment) + 1) % 3]; setMoment(hero, n); toast({jour: '☀️ Grand soleil sur l\'île', couchant: '🌅 Coucher de soleil', nuit: '🌙 La nuit tombe sur Mirage'}[n]); });

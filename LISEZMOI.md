@@ -44,6 +44,24 @@ La galerie « Mirage en images » montre toutes les photos du dossier **images/g
 - **Jour, coucher de soleil, nuit** : l'accueil suit l'heure de la personne qui visite. Pour tester, ajoute `?moment=nuit` (ou `couchant`, `jour`) à la fin de l'adresse, et `?meteo=pluie` (ou `arcenciel`, `beau`) pour la météo.
 - **Lien vers une règle** : survole un titre, clique sur la petite icône de lien, et colle le lien où tu veux.
 
+## Compte à rebours de l'ouverture
+
+Ouvre **ouverture.txt**, clique sur le crayon et écris la date sous les lignes qui commencent par `#`, par exemple :
+
+`25/10/2026 21h00`
+
+C'est l'heure de Paris. Le compte à rebours apparaît sur l'accueil, et au moment exact un bouquet de feux d'artifice part avec le message « La V2 est ouverte ! » (affiché pendant 24 h). Sans date, rien ne s'affiche.
+
+## Les surprises du site
+
+- **Fêtes** : à partir du 20 octobre jusqu'au 2 novembre, Halloween (citrouilles, chauves-souris, fantôme, mer violette la nuit) ; du 1er au 26 décembre, Noël (bonnet sur le soleil, neige, sapin, bonhomme de neige, guirlande au kiosque) ; le 31 décembre et le 1er janvier, le Nouvel an (feux d'artifice, gros bouquet à minuit).
+- **Météos rares** : orage (éclairs, mer agitée), brume le matin, et parfois une baleine qui saute et éclabousse l'écran.
+- **Pêche** : clique sur les poissons de l'accueil pour les pêcher. Au 10e, un trophée « Pêcheur confirmé » envoie vers la réglementation de la pêche.
+- **Codes secrets à taper au clavier** : `abordage` (mode pirate, retape pour revenir), `mirage` (feux d'artifice), `coquillage` (pluie de coquillages), `tortue` (les tortues accélèrent). La nuit, un clic dans le ciel lance une fusée.
+- **Le crabe** : sur les pages du règlement, un crabe apparaît en bas à droite ; clique dessus pour avoir une astuce (elles viennent de `conseils.txt`).
+
+Pour tester sans attendre, ajoute à la fin de l'adresse : `?fete=halloween` (ou `noel`, `nouvelan`, `aucune`), `?meteo=orage`, `?brume=1`, `?baleine=1`. Plusieurs à la fois : `?fete=noel&moment=nuit`.
+
 ## Ajouter une page
 
 1. Dans le dossier **pages**, clique sur **Add file** puis **Create new file**. Donne-lui un nom simple, sans espace ni accent, terminé par `.md` (par exemple `casino.md`).
@@ -66,5 +84,7 @@ Va dans **Actions**, clique sur la ligne avec la croix rouge : le message expliq
 
 - `pages/` : le texte de chaque page
 - `sommaire.txt` : l'ordre et les titres des pages dans le menu
+- `ouverture.txt` : la date du compte à rebours de l'ouverture
+- `conseils.txt` : les astuces (bouteille à la mer et crabe)
 - `images/` : logos, emojis des bannières et images des pages
 - `modele.html` et `construire.py` : le design et le programme qui fabrique le site (pas besoin d'y toucher)
