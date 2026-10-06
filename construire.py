@@ -34,7 +34,7 @@ def img_for(url):
             if not f.exists():
                 print('ATTENTION image introuvable :', url); IMG[url] = url
             else:
-                IMG[url] = webp_uri(Image.open(f).convert('RGB'), 900, 78)
+                IMG[url] = webp_uri(Image.open(f).convert('RGBA'), 900, 80)
     return IMG[url]
 
 # sommaire : fichier | titre | partie
