@@ -664,8 +664,6 @@ abbr.lx:hover::after,abbr.lx:focus::after,abbr.lx:hover::before,abbr.lx:focus::b
 .nightveil{position:absolute;inset:0;z-index:2;pointer-events:none;background:rgba(3,12,32,0);transition:background 1.2s}
 .hero.tod-nuit .nightveil{background:rgba(3,12,32,.42)}
 .hero.tod-couchant .nightveil{background:rgba(120,40,70,.14)}
-.hero.tod-nuit .hero-waves .wave path{filter:brightness(.55) saturate(.8)}
-.hero.tod-couchant .hero-waves .wave path{filter:brightness(.9) saturate(1.1) hue-rotate(-12deg)}
 .plankton{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity 1.2s;
   background-image:radial-gradient(2px 2px at 10% 30%,#8ff9ff 50%,transparent 60%),radial-gradient(2px 2px at 30% 70%,#8ff9ff 50%,transparent 60%),radial-gradient(1.6px 1.6px at 52% 45%,#b2fff4 50%,transparent 60%),radial-gradient(2px 2px at 74% 62%,#8ff9ff 50%,transparent 60%),radial-gradient(1.6px 1.6px at 88% 28%,#b2fff4 50%,transparent 60%);
   background-size:340px 260px;filter:drop-shadow(0 0 4px #6ff);animation:twinkle 2.2s ease-in-out infinite alternate}
@@ -758,11 +756,11 @@ abbr.lx:hover::after,abbr.lx:focus::after,abbr.lx:hover::before,abbr.lx:focus::b
 @keyframes shoot{0%{opacity:0;transform:translateX(0)}2%{opacity:1}9%{opacity:0;transform:translateX(260px)}100%{opacity:0;transform:translateX(260px)}}
 .hero.tod-nuit .shoot{display:block}
 .hero.tod-nuit .plane,.hero.tod-nuit .parrotfly,.hero.tod-nuit .kite,.hero.tod-nuit .surfer,.hero.tod-nuit .fly,.hero.wx-pluie .plane,.hero.wx-pluie .kite,.hero.wx-pluie .parrotfly,.hero.wx-pluie .fly{display:none}
-.surfer{position:absolute;bottom:20px;width:62px;z-index:5;pointer-events:none;animation:surf 34s linear 6s infinite;left:-10%}
+.surfer{position:absolute;bottom:20px;width:62px;z-index:5;pointer-events:none;animation:surfride 34s linear 6s infinite;left:-10%}
 .surfer span{display:block;animation:surfbob 1.6s ease-in-out infinite alternate}
 .surfer img{width:100%;display:block;filter:drop-shadow(0 8px 6px rgba(0,40,60,.3))}
 .surfer .spray{position:absolute;left:-18px;bottom:6px;width:30px;height:14px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.95),rgba(255,255,255,0));animation:spray .5s ease-in-out infinite alternate}
-@keyframes surf{from{left:-10%}to{left:108%}}
+@keyframes surfride{from{left:-10%}to{left:108%}}
 @keyframes surfbob{from{transform:translateY(0) rotate(-6deg)}to{transform:translateY(-10px) rotate(5deg)}}
 @keyframes spray{to{transform:scale(1.4);opacity:.6}}
 .canoe{position:absolute;bottom:48px;width:56px;z-index:3;pointer-events:none;animation:canoe 70s linear 20s infinite;left:108%;opacity:.9}
@@ -895,6 +893,14 @@ abbr.lx:hover::after,abbr.lx:focus::after,abbr.lx:hover::before,abbr.lx:focus::b
 @keyframes zz{0%,30%{opacity:0;transform:translate(0,0)}50%{opacity:1}90%{opacity:0;transform:translate(14px,-26px)}100%{opacity:0}}
 @media (max-width:640px){.sealrock{display:none}}
 @media (prefers-reduced-motion:reduce){.sunpath i,.flyfish,.sealrock *{animation:none!important}}
+
+/* bord de l'eau : le haut de la bande d'eau reprend exactement le bas de l'océan (plus de ligne) */
+#shg .s0{stop-color:color-mix(in srgb,var(--w4) 55%,#021c28)}
+#shg .s1{stop-color:#2a9fa8}
+#shg .s2{stop-color:#6fd6d2}
+.hero .oseam{position:absolute;left:0;right:0;bottom:0;height:70px;z-index:9;pointer-events:none;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--w4) 55%,#021c28) 92%)}
+.hero.tod-couchant .oseam{filter:saturate(1.15) brightness(.97) sepia(.18) hue-rotate(-8deg)}
+.hero.tod-nuit .oseam{filter:brightness(.6) saturate(.8) hue-rotate(-12deg)}
 /* ---------- accueil pleine largeur ---------- */
 body.is-home .shell{max-width:none}
 body.is-home main > *{max-width:1180px;margin-inline:auto}
@@ -978,9 +984,9 @@ body.is-home .hero .hero-logo{width:min(620px,70%)}
 .surfx{-webkit-mask-image:none;mask-image:none;position:absolute;left:0;right:0;bottom:30px;height:90px;pointer-events:none;z-index:5;overflow:hidden}
 .surfx .shine{position:absolute;top:25%;bottom:20%;width:26%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,255,255,.4),transparent 70%);filter:blur(10px);animation:shine 9s ease-in-out infinite;mix-blend-mode:soft-light}
 @keyframes shine{from{transform:translateX(-120%)}to{transform:translateX(420%)}}
-.ripple{position:absolute;border:2px solid rgba(255,255,255,.8);border-radius:50%;pointer-events:none;translate:-50% -50%;animation:ripple 1.2s ease-out forwards;z-index:6}
+.ripple{position:absolute;border:2px solid rgba(255,255,255,.8);border-radius:50%;pointer-events:none;translate:-50% -50%;animation:searipple 1.2s ease-out forwards;z-index:6}
 .ripple.r2{animation-delay:.18s;border-width:1.5px}.ripple.r3{animation-delay:.36s;border-width:1px}
-@keyframes ripple{from{width:6px;height:4px;opacity:1}to{width:180px;height:70px;opacity:0}}
+@keyframes searipple{from{width:6px;height:4px;opacity:1}to{width:180px;height:70px;opacity:0}}
 .pop{position:absolute;width:var(--s);height:var(--s);border-radius:50%;pointer-events:none;z-index:6;background:radial-gradient(circle at 30% 30%,#fff 0 12%,rgba(255,255,255,.2) 20%,transparent 66%);border:1px solid rgba(255,255,255,.7);
   animation:popup 1.4s ease-out forwards}
 @keyframes popup{to{transform:translate(var(--x),-140px);opacity:0}}
@@ -1567,7 +1573,7 @@ function beach(){
     return `<i class="fp" style="left:${x}%;top:${top}px;width:${10 * s}px;height:${5 * s}px;opacity:${.12 + y * .2}"></i>`; }).join('');
   return `<div class="beach" aria-hidden="true">
     <svg class="wash" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path class="wet" d="M0 30 C200 60 380 20 600 44 S1000 66 1200 40 1440 52 1440 52 V70 H0Z"/><path class="lip" d="M0 30 C200 60 380 20 600 44 S1000 66 1200 40 1440 52 1440 52 V56 C1200 46 1000 72 600 50 S200 66 0 36Z"/></svg>
-    <svg class="shoreline" viewBox="0 0 1440 70" preserveAspectRatio="none"><defs><linearGradient id="shg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--w4)"/><stop offset=".55" style="stop-color:#2a9fa8"/><stop offset="1" style="stop-color:#6fd6d2"/></linearGradient></defs><path d="M0 0 H1440 V22 C1300 48 1180 10 1020 30 S760 54 600 28 300 8 160 34 40 44 0 26Z" style="fill:url(#shg)"/>
+    <svg class="shoreline" viewBox="0 0 1440 70" preserveAspectRatio="none"><defs><linearGradient id="shg" x1="0" y1="0" x2="0" y2="1"><stop class="s0" offset="0"/><stop class="s1" offset=".55"/><stop class="s2" offset="1"/></linearGradient></defs><path d="M0 0 H1440 V22 C1300 48 1180 10 1020 30 S760 54 600 28 300 8 160 34 40 44 0 26Z" style="fill:url(#shg)"/>
       <path class="foam" d="M0 26 C40 44 160 34 300 8 S600 28 760 54 1020 30 1300 48 1380 30 1440 22" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
       <path class="foam f2" d="M0 40 C60 54 180 46 320 24 S620 42 780 66 1040 44 1300 60 1380 44 1440 36" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3" stroke-linecap="round" stroke-dasharray="40 26" vector-effect="non-scaling-stroke"/></svg>
     <div class="ripples"></div>${steps}
@@ -1925,10 +1931,11 @@ function moreLife(hero){
     <span class="camp" aria-hidden="true"><i class="glow"></i><span class="f">${im('fire')}</span><i class="spark k1"></i><i class="spark k2"></i><i class="spark k3"></i></span>`);
   /* nouveaux effets de mer : reflet du soleil, écume, poissons volants, phoque sur son rocher */
   const R = (a, b) => a + Math.random() * (b - a);
-  let g = ''; for (let i = 0; i < 60; i++){ const y = R(48, 112); g += `<i style="left:${R(0, 92) + (y / 100) * R(-6, 6)}%;top:${y}px;--s:${R(6, 22) * (0.4 + y / 110)}px;--t:${R(1, 2.4)}s;--d:${-R(0, 3)}s"></i>`; }
+  let g = ''; for (let i = 0; i < 46; i++){ const y = R(50, 112); g += `<i style="left:${R(0, 92) + (y / 100) * R(-6, 6)}%;top:${y}px;--s:${R(4, 14) * (0.4 + y / 110)}px;--t:${R(1, 2.4)}s;--d:${-R(0, 3)}s"></i>`; }
   waves.insertAdjacentHTML('beforeend', `<div class="sunpath" aria-hidden="true">${g}</div>
     <span class="flyfish" style="left:18%;--t:9s;--d:-2s" aria-hidden="true">${im('fish')}</span><span class="flyfish" style="left:21%;--t:9s;--d:-1.75s;width:24px" aria-hidden="true">${im('fish')}</span><span class="flyfish" style="left:62%;--t:13s;--d:-7s" aria-hidden="true">${im('tropical_fish')}</span>`);
   beach.insertAdjacentHTML('beforeend', `<span class="sealrock" aria-hidden="true"><span class="rk">${im('rock')}</span><span class="sl">${im('seal')}</span><b class="zz">z z</b></span>`);
+  oc.insertAdjacentHTML('beforeend', '<div class="oseam" aria-hidden="true"></div>');
   /* bulles qui suivent la souris sous l'eau */
   if (!CALM.matches && !matchMedia('(pointer: coarse)').matches){
     let last = 0;
