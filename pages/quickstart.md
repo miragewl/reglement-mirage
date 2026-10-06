@@ -20,7 +20,7 @@ Concernant la préparation de votre background, faites-le comme vous le sentez e
 
 {% embed url="<https://discord.gg/QnwhBmm7AG>" %}
 
-<figure><img src="images/image2.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/image2.webp" alt=""><figcaption></figcaption></figure>
 
 ### Comment préparer son Background ?
 
