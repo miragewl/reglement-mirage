@@ -1175,42 +1175,109 @@ body.diff li.v2::before{display:none}
 .qkv.lv-r{border-color:#E5484D;box-shadow:inset 4px 0 0 #E5484D}.qkv.lv-r .qk{color:#C42A30}
 @media (max-width:640px){.content ul.qkv > li{grid-template-columns:1fr}.qsev{margin-left:0}}
 
-/* ---------- v36 : décor animé des pages ---------- */
+/* ---------- v37 : colonnes marines des pages ---------- */
 .zdeco{position:fixed;left:var(--side);right:0;top:var(--top);bottom:0;z-index:0;pointer-events:none;overflow:hidden}
 body.is-home .zdeco{display:none}
 main > .page,#footslot{position:relative;z-index:1}
+.zdeco .zi{pointer-events:auto;cursor:inherit}
 .zdeco::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 60% at 0% 100%,color-mix(in srgb,var(--sea) 14%,transparent),transparent 70%),radial-gradient(40% 60% at 100% 100%,color-mix(in srgb,var(--sea) 14%,transparent),transparent 70%),radial-gradient(30% 40% at 100% 0%,color-mix(in srgb,var(--accent) 10%,transparent),transparent 70%)}
+.zdeco::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--sand) 55%,transparent));-webkit-mask-image:linear-gradient(90deg,#000 0 14%,transparent 22% 78%,#000 86%);mask-image:linear-gradient(90deg,#000 0 14%,transparent 22% 78%,#000 86%)}
 .zray i{position:absolute;top:-10%;width:12%;height:90%;background:linear-gradient(180deg,color-mix(in srgb,var(--sea) 16%,transparent),transparent);filter:blur(14px);transform-origin:50% 0;animation:zray 10s ease-in-out infinite alternate}
 .zray i:nth-child(1){left:2%;rotate:14deg}.zray i:nth-child(2){right:4%;rotate:-12deg;animation-delay:-4s}.zray i:nth-child(3){right:14%;width:7%;rotate:-6deg;animation-delay:-7s}
 @keyframes zray{from{opacity:.3;translate:-10px 0}to{opacity:1;translate:10px 0}}
 .zb{position:absolute;bottom:-30px;width:var(--s);height:var(--s);border-radius:50%;border:1.5px solid color-mix(in srgb,var(--sea) 55%,transparent);background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.85) 0 14%,transparent 30%);animation:zbub var(--t) linear var(--d) infinite;opacity:.8}
 @keyframes zbub{0%{transform:translate(0,0)}50%{transform:translate(var(--x),-55vh)}100%{transform:translate(0,-110vh);opacity:0}}
+.zdeco .e3{width:100%;display:block}
 .zf{position:absolute;display:block}
-.zf .e3{width:100%;display:block;filter:drop-shadow(0 8px 12px rgba(8,50,60,.2))}
-.zl1{left:3%;top:18%;width:64px;opacity:.85;animation:zjelly 9s ease-in-out infinite}
-.zl2{left:-80px;top:46%;width:54px;animation:zswimR 26s linear infinite}
-.zl3{left:5%;top:72%;width:40px;animation:zbob 5s ease-in-out infinite;opacity:.9}
+.zf .e3{filter:drop-shadow(0 8px 12px rgba(8,50,60,.2))}
+.zf > span{display:block}
+/* créatures */
+.zshark{right:-160px;top:8%;width:130px;opacity:.22;filter:blur(1px) saturate(.6);animation:zshark 48s linear infinite}
+@keyframes zshark{0%{transform:translateX(0)}48%{transform:translateX(-17vw)}50%{transform:translateX(-17vw) scaleX(-1)}98%{transform:translateX(0) scaleX(-1)}100%{transform:translateX(0)}}
+.zl1{left:3%;top:16%;width:64px;opacity:.88;animation:zjelly 9s ease-in-out infinite;transition:filter .3s}
+.zr5{right:9%;top:52%;width:44px;opacity:.8;animation:zjelly 11s ease-in-out -4s infinite;transition:filter .3s}
+.zjel:hover,.zjel.zzap{filter:drop-shadow(0 0 14px #ff9de2) drop-shadow(0 0 30px #c48bff) brightness(1.25)}
+.zjel.zzap{animation-duration:1.4s}
+.zl2{left:-80px;top:44%;width:54px;animation:zswimR 26s linear infinite}
+.zl4{left:-110px;top:60%;width:84px;animation:zswimR 44s linear -18s infinite}
+.zl3{left:5%;top:78%;width:40px;animation:zbob 5s ease-in-out infinite;opacity:.9}
 .zr1{right:3.5%;top:14%;width:86px;opacity:.9;animation:zbob 6s ease-in-out infinite}
-.zr2{right:-60px;top:40%;width:30px;animation:zswimL 22s linear infinite}
-.zr2.b{top:42.5%;width:24px;animation-delay:-.6s}.zr2.c{top:38.5%;width:22px;animation-delay:-1.1s}
+.ztop{right:12%;top:30%;width:46px;opacity:.75;animation:zbob 7s ease-in-out -2s infinite}
+.zr2{right:-60px;top:38%;width:30px;animation:zswimL 22s linear infinite}
+.zr2.b{top:40.5%;width:24px;animation-delay:-.6s}.zr2.c{top:36.5%;width:22px;animation-delay:-1.1s}
 .zr3{right:5%;top:64%;width:58px;animation:zocto 11s ease-in-out infinite}
 @keyframes zjelly{0%,100%{transform:translateY(0) scale(1,1)}25%{transform:translateY(-14px) scale(.94,1.06)}50%{transform:translateY(-40px) scale(1.04,.96)}75%{transform:translateY(-18px) scale(.96,1.04)}}
 @keyframes zbob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(4deg)}}
 @keyframes zocto{0%,100%{transform:translate(0,0) scale(1,1)}40%{transform:translate(-10px,-60px) scale(.9,1.1)}55%{transform:translate(-10px,-52px) scale(1.08,.92)}}
 @keyframes zswimR{0%{transform:translateX(0) scaleX(-1)}45%{transform:translateX(min(14vw,260px)) scaleX(-1)}50%{transform:translateX(min(14vw,260px)) scaleX(1)}95%{transform:translateX(0) scaleX(1)}100%{transform:translateX(0) scaleX(-1)}}
 @keyframes zswimL{0%{transform:translateX(0)}45%{transform:translateX(max(-14vw,-260px))}50%{transform:translateX(max(-14vw,-260px)) scaleX(-1)}95%{transform:translateX(0) scaleX(-1)}100%{transform:translateX(0)}}
-.zweed{position:absolute;bottom:-6px;display:flex;align-items:flex-end;opacity:.8}
+.zflee{animation:zflee 2.6s ease forwards}
+@keyframes zflee{0%{transform:none;opacity:1}12%{transform:translate(-14px,-6px) scale(.9)}35%{transform:translate(140px,-80px) scale(.6);opacity:0}80%{transform:translate(0,0) scale(.6);opacity:0}100%{transform:none;opacity:1}}
+.zjet{animation:zjet 1.2s cubic-bezier(.2,.8,.3,1)}
+@keyframes zjet{0%{transform:none}25%{transform:translate(0,-90px) scale(.8,1.25)}100%{transform:none}}
+.zink{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:radial-gradient(circle,rgba(20,10,40,.85),rgba(40,20,70,.5) 50%,transparent 72%);filter:blur(4px);animation:zink 2.6s ease-out forwards;pointer-events:none}
+@keyframes zink{0%{transform:scale(.3);opacity:1}40%{transform:scale(4);opacity:.85}100%{transform:scale(6.5) translateY(14px);opacity:0}}
+/* fond : algues, coraux, épave, coffre, étoiles de mer, objets de la page */
+.zweed{position:absolute;bottom:-6px;display:flex;align-items:flex-end;opacity:.85}
 .zweed.l{left:-10px}.zweed.r{right:-10px;transform:scaleX(-1)}
 .zweed span{display:block;width:var(--w);margin-right:-16px;transform-origin:50% 100%;animation:kelp var(--t) ease-in-out var(--d) infinite alternate}
-.zweed .e3{width:100%;display:block;filter:hue-rotate(-12deg) saturate(1.1)}
-.zcoral{position:absolute;bottom:-4px;width:90px;opacity:.9}
-.zcoral.l{left:70px}.zcoral.r{right:80px;width:110px}
-.zcoral .e3{width:100%;display:block}
-.zcrab{position:absolute;bottom:6px;right:12%;width:42px}
-.zcrab .e3{width:100%;display:block}
-/* les éléments des marges n'apparaissent que s'il y a de la place à côté du texte */
-@media (max-width:1700px){.zf,.zweed,.zcoral,.zcrab{display:none}.zl1,.zr1{display:block}.zl1{left:1%;width:48px;opacity:.5}.zr1{right:1%;width:56px;opacity:.5}}
-@media (max-width:1450px){.zl1,.zr1{display:none}}
+.zweed .e3{filter:hue-rotate(-12deg) saturate(1.1)}
+.zcoral{position:absolute;bottom:-4px;width:90px;opacity:.95}
+.zcoral.l{left:150px}.zcoral.r{right:80px;width:110px}
+.zcrab{position:absolute;bottom:6px;right:13%;width:42px}
+.zwreck{position:absolute;left:60px;bottom:4px;width:110px;rotate:-14deg;opacity:.85;filter:sepia(.3) brightness(.8)}
+.zchest{position:absolute;left:84px;bottom:10px;width:58px;height:44px}
+.zchest .box{position:absolute;left:0;right:0;bottom:0;height:26px;border-radius:4px 4px 6px 6px;background:linear-gradient(180deg,#9b5a2a,#6e3a17);box-shadow:inset 0 0 0 3px #c8962f,inset 0 -6px 0 rgba(0,0,0,.18)}
+.zchest .box::after{content:"";position:absolute;left:50%;top:5px;width:10px;height:12px;margin-left:-5px;border-radius:2px;background:#ffd54a;box-shadow:0 0 0 2px #8b5a1c}
+.zchest .lid{position:absolute;left:-2px;right:-2px;bottom:24px;height:18px;border-radius:14px 14px 3px 3px;background:linear-gradient(180deg,#b06a33,#7a4219);box-shadow:inset 0 0 0 3px #c8962f;transform-origin:50% 100%;transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.zchest::before{content:"";position:absolute;left:4px;right:4px;bottom:22px;height:8px;border-radius:50%;background:radial-gradient(#fff6b0,#ffc83d 60%,transparent 70%);opacity:0;transition:opacity .4s;filter:blur(1px)}
+.zchest.open .lid{transform:rotateX(70deg) translateY(-6px) rotate(-18deg)}
+.zchest.open::before{opacity:1}
+.zchest .gl{position:absolute;width:6px;height:6px;background:#fff;border-radius:50%;box-shadow:0 0 8px 3px #ffe27a;opacity:0;animation:zgl 3s ease-in-out infinite}
+.zchest .g1{left:10px;top:10px}.zchest .g2{right:8px;top:4px;animation-delay:1s}.zchest .g3{left:26px;top:-2px;animation-delay:2s}
+@keyframes zgl{0%,100%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1)}}
+.zcoin{position:absolute;width:20px;pointer-events:none;animation:zcoin 1.6s cubic-bezier(.2,.8,.4,1) forwards}
+@keyframes zcoin{0%{transform:translate(-50%,0) scale(.4);opacity:1}50%{transform:translate(calc(-50% + var(--x)),var(--y)) scale(1) rotate(200deg)}100%{transform:translate(calc(-50% + var(--x) * 1.3),20px) rotate(400deg);opacity:0}}
+.zst{position:absolute;bottom:8px;width:34px;height:34px}
+.zst i{position:absolute;inset:0;background:var(--c);clip-path:polygon(50% 0,63% 36%,100% 38%,70% 60%,80% 98%,50% 76%,20% 98%,30% 60%,0 38%,37% 36%);filter:drop-shadow(0 3px 3px rgba(0,0,0,.25));box-shadow:inset 0 0 0 30px var(--c)}
+.zst i::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(255,255,255,.55) 8%,transparent 10%) 0 0/8px 8px}
+.zst.s1{left:205px;rotate:-12deg}.zst.s2{right:200px;width:26px;height:26px;rotate:20deg}
+.zst.spin i{animation:zspin .9s cubic-bezier(.3,1.6,.5,1)}
+@keyframes zspin{to{transform:rotate(360deg) scale(1.1)}}
+.zt{position:absolute;bottom:8px;width:56px}
+.zt > span{display:block;filter:saturate(.8) drop-shadow(0 6px 6px rgba(0,0,0,.2))}
+.zfl0{left:12px;bottom:30px;width:70px;rotate:-10deg}.zfl1{left:200px;width:34px;bottom:34px}
+.zfr0{right:200px;width:48px;bottom:36px;rotate:8deg}.zfr1{right:30px;width:44px;bottom:60px}
+.th-police .zfr0 > span{animation:zsiren 1.2s ease-in-out infinite}
+@keyframes zsiren{0%,100%{filter:drop-shadow(0 0 0 transparent)}50%{filter:drop-shadow(0 0 14px #ff3b3b) drop-shadow(0 0 22px #3b7bff)}}
+.th-pirate .zfl1 > span,.th-argent .zfl1 > span{animation:zgl2 2.4s ease-in-out infinite}
+@keyframes zgl2{0%,100%{filter:brightness(1)}50%{filter:brightness(1.4) drop-shadow(0 0 10px #ffd54a)}}
+.zhook{position:absolute;left:7%;top:0;width:30px;animation:zhook 6s ease-in-out infinite}
+.zhook .ln{position:absolute;left:50%;bottom:90%;width:1.5px;height:60vh;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--fg) 40%,transparent))}
+.zhook > span{display:block;margin-top:38vh}
+@keyframes zhook{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(24px) rotate(4deg)}}
+
+/* tout reste dans la marge réelle (--mg = largeur libre de chaque côté du texte) */
+.zdeco{--mg:max(0px,calc((100vw - var(--side) - 1160px) / 2))}
+@keyframes zswimR{0%{transform:translateX(0) scaleX(-1)}45%{transform:translateX(calc(var(--mg) + 10px)) scaleX(-1)}50%{transform:translateX(calc(var(--mg) + 10px)) scaleX(1)}95%{transform:translateX(0) scaleX(1)}100%{transform:translateX(0) scaleX(-1)}}
+@keyframes zswimL{0%{transform:translateX(0)}45%{transform:translateX(calc(-1 * var(--mg) + 10px))}50%{transform:translateX(calc(-1 * var(--mg) + 10px)) scaleX(-1)}95%{transform:translateX(0) scaleX(-1)}100%{transform:translateX(0)}}
+@keyframes zshark{0%{transform:translateX(0)}48%{transform:translateX(calc(-1 * var(--mg) + 20px))}50%{transform:translateX(calc(-1 * var(--mg) + 20px)) scaleX(-1)}98%{transform:translateX(0) scaleX(-1)}100%{transform:translateX(0)}}
+.zl1{left:calc(var(--mg) * .3)}.zl3{left:calc(var(--mg) * .35)}
+.zr1{right:calc(var(--mg) * .3)}.zr3{right:calc(var(--mg) * .3)}.zr5{right:calc(var(--mg) * .55)}.ztop{right:calc(var(--mg) * .45)}
+.zcoral.l{left:calc(var(--mg) - 96px)}.zcoral.r{right:calc(var(--mg) * .35)}
+.zst.s1{left:calc(var(--mg) - 40px)}.zst.s2{right:calc(var(--mg) - 34px)}
+.zfl1{left:calc(var(--mg) - 46px)}.zfr0{right:calc(var(--mg) - 56px)}
+.zcrab{right:calc(var(--mg) * .55)}
+.zhook{left:calc(var(--mg) * .55)}
+/* place disponible : tout à partir de 1700 px, version réduite entre 1480 et 1700, rien en dessous (l'aquarium de droite prend le relais) */
+@media (max-width:1700px){
+  .zshark,.zl3,.zr2,.zr5,.ztop,.zfl1,.zfr1,.zst.s1,.zst.s2,.zcoral.l,.zcrab,.zhook{display:none}
+  .zl1{left:1%;width:44px}.zr1{right:1%;width:54px}.zr3{right:1.5%;width:40px}.zl2{width:38px}.zl4{width:56px}
+  .zweed{transform:scale(.7);transform-origin:0 100%}.zweed.r{transform:scaleX(-1) scale(.7);transform-origin:0 100%}
+  .zwreck{left:20px;width:80px}.zchest{left:34px;transform:scale(.8);transform-origin:0 100%}.zfl0{left:8px;width:48px;bottom:46px}.zfr0{right:14px;width:38px}.zcoral.r{right:30px;width:70px}
+}
+@media (max-width:1700px){.zweed span:nth-child(n+3){display:none}.zweed{transform:scale(.55)!important}.zweed.r{transform:scale(.55)!important;transform-origin:100% 100%!important}.zwreck,.zcoral.r{display:none}.zchest{left:6px!important;transform:scale(.68)!important}.zfl0{left:4px!important;width:40px!important;bottom:40px!important}.zfr0{right:6px!important;width:34px!important}}
+@media (max-width:1600px){.zdeco > *:not(.zray):not(.zb){display:none}}
 @media (max-width:1100px){.zdeco{left:0}}
 @media (prefers-reduced-motion:reduce){.zdeco *{animation:none!important}}
 /* aquarium de lecture dans la colonne de droite */
@@ -1228,6 +1295,18 @@ main > .page,#footslot{position:relative;z-index:1}
 .zaq .txt b{display:block;font:800 15px/1.2 var(--display);color:var(--fg)}
 .zaq .txt small{display:block;margin-top:3px;font:500 12px/1.3 var(--body);color:var(--muted)}
 .zaq.done{border-color:var(--sea);box-shadow:0 0 0 3px color-mix(in srgb,var(--sea) 18%,transparent)}
+/* aquarium de droite plus grand quand les marges sont trop étroites */
+.zaq .fi.f3,.zaq .fi.f4{display:none}
+@media (max-width:1600px){
+  .zaq{flex-direction:column;align-items:stretch}
+  .zaq .tank{width:100%;height:120px}
+  .zaq .fi.f3,.zaq .fi.f4{display:block}
+  .zaq .fi{width:26px}.zaq .fi.f2{width:18px}
+  .zaq .fi.f3{bottom:auto;top:16px;width:26px;animation:zjelly 6s ease-in-out infinite;left:30%}
+  .zaq .fi.f4{bottom:8px;width:30px;left:auto;right:30px;animation:zocto 8s ease-in-out infinite}
+  .zaq .pl{width:30px}
+}
+
 /* apparition douce des blocs au défilement */
 .zrv{opacity:0;transform:translateY(18px)}
 .zrv.zin{opacity:1;transform:none;transition:opacity .6s ease,transform .7s cubic-bezier(.2,.9,.25,1)}
@@ -2586,30 +2665,72 @@ function enhanceContent(ct){
 }
 
 /* ---------- v36 : décor animé des pages du règlement ---------- */
+const ZTHEME = {
+  pirate: {floorL: ['skull_and_crossbones', 'coin'], floorR: ['money_bag', 'pirate_flag'], top: 'anchor'},
+  police: {floorL: ['oncoming_police_car'], floorR: ['police_car_light', 'shield'], top: 'shield'},
+  ems: {floorL: ['ambulance'], floorR: ['adhesive_bandage', 'syringe'], top: 'stethoscope'},
+  mort: {floorL: ['headstone'], floorR: ['ring_buoy', 'adhesive_bandage'], top: 'ring_buoy'},
+  peche: {floorL: ['fishing_pole'], floorR: ['shrimp', 'oyster'], top: null, hook: true},
+  loi: {floorL: ['scroll'], floorR: ['balance_scale', 'locked'], top: 'balance_scale'},
+  argent: {floorL: ['money_bag', 'coin'], floorR: ['shopping_bags'], top: 'coin'},
+  travail: {floorL: ['hammer'], floorR: ['wrench', 'gear'], top: 'gear'},
+  route: {floorL: ['automobile'], floorR: ['vertical_traffic_light'], top: 'taxi'},
+  armes: {floorL: ['dagger'], floorR: ['bullseye'], top: 'bullseye'},
+  air: {floorL: ['helicopter'], floorR: ['airplane'], top: 'parrot'},
+  defaut: {floorL: ['gem_stone'], floorR: ['oyster', 'anchor'], top: 'anchor'},
+};
+const ZPAGE = {'groupes-illegaux': 'pirate', 'general-legal-et-illegal': 'pirate', 'police': 'police', 'defcon': 'police', 'ems': 'ems', 'mort-rp': 'mort',
+  'reglementation-de-la-peche': 'peche', 'code-penal': 'loi', 'code-civil': 'loi', 'bureau-du-procureur': 'loi', 'les-fondamentaux-du-rp': 'loi',
+  'reprise-d-entreprise': 'argent', 'boutique': 'argent', 'code-du-travail': 'travail', 'code-de-la-route': 'route', 'permis-de-port-darmes': 'armes', 'reglementation-espace-aerien': 'air'};
 function pageDeco(p){
   const old = document.querySelector('.zdeco'); if (old) old.remove();
   if (!p) return;
   const ic = PICON[p.slug] && E[PICON[p.slug]] ? PICON[p.slug] : 'spiral_shell';
+  const th = ZTHEME[ZPAGE[p.slug] || 'defaut'];
+  const has = n => n && E[n];
   const R = (a, b) => (a + Math.random() * (b - a)).toFixed(1);
-  let bub = ''; for (let i = 0; i < 18; i++){ const left = i % 2 ? R(1, 11) : R(89, 99); bub += `<i class="zb" style="left:${left}%;--s:${R(5, 16)}px;--t:${R(9, 18)}s;--d:-${R(0, 18)}s;--x:${R(-24, 24)}px"></i>`; }
-  const d = document.createElement('div'); d.className = 'zdeco'; d.setAttribute('aria-hidden', 'true');
+  let bub = ''; for (let i = 0; i < 20; i++){ const left = i % 2 ? R(1, 10) : R(90, 99); bub += `<i class="zb" style="left:${left}%;--s:${R(5, 16)}px;--t:${R(9, 18)}s;--d:-${R(0, 18)}s;--x:${R(-24, 24)}px"></i>`; }
+  const star = (cls, c) => `<span class="zst zi ${cls}" style="--c:${c}"><i></i></span>`;
+  const fl = (arr, side) => arr.filter(has).map((n, i) => `<span class="zt ${side}${i}"><span>${im(n)}</span></span>`).join('');
+  const d = document.createElement('div'); d.className = 'zdeco th-' + (ZPAGE[p.slug] || 'defaut'); d.setAttribute('aria-hidden', 'true');
   d.innerHTML = `<div class="zray"><i></i><i></i><i></i></div>${bub}
-    <span class="zf zl1">${im('jellyfish')}</span>
-    <span class="zf zl2">${im('tropical_fish')}</span>
+    <span class="zf zshark">${im('shark')}</span>
+    <span class="zf zl1 zi zjel">${im('jellyfish')}</span>
+    <span class="zf zl2 zi zfish"><span>${im('tropical_fish')}</span></span>
+    <span class="zf zl4 zi zturt"><span>${im('turtle')}</span></span>
     <span class="zf zl3">${im('spiral_shell')}</span>
     <span class="zf zr1">${im(ic)}</span>
-    <span class="zf zr2">${im('fish')}</span><span class="zf zr2 b">${im('fish')}</span><span class="zf zr2 c">${im('fish')}</span>
-    <span class="zf zr3">${im('octopus')}</span>
+    <span class="zf zr2 zi zfish"><span>${im('fish')}</span></span><span class="zf zr2 b zi zfish"><span>${im('fish')}</span></span><span class="zf zr2 c zi zfish"><span>${im('fish')}</span></span>
+    <span class="zf zr3 zi zoct"><span>${im('octopus')}</span></span>
+    <span class="zf zr5 zi zjel">${im('jellyfish')}</span>
+    ${has(th.top) ? `<span class="zf ztop">${im(th.top)}</span>` : ''}
+    ${th.hook ? `<span class="zhook"><i class="ln"></i><span>${im('hook')}</span></span>` : ''}
     <div class="zweed l">${[150, 220, 120, 190].map((h, i) => `<span style="--w:${(h * .38).toFixed(0)}px;--t:${3 + i * .7}s;--d:-${i}s">${im('herb')}</span>`).join('')}</div>
     <div class="zweed r">${[130, 200, 170].map((h, i) => `<span style="--w:${(h * .38).toFixed(0)}px;--t:${3.4 + i * .6}s;--d:-${i * .8}s">${im('herb')}</span>`).join('')}</div>
+    <span class="zwreck"><span>${im('wood')}</span></span>
+    <span class="zchest zi"><i class="lid"></i><i class="box"></i><i class="gl g1"></i><i class="gl g2"></i><i class="gl g3"></i></span>
+    ${fl(th.floorL, 'zfl')}${fl(th.floorR, 'zfr')}
+    ${star('s1', '#FF8A3D')}${star('s2', '#FF5FA2')}
     <span class="zcoral l">${im('coral')}</span><span class="zcoral r">${im('coral')}</span><span class="zcrab">${im('crab')}</span>`;
   document.body.appendChild(d);
   crabLoop(d.querySelector('.zcrab'), 40);
+  /* interactions */
+  d.addEventListener('click', e => {
+    const t = e.target.closest('.zi'); if (!t) return;
+    if (t.classList.contains('zfish') || t.classList.contains('zturt')){ const s = t.firstElementChild; if (s.classList.contains('zflee')) return; s.classList.add('zflee'); setTimeout(() => s.classList.remove('zflee'), 2600); }
+    else if (t.classList.contains('zoct')){ const r = t.getBoundingClientRect(), dr = d.getBoundingClientRect(); const k = document.createElement('i'); k.className = 'zink'; k.style.left = (r.left - dr.left + r.width / 2) + 'px'; k.style.top = (r.top - dr.top + r.height * .7) + 'px'; d.appendChild(k); setTimeout(() => k.remove(), 2600);
+      const s = t.firstElementChild; s.classList.remove('zjet'); void s.offsetWidth; s.classList.add('zjet'); }
+    else if (t.classList.contains('zchest')){ t.classList.add('open'); const r = t.getBoundingClientRect(), dr = d.getBoundingClientRect();
+      for (let i = 0; i < 10; i++){ const c = document.createElement('span'); c.className = 'zcoin'; c.innerHTML = im('coin'); c.style.left = (r.left - dr.left + r.width / 2) + 'px'; c.style.top = (r.top - dr.top) + 'px'; c.style.setProperty('--x', (Math.random() * 120 - 60).toFixed(0) + 'px'); c.style.setProperty('--y', (-60 - Math.random() * 90).toFixed(0) + 'px'); c.style.animationDelay = (i * .05) + 's'; d.appendChild(c); setTimeout(() => c.remove(), 1800); }
+      setTimeout(() => t.classList.remove('open'), 2400); }
+    else if (t.classList.contains('zst')){ t.classList.remove('spin'); void t.offsetWidth; t.classList.add('spin'); }
+    else if (t.classList.contains('zjel')){ t.classList.remove('zzap'); void t.offsetWidth; t.classList.add('zzap'); }
+  });
 }
 function railAquarium(rail, p){
   if (!rail) return;
   const a = document.createElement('div'); a.className = 'zaq';
-  a.innerHTML = `<div class="tank"><div class="water"><i class="wv"></i></div><span class="fi f1">${im('tropical_fish')}</span><span class="fi f2">${im('fish')}</span><i class="sand"></i><span class="pl">${im('herb')}</span></div><div class="txt"><b>Lu à <span class="pc">0</span> %</b><small class="rest"></small></div>`;
+  a.innerHTML = `<div class="tank"><div class="water"><i class="wv"></i></div><span class="fi f1">${im('tropical_fish')}</span><span class="fi f2">${im('fish')}</span><span class="fi f3">${im('jellyfish')}</span><span class="fi f4">${im('octopus')}</span><i class="sand"></i><span class="pl">${im('herb')}</span></div><div class="txt"><b>Lu à <span class="pc">0</span> %</b><small class="rest"></small></div>`;
   rail.prepend(a);
   const total = mins(p);
   const upd = () => { if (!a.isConnected){ removeEventListener('scroll', upd); return; }
