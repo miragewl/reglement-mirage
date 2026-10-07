@@ -1176,7 +1176,8 @@ body.diff li.v2::before{display:none}
 @media (max-width:640px){.content ul.qkv > li{grid-template-columns:1fr}.qsev{margin-left:0}}
 
 /* ---------- accueil pleine largeur ---------- */
-body.is-home .shell{max-width:none}
+.shell{max-width:none}
+body:not(.is-home) main > .page{max-width:1160px;margin-inline:auto}
 body.is-home main > *{max-width:1180px;margin-inline:auto}
 body.is-home main > .hero{max-width:none;margin:-28px calc(-1 * clamp(16px,4vw,52px)) 26px;border-radius:0;box-shadow:none}
 body.is-home main > .foot{max-width:none}
