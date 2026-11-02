@@ -455,8 +455,27 @@ Pour toute activité ne figurant pas dans la liste des actions autorisées ci-de
 {% column %}
 
 * Attendre 72h après avoir effectué un braquage (bijouterie, Fleeca ou Pacific) avant de pouvoir en effectuer un nouveau.
+* Casse du casino 4 Dragons : un seul casse toutes les 48 h pour tout le serveur.
   {% endcolumn %}
   {% endcolumns %}
+
+***
+
+{% columns %}
+{% column valign="middle" %}
+
+<h4 align="center">Casse du casino 4 Dragons</h4>
+{% endcolumn %}
+
+{% column %}
+
+* De **3 à 6 membres du même groupe illégal**, tous présents au lancement.
+* Au moins **4 agents du SASP en service**.
+* Un seul casse toutes les **48 h** pour tout le serveur.
+* Le casse dure **45 minutes au maximum** : passé ce délai, le casino se referme.
+* Le SASP n'est alerté qu'une fois, à l'explosion de la chambre forte. La négociation se fait par le téléphone du casino.
+{% endcolumn %}
+{% endcolumns %}
 
 ***
 

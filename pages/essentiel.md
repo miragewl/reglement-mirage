@@ -20,7 +20,7 @@ Cette page résume les règles qu'on ne doit jamais oublier. Elle ne remplace pa
 - **Toujours enregistrer.** Le REC est obligatoire pour toute scène qui peut mener à un gunfight, et pour les conducteurs en course-poursuite. [Général](general-legal-et-illegal.md)
 - **Une sommation avant de tirer**, sauf pour le tir pneu après 5 minutes de course-poursuite. [Général](general-legal-et-illegal.md)
 - **Plus de zone safe.** L'illégal est possible partout, mais s'en prendre au SASP ou aux EMS a des conséquences RP lourdes. Une scène commencée ne se fuit pas dans un QG, un poste de police ou un hôpital. [Général](general-legal-et-illegal.md)
-- **Les temps sur zone.** 5 minutes (drogue, LTD, ATM, cambriolage) ou 10 minutes (conteneur, bijouterie, Fleeca) minimum, et 72 h entre deux braquages. [Général](general-legal-et-illegal.md)
+- **Les temps sur zone.** 5 minutes (drogue, LTD, ATM, cambriolage) ou 10 minutes (conteneur, bijouterie, Fleeca) minimum, et 72 h entre deux braquages (48 h pour le casse du casino 4 Dragons, de 3 à 6 membres face à 4 agents en service au moins). [Général](general-legal-et-illegal.md)
 - **Les otages.** 1 otage = 1 condition, 5 demandes maximum, 10 000 $ par otage et 50 000 $ par scène au maximum. [Général](general-legal-et-illegal.md)
 - **Les groupes.** 16 membres maximum, déclaration obligatoire à partir de 4 joueurs indépendants, pas d'alliance contre une même cible. [Groupes illégaux](groupes-illegaux.md)
 

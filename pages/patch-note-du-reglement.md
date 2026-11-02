@@ -27,7 +27,8 @@
 ➕ Mariage : demande avec bague de Vangelico, registre avec jusqu'à deux témoins, nom, alliances\
 ➕ Justice : pas de juge pour l'instant, la Gouverneure statue\
 ➕ EMS : deux hôpitaux (Los Santos Medical Clinic, Sandy Shores Hospital), plus de transport à la morgue\
-➕ Police : perquisition d'un logement au bélier, avec mandat
+➕ Police : perquisition d'un logement au bélier, avec mandat\
+➕ Ajout du casse du casino 4 Dragons : 3 à 6 membres, 4 agents en service, un casse toutes les 48 h
 
 ## 16/07/2025
 

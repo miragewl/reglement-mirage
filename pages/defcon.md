@@ -61,7 +61,7 @@ Arme de service (PPA 1), taser et équipements complémentaires (lampe torche, m
 #### Délits mineurs et majeurs
 
 - **Délits mineurs** : supérette, ATM, vente de drogue, etc.
-- **Délits majeurs** : banque, bijouterie, fusillade, prise d'otage, etc.
+- **Délits majeurs** : banque, bijouterie, casse du casino, fusillade, prise d'otage, etc.
 
 #### Renforts
 
