@@ -283,6 +283,20 @@ main{min-width:0;padding-inline:clamp(16px,4vw,52px);padding-block:28px 0}
 .content hr{display:none}
 .content img{display:block;border-radius:20px;margin:20px auto;max-width:100%;height:auto;filter:drop-shadow(0 12px 22px rgba(8,50,60,.22))}
 .content figure{margin:0}
+/* carrousel de photos (<div class="carrousel"> dans une page) : une photo à la fois, flèches, points, glisser au doigt */
+.carrousel{position:relative;margin:16px 0 30px;border-radius:20px;overflow:hidden;aspect-ratio:16/9;background:#0b2a33;box-shadow:0 18px 36px -18px rgba(8,50,60,.55)}
+.carrousel .c-piste{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain}
+.carrousel .c-piste::-webkit-scrollbar{display:none}
+.carrousel figure{flex:0 0 100%;height:100%;scroll-snap-align:start;scroll-snap-stop:always}
+.carrousel img{width:100%;height:100%;object-fit:cover;margin:0;border-radius:0;filter:none}
+.carrousel .c-fl{position:absolute;top:50%;translate:0 -50%;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.88);color:#0E2A33;font:700 24px/1 var(--body);display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.28);cursor:inherit;transition:transform .2s,opacity .2s;opacity:.9}
+.carrousel .c-fl:hover{transform:scale(1.08);opacity:1}
+.carrousel .c-prev{left:12px}.carrousel .c-next{right:12px}
+.carrousel .c-pts{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:7px}
+.carrousel .c-pts button{width:9px;height:9px;padding:0;border:0;border-radius:99px;background:rgba(255,255,255,.55);box-shadow:0 1px 4px rgba(0,0,0,.35);cursor:inherit;transition:width .3s,background .3s}
+.carrousel .c-pts button[aria-current="true"]{width:26px;background:#fff}
+.carrousel .c-num{position:absolute;top:12px;right:12px;padding:4px 10px;border-radius:99px;background:rgba(6,30,38,.62);color:#fff;font:600 12.5px/1.4 var(--body)}
+@media (max-width:640px){.carrousel .c-fl{width:36px;height:36px;font-size:20px}}
 .content blockquote{margin:18px 0;padding:4px 18px;border-left:3px solid var(--sea);color:var(--muted)}
 .sasp{font-weight:700;color:var(--sea)}
 .tick{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:6px;background:var(--sea);vertical-align:-3px;margin-right:8px}
@@ -2691,6 +2705,33 @@ function enhanceContent(ct){
   const cards = articleCards(ct);
   articleFilter(ct, cards);
   kvLists(ct);
+  carrousels(ct);
+}
+/* carrousels : la piste défile au doigt (scroll-snap), flèches et points la pilotent ; défilement auto toutes les 5 s
+   quand il est à l'écran, arrêté au survol, après une action du joueur, et en mode léger / animations réduites */
+function carrousels(ct){
+  ct.querySelectorAll('.carrousel').forEach(c => {
+    if (c.dataset.ok) return; c.dataset.ok = 1;
+    const figs = [...c.querySelectorAll('figure')]; if (figs.length < 2) return;
+    const piste = document.createElement('div'); piste.className = 'c-piste'; figs.forEach(f => piste.appendChild(f)); c.prepend(piste);
+    figs.forEach((f, i) => { const im = f.querySelector('img'); if (im){ im.alt = 'Photo ' + (i + 1) + ' sur ' + figs.length; if (i > 0) im.loading = 'lazy'; } });
+    const fl = (cls, txt, lab) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'c-fl ' + cls; b.textContent = txt; b.setAttribute('aria-label', lab); c.appendChild(b); return b; };
+    const prev = fl('c-prev', '‹', 'Photo précédente'), next = fl('c-next', '›', 'Photo suivante');
+    const pts = document.createElement('div'); pts.className = 'c-pts';
+    const dots = figs.map((f, i) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Photo ' + (i + 1)); b.onclick = () => { stop(); go(i); }; pts.appendChild(b); return b; });
+    const num = document.createElement('span'); num.className = 'c-num'; c.append(pts, num);
+    let cur = 0, auto = !CALM.matches, vu = false, survol = false;
+    const go = i => { cur = (i + figs.length) % figs.length; piste.scrollTo({left: cur * piste.clientWidth}); maj(); };
+    const maj = () => { dots.forEach((d, i) => d.setAttribute('aria-current', i === cur ? 'true' : 'false')); num.textContent = (cur + 1) + ' / ' + figs.length; };
+    const stop = () => { auto = false; };
+    prev.onclick = () => { stop(); go(cur - 1); }; next.onclick = () => { stop(); go(cur + 1); };
+    let t = 0; piste.addEventListener('scroll', () => { clearTimeout(t); t = setTimeout(() => { const i = Math.round(piste.scrollLeft / piste.clientWidth); if (i !== cur){ cur = i; maj(); } }, 80); }, {passive: true});
+    piste.addEventListener('pointerdown', stop, {passive: true});
+    c.addEventListener('mouseenter', () => survol = true); c.addEventListener('mouseleave', () => survol = false);
+    if ('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(e => vu = e.isIntersecting), {threshold: .6}).observe(c);
+    const tic = setInterval(() => { if (!c.isConnected) return clearInterval(tic); if (auto && vu && !survol && !document.hidden) go(cur + 1); }, 5000);
+    maj();
+  });
 }
 
 /* ---------- v36 : décor animé des pages du règlement ---------- */
