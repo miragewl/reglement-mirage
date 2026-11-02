@@ -36,12 +36,12 @@ Ces cérémonies sont symboliques et n'ont aucune valeur légale au regard du Go
 
 #### Lieu n° 1 : Chumash
 
-![](images/mariage-lieu1.webp)
+<figure><img src="images/mariage-lieu1.webp" alt=""><figcaption></figcaption></figure>
 
 #### Lieu n° 2 : le Golf
 
-![](images/mariage-lieu2.webp)
+<figure><img src="images/mariage-lieu2.webp" alt=""><figcaption></figcaption></figure>
 
 #### Lieu n° 3 : la plage (voir la carte)
 
-![](images/mariage-lieu3.webp)
+<figure><img src="images/mariage-lieu3.webp" alt=""><figcaption></figcaption></figure>
