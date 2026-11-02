@@ -16,6 +16,7 @@ mort-rp | Mort RP, Wipe, Fédéral | Règlement général
 reprise-d-entreprise | Entreprises | Règlement général
 boutique | Boutique | Règlement général
 code-civil | Code civil | Règlement en jeu
+mariage | Mariage | Règlement en jeu
 code-penal | Code pénal | Règlement en jeu
 code-du-travail | Code du travail | Règlement en jeu
 code-de-la-route | Code de la route | Règlement en jeu
