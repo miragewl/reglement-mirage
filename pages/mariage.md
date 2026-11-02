@@ -36,32 +36,28 @@ Ces cérémonies sont symboliques et n'ont aucune valeur légale au regard du Go
 
 #### Lieu n° 1 : Chumash
 
-<figure><img src="images/mariage-l1-1.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="images/mariage-l1-2.webp" alt=""><figcaption></figcaption></figure>
+<div class="carrousel">
+<figure><img src="images/mariage-l1-1.webp" alt=""></figure>
+<figure><img src="images/mariage-l1-2.webp" alt=""></figure>
+</div>
 
 #### Lieu n° 2 : le Golf
 
-<figure><img src="images/mariage-l2-1.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="images/mariage-l2-2.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="images/mariage-l2-3.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="images/mariage-l2-4.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="images/mariage-l2-5.webp" alt=""><figcaption></figcaption></figure>
+<div class="carrousel">
+<figure><img src="images/mariage-l2-1.webp" alt=""></figure>
+<figure><img src="images/mariage-l2-2.webp" alt=""></figure>
+<figure><img src="images/mariage-l2-3.webp" alt=""></figure>
+<figure><img src="images/mariage-l2-4.webp" alt=""></figure>
+<figure><img src="images/mariage-l2-5.webp" alt=""></figure>
+</div>
 
 #### Lieu n° 3 : la plage (voir la carte)
 
-<figure><img src="images/mariage-l3-1.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="images/mariage-l3-2.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="images/mariage-l3-3.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="images/mariage-l3-4.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="images/mariage-l3-5.webp" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="images/mariage-l3-6.webp" alt=""><figcaption></figcaption></figure>
+<div class="carrousel">
+<figure><img src="images/mariage-l3-1.webp" alt=""></figure>
+<figure><img src="images/mariage-l3-2.webp" alt=""></figure>
+<figure><img src="images/mariage-l3-3.webp" alt=""></figure>
+<figure><img src="images/mariage-l3-4.webp" alt=""></figure>
+<figure><img src="images/mariage-l3-5.webp" alt=""></figure>
+<figure><img src="images/mariage-l3-6.webp" alt=""></figure>
+</div>
