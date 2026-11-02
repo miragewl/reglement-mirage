@@ -226,6 +226,25 @@ Il n'y a plus de zone safe : les actions illégales sont possibles partout, y co
 {% columns %}
 {% column valign="middle" %}
 
+<h4 align="center">Logement</h4>
+{% endcolumn %}
+
+{% column %}
+
+* Un logement se paie **par carte** (compte en banque), jamais en espèces.
+* Trois formules à la signature : **comptant**, **en plusieurs fois** (25 % d'apport, puis 4, 8 ou 12 échéances avec 10 % de frais) ou **location**.
+* En plusieurs fois, trois échéances impayées et le logement est repris.
+* Un logement qui n'est pas fini de payer ne peut pas être cédé.
+* Seuls les **agents immobiliers** peuvent mettre un logement en location (de 1 à 30 jours). La sous-location n'existe pas.
+* Un bail rompu avant la fin rend les jours entiers non consommés, moins 25 % gardés par le bailleur.
+{% endcolumn %}
+{% endcolumns %}
+
+***
+
+{% columns %}
+{% column valign="middle" %}
+
 <h4 align="center">Mécaniciens</h4>
 {% endcolumn %}
 

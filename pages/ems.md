@@ -12,6 +12,8 @@ Un seul service EMS, deux hôpitaux :
 
 Un joueur qui réapparaît sans avoir été soigné par les EMS se réveille à l'hôpital le plus proche.
 
+Les EMS ont aussi une **vedette de secours en mer** (LSMC « Water Rescue ») à la marina partagée avec le SASP, pour les sauvetages et les évacuations depuis l'eau. Elle ne sort qu'en service.
+
 ### <sub>👨‍⚕️ Interdiction aux membres des EMS</sub>&#x20;
 
 ⚠️ De faire des actions illégales (vente de drogue, braquage, mission etc..)
@@ -46,20 +48,23 @@ Cependant, vous devez rester professionnel et être présent uniquement dans le 
 * Toute grossesse doit être validée au préalable par le staff.&#x20;
 * Un rappel du règlement sera effectué avant validation.&#x20;
 * Toute tentative de contournement ou de grossesse non validée est interdite.&#x20;
-* Une grossesse dure 1 mois IRL pour 3 trimestres et donc un total de 40 semaines IG.
+* Une fois le dossier validé, c'est un **EMS gradé** (chef ou patron) qui déclare la grossesse dans le dossier médical de la patiente. Il n'y a pas de tirage au sort.
+* Une grossesse dure 1 mois IRL pour 3 trimestres et donc un total de 40 semaines IG (une semaine IG = 18 h réelles). Le temps passe même déconnectée.
 
 #### **Suivi médical obligatoire**
 
 La grossesse doit être jouée de manière réaliste et suivie. \
-Test de grossesse obligatoire auprès des EMS.\
-La joueuse peut potentiellement souffrir d'infertilité. Dans ce cas elle devrait suivre un traitement (en 5 pilules à prendre) distribué par les EMS avant de pouvoir refaire un test de grossesse. \
+La joueuse peut potentiellement souffrir d'infertilité (par exemple après un premier accouchement). Dans ce cas elle doit suivre un traitement de 5 pilules distribué par les EMS avant qu'une nouvelle grossesse puisse être déclarée. \
 \
-Lors d'un test, elle a une chance sur deux d'être enceinte. Suivi médical comprenant :
+Suivi médical comprenant 3 visites, chacune avec une échographie :
 
-* 2 échographies : 1 au 1er trimestre et 1 au 2e trimestre
-* 1 prise de sang chaque semaine.
+* 1er trimestre : entre la 11e et la 14e semaine
+* 2e trimestre : entre la 20e et la 24e semaine
+* 3e trimestre : entre la 30e et la 34e semaine
 
-Tous les examens doivent être réalisés en RP avec les EMS. Un manque de suivi peut entraîner des sanctions RP (complications, perte du bébé) ou HRP.
+Et des prises de sang régulières : un bilan de plus de 10 semaines est périmé.
+
+Tous les examens doivent être réalisés en RP avec les EMS. Une visite manquée ou un bilan périmé fait monter le risque de la grossesse : complications, accouchement prématuré, perte du bébé. Un manque de suivi peut aussi entraîner des sanctions HRP.
 
 #### **Symptômes et évolution**
 
@@ -81,6 +86,8 @@ L’accouchement a lieu à 40 semaines. Il doit obligatoirement être réalisé 
 
 * À l’hôpital (Los Santos Medical Clinic ou Sandy Shores Hospital)
 * Avec la présence des EMS
+
+**Accouchement prématuré** : à partir de la 32e semaine, une grossesse à risque peut déclencher une menace d'accouchement. Les EMS ont alors 20 minutes pour intervenir avant le début du travail.
 
 #### **Gestion de l’enfant**
 

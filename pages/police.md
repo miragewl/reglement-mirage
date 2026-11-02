@@ -10,6 +10,18 @@
 Vous devez respecter le principe de négociation lors de vos échanges avec des groupes illégaux.\
 Exemple : si un groupe vous demande de retirer des barrières et des herses en échange d’otages, vous devez tenir parole et retirer le dispositif.
 
+#### **⚠️ Agent pris en otage : le GPS**
+
+Chaque agent a un traceur GPS. La commande `/gps` (ou le bouton GPS du MDT) le coupe : votre position disparaît pour vos collègues, et les leurs disparaissent de votre carte.
+
+* Si vos ravisseurs exigent que vous coupiez votre traceur, vous devez le faire.
+* Il est interdit de rallumer son GPS ou de transmettre sa position en cachette pendant la scène.
+* Le GPS se rallume tout seul en fin de service ou à la reconnexion.
+
+#### **⚠️ Vedette**
+
+Le SASP dispose d'une vedette à la marina, partagée avec les EMS : patrouilles côtières, poursuites et interventions en mer. Elle ne sort qu'en service.
+
 #### **⚠️ Ripoux**
 
 Être policier ripoux ou corrompu est possible **uniquement sous dossier** : ouvrez un ticket sur le Discord avec votre projet, il doit être validé par le staff avant toute action.\
