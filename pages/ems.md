@@ -3,6 +3,15 @@
 
 \[Mirage WL], \[2025]. Tous droits réservés. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.
 
+### <sub>🏥 Les hôpitaux</sub>
+
+Un seul service EMS, deux hôpitaux :
+
+* **Los Santos Medical Clinic**, au sud, en ville.
+* **Sandy Shores Hospital**, au nord.
+
+Un joueur qui réapparaît sans avoir été soigné par les EMS se réveille à l'hôpital le plus proche.
+
 ### <sub>👨‍⚕️ Interdiction aux membres des EMS</sub>&#x20;
 
 ⚠️ De faire des actions illégales (vente de drogue, braquage, mission etc..)
@@ -17,7 +26,7 @@
 
 **⚠️** Lorsqu’un joueur est déclaré mort RP, les EMS seront toujours prévenus en amont .
 
-⚠️ Une fois sur place, vous ne devez pas réanimer les personnes considérées comme mortes, mais les transporter à la morgue à l’aide d’un brancard, par ambulance ou hélicoptère.
+⚠️ Une fois sur place, vous ne devez pas réanimer les personnes considérées comme mortes.
 
 ⚠️ Tant que les personnes sont dans le coma, vous pouvez les fouiller et obtenir toutes les informations nécessaires sans interaction directe avec elles.
 
@@ -70,7 +79,7 @@ Ces effets étant gérés par le script, toute tentative de contournement, d’e
 
 L’accouchement a lieu à 40 semaines. Il doit obligatoirement être réalisé :
 
-* À l’hôpital
+* À l’hôpital (Los Santos Medical Clinic ou Sandy Shores Hospital)
 * Avec la présence des EMS
 
 #### **Gestion de l’enfant**

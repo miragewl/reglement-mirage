@@ -7,6 +7,10 @@
 
 ### CODE PÉNAL
 
+{% hint style="info" %}
+Il n'y a pas de juge pour l'instant : c'est la **Gouverneure** qui statue : partout où ce code parle du juge, lisez « la Gouverneure ». Les avocats passent par leur tablette.
+{% endhint %}
+
 ***
 
 <h2 align="center">PRÉAMBULE (§ 100-199)</h2>

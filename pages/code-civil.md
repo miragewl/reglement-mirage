@@ -5,13 +5,17 @@
 
 ### CODE CIVIL
 
+{% hint style="info" %}
+Il n'y a pas de juge pour l'instant : c'est la **Gouverneure** qui statue (divorces, adoptions, litiges, audiences). Les avocats passent par leur tablette.
+{% endhint %}
+
 ***
 
 ### CHAPITRE 1 : Des dispositions générales
 
 **Article 1.** La loi n'a point d'effet rétroactif.
 
-**Article 2.** Le Juge qui refusera de juger, sous prétexte du silence, de l'obscurité ou de l'insuffisance de la loi, pourra être poursuivi comme coupable de déni de justice.
+**Article 2.** La personne chargée de statuer qui refusera de juger, sous prétexte du silence, de l'obscurité ou de l'insuffisance de la loi, pourra être poursuivi comme coupable de déni de justice.
 
 **Article 3**. On ne peut déroger, par des conventions particulières, aux lois qui intéressent l'ordre public et les bonnes mœurs.
 
@@ -43,7 +47,7 @@ Dès lors qu'il y a accord de tutorat par les deux parties, le tuteur est désig
 
 **Article 102-4.** Le mariage doit être porté à la connaissance du pouvoir civil de l’État de San Andreas.
 
-**Article 102-5.** Le mariage civil est célébré dans les locaux du Gouvernement, par un membre habilité à officier, sur rendez-vous pris au moins une semaine à l'avance. Les fiancés doivent, à cette occasion, produire chacun deux témoins majeurs et capables de discernement. Seul ce mariage est reconnu officiellement ; une cérémonie religieuse ou laïque peut suivre, sans valeur légale (voir [Mariage](mariage.md)).
+**Article 102-5.** Le mariage civil est célébré dans les locaux du Gouvernement, par un membre habilité à officier, sur rendez-vous pris au moins une semaine à l'avance. Les fiancés peuvent, à cette occasion, faire signer le registre par un ou deux témoins majeurs et capables de discernement. Seul ce mariage est reconnu officiellement ; une cérémonie religieuse ou laïque peut suivre, sans valeur légale (voir [Mariage](mariage.md)).
 
 **Article 102-6.** L’officiant examine si :
 
@@ -61,20 +65,20 @@ Dès lors qu'il y a accord de tutorat par les deux parties, le tuteur est désig
 
 #### Section 2-2 : Du divorce
 
-**Article 103-1.** Les époux peuvent demander le divorce par une requête commune en produisant une convention complète sur les effets du divorce accompagnée des documents nécessaires auprès du Juge.
+**Article 103-1.** Les époux peuvent demander le divorce par une requête commune en produisant une convention complète sur les effets du divorce accompagnée des documents nécessaires auprès de la Gouverneure.
 
 \
 **Article 103-2.** Un époux peut demander, à titre personnel, la dissolution des liens du mariage pour des motifs sérieux qui ne lui sont pas imputables et qui rendent la continuation de l’union insupportable.
 
 \
-**Article 103-3.** En cas de litige, chaque époux dépose ses conclusions sur l’effet du divorce et, le Juge, ou, à défaut, le représentant de l’État de San Andreas, se prononce sur les conclusions finales de l’acte de divorce.\
+**Article 103-3.** En cas de litige, chaque époux dépose ses conclusions sur l’effet du divorce et la Gouverneure se prononce sur les conclusions finales de l’acte de divorce.\
 (a) Garde des enfants, qu’elle soit partagée ou unilatérale\
 (b) Éventualité d’une contribution d’entretien. <br>
 
-**Article 103-4.** Le juge, ou, à défaut, le représentant de l’État de San Andreas peut demander une audition ultérieure afin de prendre le temps d’examiner les pièces.
+**Article 103-4.** La Gouverneure peut demander une audition ultérieure afin de prendre le temps d’examiner les pièces.
 
 \
-**Article 103-5.** Pour décider si une contribution d’entretien doit être allouée, le Juge, ou, à défaut, le représentant de l’État de San Andreas examine :
+**Article 103-5.** Pour décider si une contribution d’entretien doit être allouée, la Gouverneure examine :
 
 1. La durée du mariage.
 2. Le niveau de vie des époux.
@@ -86,7 +90,7 @@ Dès lors qu'il y a accord de tutorat par les deux parties, le tuteur est désig
 **Article 104-1-a.** Un mineur peut être adopté si toutes les circonstances permettent de prévoir que l’établissement d’un lien de filiation servira le bien de l’enfant sans porter préjudice à la situation d’autres enfants et/ou du/des adoptant/s. Une procédure d’adoption ne peut être initiée que si le/les adoptant/s, au vu de leur âge et de leur situation personnelle, paraissent à même de prendre en charge l’enfant jusqu’à sa majorité.
 
 \
-**Article 104-1-b.** L’adoption d’une personne majeure est autorisée, sous réserve du consentement libre et éclairé de l’adoptant et de l’adopté. Cette adoption est soumise à l’appréciation du juge, qui en vérifie la légitimité, la sincérité du lien affectif, ainsi que l'absence de fraude.
+**Article 104-1-b.** L’adoption d’une personne majeure est autorisée, sous réserve du consentement libre et éclairé de l’adoptant et de l’adopté. Cette adoption est soumise à l’appréciation de la Gouverneure, qui en vérifie la légitimité, la sincérité du lien affectif, ainsi que l'absence de fraude.
 
 \
 **Article 104-2.** Les dispositions sur l’adoption restent applicables si l’enfant devient majeur.
@@ -95,7 +99,7 @@ Dès lors qu'il y a accord de tutorat par les deux parties, le tuteur est désig
 **Article 104-3.** Une personne peut adopter un mineur à condition d’avoir 25 ans révolus.
 
 \
-**Article 104-4.** La demande d’adoption sera à déposer auprès du bureau du Juge ou, à défaut, le représentant de l’État de San Andreas. Les conditions doivent être réunies au moment du dépôt de cette requête.
+**Article 104-4.** La demande d’adoption sera à déposer auprès de la Gouverneure. Les conditions doivent être réunies au moment du dépôt de cette requête.
 
 #### Section 2-4 : Du déplacement
 

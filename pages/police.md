@@ -66,3 +66,12 @@ Au bout de 10 minutes sans réponse des cibles, l’assaut est autorisé.
 
 * Vous devez prendre 100 % des ressources illégales (couleur violette)
 * Vous devez obligatoirement établir un inventaire et prendre des photos des ressources saisies avant la fin de la scène et en informer le suspect.
+
+#### **⚠️ Perquisition d'un logement**
+
+Un logement (maison, appartement) se perquisitionne uniquement avec un mandat qui le nomme, obtenu comme indiqué plus haut.
+
+* La porte s'ouvre avec le **bélier** de l'armurerie, en service uniquement. Elle est enfoncée, pas déverrouillée : vos collègues en service peuvent entrer pendant 5 minutes.
+* Chaque entrée au bélier est enregistrée : le propriétaire et les locataires sont prévenus, un avis de passage est laissé dans le logement et l'alarme se déclenche s'il y en a une.
+* Utiliser le bélier sans mandat est interdit et sanctionné.
+* Mêmes obligations qu'en perquisition de QG : inventaire, photos des saisies, suspect informé.

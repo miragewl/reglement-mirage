@@ -5,6 +5,12 @@
 
 Pour garantir la bonne organisation de votre union, merci de respecter les démarches suivantes. Les conditions du mariage (âge, liens de parenté, témoins) sont dans le [Code civil](code-civil.md).
 
+## Avant tout : la demande
+
+* La **bague** s'achète chez **Vangelico**, auprès de la vendeuse : plusieurs modèles, gravure possible, paiement par carte uniquement.
+* La demande se fait **en jeu**, bague en poche, face à la personne. Elle peut accepter, refuser ou prendre le temps de réfléchir une fois.
+* Si elle accepte, la bague lui est remise comme bague de fiançailles et vous êtes fiancés.
+
 ## 1. Prendre contact avec le Gouvernement
 
 Vous devez contacter le Gouvernement **au moins 1 semaine à l'avance** afin de convenir d'une date pour la cérémonie officielle.
@@ -16,6 +22,12 @@ Contact : le numéro du Gouvernement.
 ## 2. Célébration du mariage civil
 
 Le mariage civil est célébré **dans les locaux du Gouvernement**, par un membre dûment habilité à officier.
+
+* Les deux époux disent « Oui, je le veux », puis signent le **registre** avec **jusqu'à deux témoins** majeurs.
+* Un **contrat de mariage** peut y être joint.
+* Au registre, vous choisissez votre nom : garder le vôtre, prendre celui de l'autre ou les accoler.
+* Les **alliances** sont remises aux époux après la cérémonie.
+* Des **faire-part** peuvent être commandés au pupitre de la mairie.
 
 {% hint style="warning" %}
 Seule cette cérémonie est reconnue officiellement.

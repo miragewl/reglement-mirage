@@ -23,7 +23,11 @@
 ➕ Fin des zones safe : l'illégal est possible partout, events compris, avec des conséquences RP lourdes en cas d'attaque contre le SASP ou les EMS\
 ➕ Boutique : page refaite. Fin des coins, nouvelle boutique sur miragev2.com, rangs VIP, boutique en jeu en dollars, imports, compensation des anciens achats\
 ➕ SASP : être ripoux est possible, uniquement sous dossier validé par le staff\
-➕ Nouvelle page **Mariage** : procédure auprès du Gouvernement, cérémonie symbolique et lieux de cérémonie
+➕ Nouvelle page **Mariage** : procédure auprès du Gouvernement, cérémonie symbolique et lieux de cérémonie\
+➕ Mariage : demande avec bague de Vangelico, registre avec jusqu'à deux témoins, nom, alliances\
+➕ Justice : pas de juge pour l'instant, la Gouverneure statue\
+➕ EMS : deux hôpitaux (Los Santos Medical Clinic, Sandy Shores Hospital), plus de transport à la morgue\
+➕ Police : perquisition d'un logement au bélier, avec mandat
 
 ## 16/07/2025
 
@@ -66,7 +70,7 @@
 ➕ [***Ajout du code du travail***](/mirage-wl-reglement/3-reglement-en-jeu-en-travaux/code-du-travail.md)\
 ➕ [***Ajout de la règlementation de la chasse***](reglementation-de-la-chasse.md)\
 ➕ ***Ajout de la règlementation de la pêche***\
-➕ [***Ajout des instances Gouvernement et Bureau du Procureur***](/mirage-wl-reglement/3-reglement-en-jeu-en-travaux/bureau-du-procureur.md)\
+➕ ***Ajout des instances Gouvernement et Bureau du Procureur***\
 ➕[ ***Ajout de consignes de bonnes conduites chez les EMS***](/mirage-wl-reglement/2-reglement-general/ems.md)
 
 ## 29/12/2024&#x20;
