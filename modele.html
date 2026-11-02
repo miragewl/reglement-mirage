@@ -2725,7 +2725,10 @@ function carrousels(ct){
     const maj = () => { dots.forEach((d, i) => d.setAttribute('aria-current', i === cur ? 'true' : 'false')); num.textContent = (cur + 1) + ' / ' + figs.length; };
     const stop = () => { auto = false; };
     prev.onclick = () => { stop(); go(cur - 1); }; next.onclick = () => { stop(); go(cur + 1); };
-    let t = 0; piste.addEventListener('scroll', () => { clearTimeout(t); t = setTimeout(() => { const i = Math.round(piste.scrollLeft / piste.clientWidth); if (i !== cur){ cur = i; maj(); } }, 80); }, {passive: true});
+    // la photo courante ne se relit qu'à l'arrêt du défilement (sinon un glissement animé la fait reculer en route)
+    const lire = () => { const i = Math.round(piste.scrollLeft / piste.clientWidth); if (i !== cur){ cur = i; maj(); } };
+    if ('onscrollend' in piste) piste.addEventListener('scrollend', lire);
+    else { let t = 0; piste.addEventListener('scroll', () => { clearTimeout(t); t = setTimeout(lire, 250); }, {passive: true}); }
     piste.addEventListener('pointerdown', stop, {passive: true});
     c.addEventListener('mouseenter', () => survol = true); c.addEventListener('mouseleave', () => survol = false);
     if ('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(e => vu = e.isIntersecting), {threshold: .6}).observe(c);
