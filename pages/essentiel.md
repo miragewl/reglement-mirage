@@ -19,14 +19,14 @@ Cette page résume les règles qu'on ne doit jamais oublier. Elle ne remplace pa
 
 - **Toujours enregistrer.** Le REC est obligatoire pour toute scène qui peut mener à un gunfight, et pour les conducteurs en course-poursuite. [Général](general-legal-et-illegal.md)
 - **Une sommation avant de tirer**, sauf pour le tir pneu après 5 minutes de course-poursuite. [Général](general-legal-et-illegal.md)
-- **Pas de retour en zone safe.** Une scène commencée ne se fuit pas dans un QG, un poste de police ou une zone safe. [Général](general-legal-et-illegal.md)
+- **Plus de zone safe.** L'illégal est possible partout, mais s'en prendre au SASP ou aux EMS a des conséquences RP lourdes. Une scène commencée ne se fuit pas dans un QG, un poste de police ou un hôpital. [Général](general-legal-et-illegal.md)
 - **Les temps sur zone.** 5 minutes (drogue, LTD, ATM, cambriolage) ou 10 minutes (conteneur, bijouterie, Fleeca) minimum, et 72 h entre deux braquages. [Général](general-legal-et-illegal.md)
 - **Les otages.** 1 otage = 1 condition, 5 demandes maximum, 10 000 $ par otage et 50 000 $ par scène au maximum. [Général](general-legal-et-illegal.md)
 - **Les groupes.** 16 membres maximum, déclaration obligatoire à partir de 4 joueurs indépendants, pas d'alliance contre une même cible. [Groupes illégaux](groupes-illegaux.md)
 
 ## La vie du personnage
 
-- **Légal ou illégal, il faut choisir.** SASP, Gouvernement, DOJ, EMS, Weazel News, avocats et Dynasty sont incompatibles avec l'illégal. Changer de voie impose un wipe. [Général](general-legal-et-illegal.md)
+- **Légal ou illégal, il faut choisir.** SASP, Gouvernement, DOJ, EMS, Weazel News, avocats et Dynasty sont incompatibles avec l'illégal (seule exception : un policier ripoux sous dossier validé par le staff). Changer de voie impose un wipe. [Général](general-legal-et-illegal.md)
 - **Une mort RP passe par un dossier.** Ticket, preuves vidéo, avertissement en scène et porte de sortie : sans dossier validé par le staff, pas de mort RP. [Mort RP](mort-rp.md)
 - **Pas de transfert avant un wipe.** Donner ses biens avant un wipe, une mort RP ou un départ est interdit. Sans connexion pendant 1 mois et demi, le wipe est automatique. [Mort RP](mort-rp.md)
 

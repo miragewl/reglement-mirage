@@ -3,46 +3,66 @@
 
 \[Mirage WL], \[2025]. Tous droits réservés. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.
 
-## Fonctionnement d'achat de coins
+## La boutique
 
-Pour les achats de coins, merci de vous rendre sur notre boutique tebex.\
-Tout achat effectué sur notre boutique ne sera pas remboursable.
+La boutique du serveur est sur **miragev2.com**. Elle ne vend plus que des **abonnements VIP** : les coins n'existent plus.
 
-{% embed url="<https://mirage-wl.tebex.io/>" %}
+{% embed url="<https://miragev2.com/>" %}
 
-Votre tbx (présent sur votre facture) sera à ajouter dans le panel boutique en jeu.
+* Le paiement est encaissé par **Tebex**. Liez votre compte Discord au paiement : le rôle de votre rang vous est donné automatiquement.
+* Le rang est lu à la connexion au serveur. S'il n'apparaît pas, déconnectez-vous puis reconnectez-vous.
 
 {% hint style="warning" %}
-Si vous rencontrez des problèmes avec la réception des coins en jeu, nous vous invitons à ouvrir un ticket sur Discord en fournissant une capture d'écran du reçu qui vous a été envoyé par e-mail après l'achat.
+Un souci avec un achat ? Ouvrez un ticket sur Discord avec votre numéro de facture Tebex.
 {% endhint %}
 
-En cas de wipe, vos coins vous sont rendus sous présentation des factures.
+## Les abonnements VIP
 
-## Les véhicules imports pour l'illégal
+L’abonnement VIP est un **abonnement mensuel**, renouvelé automatiquement chaque mois. Il se résilie à tout moment depuis votre compte Tebex, **avant** la date de renouvellement.
 
-Les véhicules boutique sont interdits dans l’illégal, sauf ceux indiqués pour l’illégal sur la boutique. Vous trouverez ces informations sur le site de la boutique, dans la rubrique intitulée : "**VEHICULES ACTIVITE ILLEGALE"**
+| Rang | Prix par mois |
+| --- | --- |
+| Mini VIP | 9,99 € |
+| VIP | 15 € |
+| VIP Bronze | 30 € |
+| VIP Silver | 40 € |
+| VIP Or | 50 € |
+| VIP Platinium | 100 € |
 
-## Abonnement VIP
+Chaque rang donne aussi tous les avantages des rangs en dessous. Le détail de chaque rang est sur la [boutique](https://miragev2.com/#vip).
 
-L’abonnement VIP est un **abonnement mensuel d’une durée de 1 mois**, avec **tacite reconduction** à l’issue de chaque période, sauf résiliation effectuée par l’utilisateur avant la date de renouvellement.
+Les avantages VIP sont **cosmétiques et de confort** : animations, logement, tenues, tatouages, animaux de compagnie, interface, inventaire. Ils ne donnent aucun avantage sur l'équilibre du jeu ni sur les règles du serveur.
 
-Il permet l’accès à divers **avantages et services exclusifs en jeu**, incluant notamment :
+{% hint style="info" %}
+Si vous arrêtez votre VIP, rien de ce que vous avez gagné ne disparaît : les objets restent, vous ne pouvez simplement plus en ajouter au-delà de votre nouveau rang.
+{% endhint %}
 
-* **Items exclusifs** (liste non exhaustive) :
-  * Brosse à cheveux permettant de changer de coupe
-  * Palette de maquillages permettant de modifier le maquillage
-  * Pierre / Feuille / Ciseaux
-  * Magic 8 Ball
-* **Meubles exclusifs** pour l’aménagement de la maison en jeu
-* **1 500 coins** à obtenir en rentrant le code tbx dans le panel boutique en jeu
-* **Rôle VIP sur Discord** avec accès au channel VIP
-* **Véhicules se salissant 30 % moins vite**
-* **Animations VIP exclusives**
+## La boutique VIP en jeu
 
-L’abonnement VIP est **strictement personnel, non cessible et non transférable**.
+* Ouverture avec **F2** (ou `/vipshop`). Réservée aux VIP, Mini VIP compris.
+* Tout se paie **en dollars**, avec votre compte en banque. Réduction de 5 % (VIP) à 25 % (Platinium) selon le rang.
+* On y trouve : bouquets, bougie, palette de maquillage, brosse à cheveux, pierre feuille ciseaux.
 
-Conformément à la politique de la boutique, **aucun remboursement ne pourra être exigé**, quelle qu’en soit la raison (résiliation anticipée, arrêt volontaire, sanction administrative, bannissement, perte d’accès au compte, etc.).
+## Les véhicules d'import
 
-En cas de **wipe du personnage**, **les coins issus des abonnements VIP sont récupérables**, à condition que le joueur soit en mesure de **présenter les factures d’achat correspondantes**.
+* Les imports sont des véhicules exclusifs, vendus **en dollars** à la concession (rubrique Imports), selon votre rang VIP.
+* Si votre VIP s'arrête, l'import reste à vous mais **ne sort plus du garage** tant que vous n'avez pas retrouvé le rang.
+* Un import ne se vend et ne se donne qu'à un joueur qui a le rang demandé.
 
-Tout abus, tentative de fraude ou utilisation non conforme des avantages VIP pourra entraîner des sanctions, pouvant aller jusqu’à la **suppression immédiate de l’abonnement sans compensation**.
+{% hint style="danger" %}
+Les imports sont interdits dans l'illégal, **sauf** ceux qui portent l'étiquette rose **« Illégal »** à la concession et sur la boutique.
+{% endhint %}
+
+## Fin des coins et compensation
+
+* Les achats faits sur l'**ancienne boutique** (coins ou VIP sur Mirage WL) donnent droit à des **jours de VIP gratuits**.
+* En jeu, ouvrez la boutique VIP (**F2**), onglet **Compensation**, et collez votre facture Tebex de l'ancienne boutique (elle commence par `tbx-`). Chaque facture ne compte qu'une fois.
+* La compensation est plafonnée à **60 jours de VIP** par joueur. Le barème est sur la boutique.
+
+## Conditions
+
+* L’abonnement VIP est **strictement personnel, non cessible et non transférable**.
+* **Aucun remboursement** ne pourra être exigé, quelle qu’en soit la raison (résiliation oubliée, arrêt volontaire, sanction, bannissement, perte d’accès au compte, etc.). Un mois entamé n'est pas remboursé.
+* Les avantages peuvent être modifiés, ajoutés ou retirés lors des mises à jour du serveur.
+* Tout abus, tentative de fraude ou utilisation non conforme des avantages VIP pourra entraîner des sanctions, pouvant aller jusqu’à la **suppression immédiate de l’abonnement sans compensation**.
+* Les conditions générales complètes sont sur la boutique, onglet **CGU**.

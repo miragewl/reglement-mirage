@@ -12,8 +12,8 @@ Exemple : si un groupe vous demande de retirer des barrières et des herses en �
 
 #### **⚠️ Ripoux**
 
-Être policier ripoux ou corrompu est interdit.\
-Tout comportement ou toute activité illégale est strictement interdit pour les membres du SASP, qu’ils soient en service, hors service ou anciens employés.
+Être policier ripoux ou corrompu est possible **uniquement sous dossier** : ouvrez un ticket sur le Discord avec votre projet, il doit être validé par le staff avant toute action.\
+Sans dossier validé, tout comportement ou toute activité illégale est strictement interdit pour les membres du SASP, qu’ils soient en service, hors service ou anciens employés.
 
 #### **⚠️ Fouille**
 

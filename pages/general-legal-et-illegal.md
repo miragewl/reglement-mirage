@@ -32,12 +32,8 @@
 
 {% column %}
 
-* Aéroport de Los Santos
-* Prison
 * Base militaire
-* Human Labs
 * Porte-avions
-* Zone Merryweather
   {% endcolumn %}
   {% endcolumns %}
 
@@ -61,7 +57,7 @@
 {% columns %}
 {% column valign="middle" %}
 
-<h4 align="center">Retour zone safe</h4>
+<h4 align="center">Fuite en cours de scène</h4>
 {% endcolumn %}
 
 {% column %}
@@ -69,7 +65,7 @@ Lorsqu’une scène commence (course-poursuite, prise d’otage, etc.), il est i
 
 * QG de gang
 * Poste de police
-* Zone safe
+* Hôpital
 
 avant la fin de la scène.
 {% endcolumn %}
@@ -124,8 +120,8 @@ avant la fin de la scène.
 
 {% column %}
 
-* Les véhicules super-sportifs et véhicules Boutique VIP sont interdits pour toute activité illégale.
-* Exception : les véhicules indiqués dans la rubrique « **VEHICULES ACTIVITE ILLEGALE** » de la boutique peuvent être utilisés pour l’illégal.
+* Les véhicules super-sportifs sont interdits pour toute activité illégale.
+* Les véhicules d'import VIP sont interdits dans l'illégal, **sauf** ceux qui portent l'étiquette rose « **Illégal** » à la concession et sur la boutique, qui sont autorisés.
   {% endcolumn %}
   {% endcolumns %}
 
@@ -186,6 +182,8 @@ Les joueurs impliqués dans l’illégal ne peuvent pas travailler dans :
 * Dynasty
 
 Changement de voie = wipe obligatoire dans les deux sens.
+
+Exception : un agent du SASP peut être ripoux **uniquement sous dossier validé par le staff** (voir [Police](police.md)).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -194,19 +192,13 @@ Changement de voie = wipe obligatoire dans les deux sens.
 {% columns %}
 {% column valign="middle" %}
 
-<h4 align="center">Zones safe</h4>
+<h4 align="center">Fin des zones safe</h4>
 {% endcolumn %}
 
 {% column %}
-Sont considérés zones safe avec un rayon de 50 mètres autour :
+Il n'y a plus de zone safe : les actions illégales sont possibles partout, y compris autour des postes du SASP, des hôpitaux, des QG, des entreprises et pendant les events.
 
-* SASP
-* EMS
-* Lieux d’événements officiels annoncés (annonces sur Discord)
-* QG illégaux (villa, quartier etc..)
-
-Autour des entreprises, les actions illégales et les prises d’otages sont autorisées, sauf pendant les events (ouvertures, soirées, événements annoncés sur Discord).
-  {% endcolumn %}
+* S'en prendre au **SASP** ou aux **EMS** (agents, postes, hôpitaux, véhicules de service) entraîne des **conséquences RP lourdes** : réponse du SASP, passage en [Defcon](defcon.md), dossier fédéral possible (voir [Mort RP, Wipe, Fédéral](mort-rp.md)).  {% endcolumn %}
   {% endcolumns %}
 
 ***

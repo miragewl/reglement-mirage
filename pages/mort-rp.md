@@ -5,9 +5,7 @@
 
 ## <sub>Wipe de votre personnage</sub>
 
-**⚠️**En cas de mort définitive ou de wipe de votre personnage, hormis les coins boutique vous perdez tous les biens qu’il possédait. **Il est interdit de transférer des objets ou de l’argent à d’autres joueurs** juste avant un wipe, une mort RP ou un départ.\
-\
-Les coins boutique ne sont restitués qu’à l’acheteur initial : si vous avez reçu un don d’un autre joueur, seul celui-ci peut demander un remboursement via ses factures.
+**⚠️**En cas de mort définitive ou de wipe de votre personnage, vous perdez tous les biens qu’il possédait. **Il est interdit de transférer des objets ou de l’argent à d’autres joueurs** juste avant un wipe, une mort RP ou un départ.
 
 ## <sub>Dossier Fédéral</sub>&#x20;
 

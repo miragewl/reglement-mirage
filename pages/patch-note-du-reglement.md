@@ -11,12 +11,18 @@
 ➕ Entreprises : plus de limite au nombre de membres d'un groupe illégal embauchés\
 ➕ Entreprises : nouveaux plafonds de salaires et de primes par grade\
 ➕ Entreprises : l'illégal est autorisé, sauf le blanchiment d'argent. Stockage autorisé, perquisition possible\
-➕ Fin de la zone de 100 m autour des entreprises et QG : les actions illégales et prises d'otages y sont autorisées, sauf pendant les events\
+➕ Fin de la zone de 100 m autour des entreprises et QG : les actions illégales et prises d'otages y sont autorisées\
 ➕ Ajout de la page **Defcon** (niveaux 5 à 2)\
 ➕ Armes : le PPA civil donne accès aux armes de poing (catégorie 2), catégories d'armes harmonisées\
 ➕ Véhicules : ceux indiqués « activité illégale » sur la boutique peuvent servir dans l'illégal\
 ➕ Tir pneu sans sommation après 5 minutes de course-poursuite\
-➕ Relecture complète : liens réparés, numérotation des articles corrigée, fautes corrigées
+➕ Relecture complète : liens réparés, numérotation des articles corrigée, fautes corrigées\
+➕ Retrait de la réglementation de la pêche\
+➕ Nouvelle page **Réglementation de la chasse** : zones, permis, armes, dépeçage, bêtes dangereuses\
+➕ Zones interdites d'accès RP : seulement la base militaire et le porte-avions\
+➕ Fin des zones safe : l'illégal est possible partout, events compris, avec des conséquences RP lourdes en cas d'attaque contre le SASP ou les EMS\
+➕ Boutique : page refaite. Fin des coins, nouvelle boutique sur miragev2.com, rangs VIP, boutique en jeu en dollars, imports, compensation des anciens achats\
+➕ SASP : être ripoux est possible, uniquement sous dossier validé par le staff
 
 ## 16/07/2025
 
@@ -57,8 +63,8 @@
 ➕ [***Ajout du code pénal***](/mirage-wl-reglement/3-reglement-en-jeu-en-travaux/code-penal.md)\
 ➕ [***Modification Police (ex-LSPD)***](/mirage-wl-reglement/2-reglement-general/police.md)\
 ➕ [***Ajout du code du travail***](/mirage-wl-reglement/3-reglement-en-jeu-en-travaux/code-du-travail.md)\
-➕[ ***Ajout de la règlementation de la chasse***](broken://pages/wIOD2wuftmoj8X5vlJRS)\
-➕ [***Ajout de la règlementation de la pêche***](/mirage-wl-reglement/3-reglement-en-jeu-en-travaux/reglementation-de-la-peche.md)\
+➕ [***Ajout de la règlementation de la chasse***](reglementation-de-la-chasse.md)\
+➕ ***Ajout de la règlementation de la pêche***\
 ➕ [***Ajout des instances Gouvernement et Bureau du Procureur***](/mirage-wl-reglement/3-reglement-en-jeu-en-travaux/bureau-du-procureur.md)\
 ➕[ ***Ajout de consignes de bonnes conduites chez les EMS***](/mirage-wl-reglement/2-reglement-general/ems.md)
 

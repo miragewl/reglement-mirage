@@ -48,6 +48,4 @@ Pour ajouter un mot, écrivez une nouvelle ligne sous la forme « - **Mot** : d�
 - **ATM** : les distributeurs de billets.
 - **MLO** : un intérieur mappé (maison, local) avec des portes ouvrables, sans téléportation.
 - **QG** : le quartier général d'un groupe.
-- **Zone safe** : zone où les actions illégales sont interdites (SASP, EMS, events, QG).
-- **Ripoux** : policier corrompu. Interdit.
-- **Coins** : la monnaie de la boutique du serveur.
+- **Ripoux** : policier corrompu. Possible uniquement sous dossier validé par le staff.
