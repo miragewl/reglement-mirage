@@ -43,7 +43,7 @@ Dès lors qu'il y a accord de tutorat par les deux parties, le tuteur est désig
 
 **Article 102-4.** Le mariage doit être porté à la connaissance du pouvoir civil de l’État de San Andreas.
 
-**Article 102-5.** Le mariage est célébré publiquement, dans un lieu choisi par les fiancés qui doivent, à cette occasion, produire chacun deux témoins majeurs et capables de discernement.
+**Article 102-5.** Le mariage civil est célébré dans les locaux du Gouvernement, par un membre habilité à officier, sur rendez-vous pris au moins une semaine à l'avance. Les fiancés doivent, à cette occasion, produire chacun deux témoins majeurs et capables de discernement. Seul ce mariage est reconnu officiellement ; une cérémonie religieuse ou laïque peut suivre, sans valeur légale (voir [Mariage](mariage.md)).
 
 **Article 102-6.** L’officiant examine si :
 

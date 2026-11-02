@@ -22,7 +22,8 @@
 ➕ Zones interdites d'accès RP : seulement la base militaire et le porte-avions\
 ➕ Fin des zones safe : l'illégal est possible partout, events compris, avec des conséquences RP lourdes en cas d'attaque contre le SASP ou les EMS\
 ➕ Boutique : page refaite. Fin des coins, nouvelle boutique sur miragev2.com, rangs VIP, boutique en jeu en dollars, imports, compensation des anciens achats\
-➕ SASP : être ripoux est possible, uniquement sous dossier validé par le staff
+➕ SASP : être ripoux est possible, uniquement sous dossier validé par le staff\
+➕ Nouvelle page **Mariage** : procédure auprès du Gouvernement, cérémonie symbolique et lieux de cérémonie
 
 ## 16/07/2025
 
