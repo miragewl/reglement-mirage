@@ -21,5 +21,5 @@ code-du-travail | Code du travail | Règlement en jeu
 code-de-la-route | Code de la route | Règlement en jeu
 permis-de-port-darmes | Permis de port d'armes | Règlement en jeu
 bureau-du-procureur | Bureau du Procureur | Règlement en jeu
-reglementation-de-la-peche | Réglementation de la pêche | Règlement en jeu
+reglementation-de-la-chasse | Réglementation de la chasse | Règlement en jeu
 reglementation-espace-aerien | Espace aérien | Règlement en jeu

@@ -52,15 +52,21 @@ Ouvre **ouverture.txt**, clique sur le crayon et écris la date sous les lignes 
 
 C'est l'heure de Paris. Le compte à rebours apparaît sur l'accueil, et au moment exact un bouquet de feux d'artifice part avec le message « La V2 est ouverte ! » (affiché pendant 24 h). Sans date, rien ne s'affiche.
 
+## Mode léger (si le site rame)
+
+Le bouton en forme de feuille, en haut à droite, coupe les animations, les flous et les ombres. Le choix est retenu sur l'ordinateur du joueur. Le site passe aussi tout seul en mode léger sur les petites configurations, ou s'il tourne à moins de 30 images par seconde. Pour tester : `?leger=1` (ou `?leger=0`) à la fin de l'adresse.
+
+Pour tout le monde, les décors qui sortent de l'écran (accueil, galerie, pied de page) se mettent en pause.
+
 ## Les surprises du site
 
-- **Fêtes** : à partir du 20 octobre jusqu'au 2 novembre, Halloween (citrouilles, chauves-souris, fantôme, mer violette la nuit) ; du 1er au 26 décembre, Noël (bonnet sur le soleil, neige, sapin, bonhomme de neige, guirlande au kiosque) ; le 31 décembre et le 1er janvier, le Nouvel an (feux d'artifice, gros bouquet à minuit).
+- **Fêtes** : du 1er au 26 décembre, Noël (bonnet sur le soleil, neige, sapin, bonhomme de neige, guirlande au kiosque) ; le 31 décembre et le 1er janvier, le Nouvel an (feux d'artifice, gros bouquet à minuit).
 - **Météos rares** : orage (éclairs, mer agitée), brume le matin, et parfois une baleine qui saute et éclabousse l'écran.
-- **Pêche** : clique sur les poissons de l'accueil pour les pêcher. Au 10e, un trophée « Pêcheur confirmé » envoie vers la réglementation de la pêche.
+- **Pêche** : clique sur les poissons de l'accueil pour les pêcher. Au 10e, un trophée « Pêcheur confirmé » s'affiche.
 - **Codes secrets à taper au clavier** : `abordage` (mode pirate, retape pour revenir), `mirage` (feux d'artifice), `coquillage` (pluie de coquillages), `tortue` (les tortues accélèrent). La nuit, un clic dans le ciel lance une fusée.
 - **Le crabe** : sur les pages du règlement, un crabe apparaît en bas à droite ; clique dessus pour avoir une astuce (elles viennent de `conseils.txt`).
 
-Pour tester sans attendre, ajoute à la fin de l'adresse : `?fete=halloween` (ou `noel`, `nouvelan`, `aucune`), `?meteo=orage`, `?brume=1`, `?baleine=1`. Plusieurs à la fois : `?fete=noel&moment=nuit`.
+Pour tester sans attendre, ajoute à la fin de l'adresse : `?fete=noel` (ou `nouvelan`, `aucune`), `?meteo=orage`, `?brume=1`, `?baleine=1`. Plusieurs à la fois : `?fete=noel&moment=nuit`.
 
 ## Ajouter une page
 

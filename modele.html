@@ -4,6 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Règlement Mirage V2</title>
+<script>
+/* Mode léger : coupe animations, flous et effets comme « réduire les animations » du système.
+   Choix du joueur (bouton, mémorisé), sinon automatique : petite config, ou images trop lentes (voir fin du script). */
+(function(){
+  var q = new URLSearchParams(location.search).get('leger'), s = null, n = navigator;
+  try { s = localStorage.getItem('mirage-leger'); } catch (e) {}
+  var petit = (n.hardwareConcurrency && n.hardwareConcurrency <= 2) || (n.deviceMemory && n.deviceMemory <= 2) || (n.connection && n.connection.saveData);
+  var on = q === '1' ? true : q === '0' ? false : s === '1' || s === 'auto' ? true : s === '0' ? false : !!petit;
+  window.LEGER = on; window.LEGER_CHOIX = s;
+  if (!on) return;
+  document.documentElement.classList.add('leger');
+  var mm = window.matchMedia.bind(window);
+  window.matchMedia = function(m){
+    return /prefers-reduced-motion:\s*reduce/.test(m) ? {matches: true, media: m, onchange: null, addListener: function(){}, removeListener: function(){}, addEventListener: function(){}, removeEventListener: function(){}, dispatchEvent: function(){ return false; }} : mm(m);
+  };
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
@@ -302,7 +319,7 @@ body.diff .tbl.v2::before{display:none}
 .step-b>*:first-child{margin-top:8px}
 
 .rule{display:grid;grid-template-columns:190px minmax(0,1fr);gap:8px 28px;padding:22px 0;border-top:1px dashed var(--line-2)}
-.rule-k h4,.rule-k h3,.rule-k p{font:800 18px/1.2 var(--display);margin:0;color:var(--sea-deep);text-wrap:balance;position:sticky;top:calc(var(--top) + 20px);transition:color .2s}
+.rule-k h4,.rule-k h3,.rule-k p{font:800 18px/1.2 var(--display);margin:0;color:var(--sea-deep);text-wrap:balance;transition:color .2s}
 .rule-b>*:first-child{margin-top:0}.rule-b>*:last-child{margin-bottom:0}
 .rule-k:not(:has(*)){display:none}
 .rule:hover .rule-k h4,.rule:hover .rule-k h3{color:var(--accent)}
@@ -401,6 +418,16 @@ body.diff .tbl.v2::before{display:none}
   .dhead{padding:22px 18px 64px}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+/* mode léger (script en tête) : les coupes de « réduire les animations », plus flous, fusions et ombres portées */
+html.leger *,html.leger *::before,html.leger *::after{animation:none!important;transition:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;mix-blend-mode:normal!important}
+html.leger .hero *,html.leger #footslot *,html.leger .banner *,html.leger .zdeco *{filter:none!important}
+html.leger .plane,html.leger .parrotfly,html.leger .surfer,html.leger .canoe,html.leger .shoot,html.leger .far,html.leger .swirl,html.leger .seafx,html.leger .surfx,html.leger .beach .wash,html.leger .intro{display:none!important}
+html.leger .pflash,html.leger .banner .a-bolt{opacity:0}
+html.leger .bottle{left:62%}
+html.leger .g-row{overflow-x:auto}
+/* décors sortis de l'écran : animations en pause (pour tout le monde) */
+.zpause,.zpause *,.zpause *::before,.zpause *::after{animation-play-state:paused!important}
+#legerBtn[aria-pressed="true"]{border-color:var(--sea);color:var(--sea)}
 /* ---------- bandeaux de page : une scène par partie ---------- */
 .banner{position:relative;overflow:hidden;border-radius:28px;min-height:270px;padding:30px 30px 88px;margin-bottom:30px;isolation:isolate;
   background:var(--b-bg);color:var(--b-ink);box-shadow:var(--shadow);animation:tide .7s cubic-bezier(.2,.9,.25,1) both}
@@ -630,8 +657,8 @@ body.is-home main > .gallery > .eyebrow,body.is-home main > .gallery > .h-sec{ma
 @keyframes lbin{from{opacity:0}}
 @media (prefers-reduced-motion: reduce){.g-track{animation:none}.g-row{overflow-x:auto}}
 /* ---------- curseur coquillage ---------- */
-html,body,a,button,label,summary,[role="button"]{cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAHiElEQVR42u2XbYxcZRXHf8/z3Jd5291u291aaJfWbnlZXKCUSouR0oKAQqIBDYIQEvlAYlQQ0aCYiIbED1WiYgSjH0iQIDFACS+WApGkFUtLBawCxba72y2lC9vtdGd25s6993mOH+7MbBe6SEKMXzzJydzMy/3/z//8z3nuwP84VOtizZrzFl911TW3hWHYePDB3/+sv//kc6+44sqfiMjw3Xf//IbNm58+8F8jsHLlqoXfvfX2N05ctKjTGM3bh95yXV3dev68+XR1dVKpTo7dcstNqyYrk/aMwTMG6/X6xNatW14dHh6KPyoBD+Diz3z2xlKhq3Pi8BEacZ2OUqfuLM0hHxYQAaO9BTd/69b9gR8wb948isUilUpl9M4771i3ceMjez8KAQ1Qr0VvR42IyckyoZ+nkO/ANyHOCuXyUfbtG0IrQ6nYgWd8tNL09vYu3rDhrlcuu+zyvo9CwABEUX3/OatWfaOQ7/AKYYnAhCilqNQqHDx4EM8zdHZ0USqWKOQLBEEAKPzAD1avXnNdEIS7T1y0KJjbPRetVVKtVq2IfPgWXHThJTeW8l05T4XYRBGpBlP1CpVamTAXUip0kA8LBH4Oo31AoxREUUSS2PnXXnv9Y0orxAlRIyqPDA898cSTj294bOMjf280Gv/ZhA8+sHGsFM7ptYkCEVIiYlenkM9TKnVSLGSV53I5jG8wniZJGhyeGCdOYrTWaK0xxuB5hjAM8X2fF3ds+/UPvn/bzaOj+5MP9MChg2NPB14e5xy1uEItrhIGIWFQwNMhGh9xmjR12NQyVa0yNjZGFDVQKLTSGG0wxsMYDwBnHWs/fcHX7r33d4/29i4wH+iBfUN7Nq84c+V6L9CLGnaKQq5A6BfwdYhnArTyUCpbGVGjxkT5MNamzcoN2ngYY/A9H6+dHiJCX99JJ3d3d49v3rxp+6wEJibGkyNHDz+/ctWqbwZeSODlMSpA46Mw0+BxjclKGXFuhuyZ9Bmw73kYb1oNEUd///J1zz33zF3vvvtOetwWAJw6MLA2HxYITB4tPpJqbAJpbEkaCdXaJJOVMs65zDqiUGi0MhjtNdOgtZlxrdB0dc7JnX/+urNm9YBSiuXLTl3nmxCjArAGScGmjiRJqDWq1KIqTgQR2uBKaZQy6GYqZdBkoFlm3wPF0qUfH5h1DEWE+lR9NDB5IkkRyd4Ta0mJERK00dAEp31rg26D6TbYe1Mc9MztWTKrB7J51PvWnnfJTTbJqhQcqYpwOkYphVI6c7vSGO1lxtPeTPmVQTe/p1RGEsBaS09vz2rje7t27Hhx97FLqk1gZHSoXCqW3hgcOPuLqUtIqeNUMgO87Xpljum3wbQ+U822HKOEiOCcEEU1c9aKs7/snPvrzp079r6PgIiw89Xt/+zp6R1bsvSkyxMXNW+WzXnLcBrTJOFhWr3XLQ/MrFxEMMaw+41hHnn4efqXf4wzzlzxlddff+03Bw7sn5pBIPuBY6I8tnv9+ou/J80+t6tXBoVpX2uOkRwNSjXBm4PVVDluxPzqlw+w6ckXKBYLnHJKn1p4wqITn31208Npmk6PYSusy8I0b6zQKNEgOjOg1YjVOEs7rRVcIthEsInDJkKaOJyFh/7wJ7Zv30Uu5/HU41sZGTrEwMmDV68+91MnzNgDrajXaom1rqr1sWNlMhJOI04hFsQqXAo2AZeATaUNnMYWnGLrlpd49NFnCQIP4ynKRyZ5ZedujApYv/bSK49LoFKdTKNG/aDR3vR8Y8A1CViFSxWuCezSrOo0FtLYkcYOmwqHDo3z0B+fQhCMUSgEpYS9e0Zp1BKW9w98/vgEKhU3cXjiZc/4GOW1q1diwCnEZgo426w6FtJYsE3wJHaIhZ0v72J8/Ai+Z9rnrtJwtDxJHCd0dnQvOS4B5xxvvvn6Y74Xts2mMJkHnG6TaClgm71PY0fSsKQNS5pY3nnnXYxuGlOByrYYIg6FQqxNjksAYMtf/vx0mqROq6wNSkzbiGKbbbA0PdBSIVMgIyAUiwUQaYI3jw+xlDqyJ6rDE+OvzUrgH6+9Wv7bK9t/mgsK2fyjs1a0FSA7K46pPo1duw1xLeETp55GsVRAHM3xFMRZ+hYvJAxz7Nm7+5lZCThn+e19v7hj8mj5Lc+EIBol2QmIqPYEtBVIpsHT2BFNJcwr9XDJRWuz01Oy1uZyPoODp4HAiy9t3TQrAYC9w2/W77rnR+e51FV9E2b9FzWtgGV69lsGbFiShiVuWKrliJWnr+CC81eTJDFxI2LF2afTv6yf0bdGXti2Y8vI+zbhe2N4dM/RkdG9968YWPO5zmL3/DS2uFSQ1vKx4Gy2651tpcOmDptYksjSv2wJtXgSR4Nrrr6CnrkLuO+Be7608+VtB2b8NfugWLxwaXDdF75+wycHL/xhzhQXJHFKElucdTjnsqOb1mvmdMGBAi8weEVBdU7R27OAXbt23f/t2796fT2qyYcm0IplfQP51YPrzzml76xL589ZeE4+6FhitN+hlQqtCE6sczZxVpw4yZ6cPKWUCXyvY35AxR3a9uMN37lyaORfEf+PZvwbsNznjd9zHHQAAAAASUVORK5CYII=) 3 3,auto}
-a,button,summary,[role="button"],.g-ph{cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAHiElEQVR42u2XbYxcZRXHf8/z3Jd5291u291aaJfWbnlZXKCUSouR0oKAQqIBDYIQEvlAYlQQ0aCYiIbED1WiYgSjH0iQIDFACS+WApGkFUtLBawCxba72y2lC9vtdGd25s6993mOH+7MbBe6SEKMXzzJydzMy/3/z//8z3nuwP84VOtizZrzFl911TW3hWHYePDB3/+sv//kc6+44sqfiMjw3Xf//IbNm58+8F8jsHLlqoXfvfX2N05ctKjTGM3bh95yXV3dev68+XR1dVKpTo7dcstNqyYrk/aMwTMG6/X6xNatW14dHh6KPyoBD+Diz3z2xlKhq3Pi8BEacZ2OUqfuLM0hHxYQAaO9BTd/69b9gR8wb948isUilUpl9M4771i3ceMjez8KAQ1Qr0VvR42IyckyoZ+nkO/ANyHOCuXyUfbtG0IrQ6nYgWd8tNL09vYu3rDhrlcuu+zyvo9CwABEUX3/OatWfaOQ7/AKYYnAhCilqNQqHDx4EM8zdHZ0USqWKOQLBEEAKPzAD1avXnNdEIS7T1y0KJjbPRetVVKtVq2IfPgWXHThJTeW8l05T4XYRBGpBlP1CpVamTAXUip0kA8LBH4Oo31AoxREUUSS2PnXXnv9Y0orxAlRIyqPDA898cSTj294bOMjf280Gv/ZhA8+sHGsFM7ptYkCEVIiYlenkM9TKnVSLGSV53I5jG8wniZJGhyeGCdOYrTWaK0xxuB5hjAM8X2fF3ds+/UPvn/bzaOj+5MP9MChg2NPB14e5xy1uEItrhIGIWFQwNMhGh9xmjR12NQyVa0yNjZGFDVQKLTSGG0wxsMYDwBnHWs/fcHX7r33d4/29i4wH+iBfUN7Nq84c+V6L9CLGnaKQq5A6BfwdYhnArTyUCpbGVGjxkT5MNamzcoN2ngYY/A9H6+dHiJCX99JJ3d3d49v3rxp+6wEJibGkyNHDz+/ctWqbwZeSODlMSpA46Mw0+BxjclKGXFuhuyZ9Bmw73kYb1oNEUd///J1zz33zF3vvvtOetwWAJw6MLA2HxYITB4tPpJqbAJpbEkaCdXaJJOVMs65zDqiUGi0MhjtNdOgtZlxrdB0dc7JnX/+urNm9YBSiuXLTl3nmxCjArAGScGmjiRJqDWq1KIqTgQR2uBKaZQy6GYqZdBkoFlm3wPF0qUfH5h1DEWE+lR9NDB5IkkRyd4Ta0mJERK00dAEp31rg26D6TbYe1Mc9MztWTKrB7J51PvWnnfJTTbJqhQcqYpwOkYphVI6c7vSGO1lxtPeTPmVQTe/p1RGEsBaS09vz2rje7t27Hhx97FLqk1gZHSoXCqW3hgcOPuLqUtIqeNUMgO87Xpljum3wbQ+U822HKOEiOCcEEU1c9aKs7/snPvrzp079r6PgIiw89Xt/+zp6R1bsvSkyxMXNW+WzXnLcBrTJOFhWr3XLQ/MrFxEMMaw+41hHnn4efqXf4wzzlzxlddff+03Bw7sn5pBIPuBY6I8tnv9+ou/J80+t6tXBoVpX2uOkRwNSjXBm4PVVDluxPzqlw+w6ckXKBYLnHJKn1p4wqITn31208Npmk6PYSusy8I0b6zQKNEgOjOg1YjVOEs7rRVcIthEsInDJkKaOJyFh/7wJ7Zv30Uu5/HU41sZGTrEwMmDV68+91MnzNgDrajXaom1rqr1sWNlMhJOI04hFsQqXAo2AZeATaUNnMYWnGLrlpd49NFnCQIP4ynKRyZ5ZedujApYv/bSK49LoFKdTKNG/aDR3vR8Y8A1CViFSxWuCezSrOo0FtLYkcYOmwqHDo3z0B+fQhCMUSgEpYS9e0Zp1BKW9w98/vgEKhU3cXjiZc/4GOW1q1diwCnEZgo426w6FtJYsE3wJHaIhZ0v72J8/Ai+Z9rnrtJwtDxJHCd0dnQvOS4B5xxvvvn6Y74Xts2mMJkHnG6TaClgm71PY0fSsKQNS5pY3nnnXYxuGlOByrYYIg6FQqxNjksAYMtf/vx0mqROq6wNSkzbiGKbbbA0PdBSIVMgIyAUiwUQaYI3jw+xlDqyJ6rDE+OvzUrgH6+9Wv7bK9t/mgsK2fyjs1a0FSA7K46pPo1duw1xLeETp55GsVRAHM3xFMRZ+hYvJAxz7Nm7+5lZCThn+e19v7hj8mj5Lc+EIBol2QmIqPYEtBVIpsHT2BFNJcwr9XDJRWuz01Oy1uZyPoODp4HAiy9t3TQrAYC9w2/W77rnR+e51FV9E2b9FzWtgGV69lsGbFiShiVuWKrliJWnr+CC81eTJDFxI2LF2afTv6yf0bdGXti2Y8vI+zbhe2N4dM/RkdG9968YWPO5zmL3/DS2uFSQ1vKx4Gy2651tpcOmDptYksjSv2wJtXgSR4Nrrr6CnrkLuO+Be7608+VtB2b8NfugWLxwaXDdF75+wycHL/xhzhQXJHFKElucdTjnsqOb1mvmdMGBAi8weEVBdU7R27OAXbt23f/t2796fT2qyYcm0IplfQP51YPrzzml76xL589ZeE4+6FhitN+hlQqtCE6sczZxVpw4yZ6cPKWUCXyvY35AxR3a9uMN37lyaORfEf+PZvwbsNznjd9zHHQAAAAASUVORK5CYII=) 3 3,pointer}
+html,body,a,button,label,summary,[role="button"]{cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEDklEQVR42u3Wf0xVZRgH8Od5z70XjvcC3ksiYpAYGim6BJkoFJVruVkhm6dWRKNUFm05Y6uU1tydtZLJHw5bwmylTUvIZKkbc7G4k0DZBccWRMyVEWAiP7p47j2Hc+77Pv2BlaBsYHD/4vvnebdzPnvO877PC6AoEvwXhBCHyV2DsWFrMj+8DRBSBNMsTEXEEjkt63OGKAAUBgAsZIBITZWAwbUgSgUiObVCwm84AIhQIRhERoIwuLV05+siefnyQr4k5WRWUZETAATs3Tv7iBWK4oJlj9zwdnTSiOo31uVtJ1i6qnlz0W4nAMCsI1YoiguS027UXfISEQmfqhrrX95B8GCIEP8APN7LRESCiGhE9ZshQ0wEjBomTYoYf2bMDiDIOXHO70C8tHuWEHcDENG/CJ+qmhl52wkWP9ScnJu7aKYRk/5XxhgIISDSbrfUHSnn+a+8mN7Z0d0SuX5jOlRX87TCQisRSTMO4EIAFwKEEICI4Nc0CJpBPOIuMfJyn1mkjozUrsx5YUNLZaWJiJyI8P9AxgE4F2CzWEhijDPGABHhi5qzlJC9iS3dvNXW0NoGJEmurl+v1r1Xdqii5/drzyMiISK/V4AFAABIABGBJDH67Nvv2MIFC6TEuFjh13V28OiJft/QcIFvVDOAg/X9/G2VsmxLWJuaVqjpRmFjU8tbQFC1Z09xeX19vUBEMT2ADwCRQZjNSgePn2S73B/raLPWRjkcW2rKD/BAkMfIcrhsdrTWcgBIX7a/MS4mMcGkgN7d3WeLj4/PiFl4X8bhw0cvIWIjEUnTqQj7o/sqhjvsZvGBctz1QemQHGF/QvrZm/tXX9+V8xebWcmOAtRu+ks/OnbMTooiqQHyXB/sF38O9FutIKMZIIMbKAb6h94mqpIAgKbVAxa7CAou5jddbuuPdrme1lp/vGgKwnCnc98nX53CrNTVxgOrVia9u69Mgepqfq71zAndvDkShg40VAQyLLazpz1Ucahmy7nTMTmIKKqqpt6UTA9GORDowuJoZ9pg4/deyM62IABsfSrzlK+393pDS5vVXbSNhG68463wWntcroAV7F1RYbFMGyLuHwiKhgte/kvnFTB1kQgA0N5ej9O4kPiG9SFLTq+ntgcURQKPJwiKwo6XlflRDj9c9uXXGBvtGp2/JOHhRz8tfsPjdgfVgLHTP6x1Cr/VMtCtsQ0pmbYnH1+nx90fe2bstfVTbkScsCXF7c8j0je6dFP/DSQWISGeJ2HuH21t+gEAaFPSm2EFr+WvVv2abHfMYwkpzoHMZ5N+utfteJeSjU2/eWuyXpXXPvbcuJVJJiMR4Qx8+I51mnBhvVUlwiqlegyiALS3K+R2T+8MmFoURZqVMTyXucxlLrfyN539IFmM9SZRAAAAAElFTkSuQmCC) 1 1,auto}
+a,button,summary,[role="button"],.g-ph{cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEDUlEQVR42u2WXUhcRxTHz5m5d3evu951NdkYEzeY2BJbKYgusX4k/YKU2NYUen2wSUlbEFJoSZSmTaSEpZTSQB5CU1BpaUtrIC7B0ERQi3SXWE1FfVJQa1uqponb1a3pfty9HzN9MKYxNaCp+uQfBoY5cObHf87MGQBFofCvENZZRBqbybQWlH50D8C6QpCEQKKIeEoqLPuSADBQFAIAZL0AqOxy200RXzOJpdzMyMqigY7vOAC/A8HX3AGQAZgB4pnKDLY7y15jPlpysay6wgUADE6fXnMnyHZZBk1jUP6Ig/T5dul78pxV3QORjorqMhf4fGsOQRZKby5hQqpDEDprPfqTj8netgG2LhB3EwsEAVQTZBsRO+o8xnpBLE5KEbQkg1QbFZaEWPxmrAEAAFACwJaAqD5a4QK/31xtiCVtJQTvQrTXeYziPNl7oSPcsXt/+dbVhnjguRKCwFQGsiQIXSd2mIefc3tHptiAXLTXC36/WVhTI3LO6aoDmGx+MAaAFCF22wBDY/j5m9u0V0tcW6NJ1v74gcqSgaYmHRFNzjn+HxCyeHMOFolwmkJMIiCgLMBX1yPcc3yU7Hz/Z0v3eBw4muljkze76s+eb5z6/WYVInJENB8WQFiYcACgaSL/onWabHFaac4mwmIGkHOdodDcbe3IXFLXQLCKH1QdapJSLJ6igsKahKrV9PQOHAcOLSdP1n4aCAQYIrIVAyAiWCnycxdvkWPfTKooYLtTEg5ePuox44y6JQkkfai33QQAb319T5Y7x6PzuDox8YclOzu72L1lU3FDw9c/IWIP55yuxBEyORFBmw312kvTeKz5xqwkkafpUM/Lf4WT452jcXLqwGZMxPiZj+sO2bmi0GicB6dnQuxWOCSKIKEe55qpIQuHZt/lvIWutIERwc4MxjCt95dYKMMp7E8M/nhd54A2Wfjws8Aslu2yaTt2pua+d/VXBfx+s23wygVV//u2FR2oRRG4JliutgZ54/nLB9ta3ZWIyFpall+URDWcDgR+bZs1WTjTE+yHffsEBIBX8lMuzf2pTnePJ0TfC5s5M9iJ/sZGcSo9PS6CfcxpzSSJWW7GwgbrvtZvjo6Mg66yHACA4eEAruBDMhdRZ4XKG319U6AoFIJBAxSFNH/7fQwt2HC2K4KZDkymZTryyhub3wr6fEY0rr0TiyRGWEwUwhMJUpJfannmqT1q1vbMK/NpA8suRLzvSrJ711O9z6arRvI3IDSVIu/kTP8kOdj7AwDw53Pfth554/AT0VhCsjtSiCffFS59MXfoYa/jEpbNd7+UgrLXpaK9Ly2KPKAzcs5xFTb+T5zf92G94xLHFsU/D6IADA8r3Odb2RuwPCkKXYs2vKENbWhDC/oHcTbTpc535c8AAAAASUVORK5CYII=) 1 1,pointer}
 input,textarea{cursor:text}
 /* ---------- message flottant ---------- */
 .toast{position:fixed;left:50%;bottom:28px;translate:-50% 30px;z-index:120;padding:12px 18px;border-radius:14px;background:#0e2a33;color:#fff;font:600 14px var(--body);box-shadow:0 14px 30px -12px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .25s,translate .25s}
@@ -1743,6 +1770,7 @@ body.is-home .hero .hero-logo{width:min(620px,70%)}
   <a class="brand" href="#accueil"><img src="__LOGOM__" alt="Mirage"><span><b>Règlement</b><small>Mirage WL · V2</small></span></a>
   <button class="find" id="findBtn" aria-label="Rechercher dans le règlement"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher une règle…</span><kbd>Ctrl K</kbd></button>
   <button class="icon-btn snd" id="soundBtn" aria-pressed="false" aria-label="Activer le son d'ambiance"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="w1" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="w2" d="M18.5 5.5a9 9 0 0 1 0 13"/><path class="x" d="m16 9 6 6m0-6-6 6"/></svg><span class="snd-l">Son</span></button>
+  <button class="icon-btn" id="legerBtn" aria-pressed="false" aria-label="Mode léger : moins d'animations, pour les petites configs" title="Mode léger"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 3.8C12 3 5 8 4 16.5"/><path d="M4 20c0-8 6-14 16.2-16.2C21 13 15 19 7.5 18.5"/><path d="M9 14.5 13 11"/></svg></button>
   <button class="icon-btn" id="themeBtn" aria-label="Passer en thème clair ou sombre"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
 </header>
 
@@ -1919,7 +1947,7 @@ const SCENES = {
     fx:`<circle class="a-siren-r" cx="470" cy="80" r="120" fill="rgba(255,40,60,.35)" style="filter:blur(30px)"/><circle class="a-siren-b" cx="610" cy="70" r="130" fill="rgba(40,120,255,.4)" style="filter:blur(30px)"/>
       <path d="M330 270 v-50 h30 v-30 h26 v80 h18 v-110 h34 v110 h22 v-70 h30 v-24 h20 v94 h26 v-60 h40 v60 h20 v-130 h36 v130 h28 v-80 h30 v80 h40 v-50 h30 v50Z" fill="#031019"/>`,
     items:[['police_car', 62, 70, 120, 'k-idle'], ['police_car_light', 64, 32, 70, 'k-pulse']]},
-  'ems': {bg:'linear-gradient(160deg,#FFFFFF,#DDF3F3)', ...DARK, waves:SEAW, emb:'ems',
+  'ems': {bg:'linear-gradient(160deg,#FFFFFF,#DDF3F3)', ...DARK, waves:SEAW,
     fx:`<path d="M300 150 H470 l14 -40 l18 90 l20 -120 l18 100 l12 -30 H800" fill="none" stroke="rgba(14,154,167,.18)" stroke-width="4"/><path class="a-ecg" d="M300 150 H470 l14 -40 l18 90 l20 -120 l18 100 l12 -30 H800" fill="none" stroke="#E5383B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`,
     items:[['ambulance', 62, 66, 120, 'k-idle'], ['stethoscope', 70, 26, 70, 'k-swing'], ['pill', 56, 30, 44, 'k-float', -1.5], ['syringe', 78, 74, 46, 'k-bob', -2]]},
   'mort-rp': {bg:'linear-gradient(180deg,#123444 0%,#6B4A3E 55%,#F08A4B 100%)', ...LIGHT, waves:DEEPW,
@@ -1944,8 +1972,8 @@ const SCENES = {
     items:[['bullseye', 76, 48, 150, 'k-pulse'], ['check_mark_button', 60, 66, 54, 'k-stamp', -1]]},
   'bureau-du-procureur': {bg:'linear-gradient(160deg,#0E2D36,#23606A)', ...LIGHT, waves:DEEPW, emb:'avocat',
     items:[['hammer', 60, 50, 110, 'k-hit'], ['scroll', 72, 76, 60, 'k-float', -1], ['balance_scale', 52, 22, 54, 'k-swing', -1]]},
-  'reglementation-de-la-peche': {bg:'linear-gradient(180deg,#6AD5DC 0%,#0E9AA7 45%,#065463 100%)', ...LIGHT, acc:'#08414D', waves:DEEPW,
-    items:[['fishing_pole', 84, 34, 110, 'k-sway'], ['tropical_fish', 70, 62, 64, 'k-swim', 0], ['fish', 60, 44, 54, 'k-swim-r', -4], ['blowfish', 92, 74, 58, 'k-bob', -1], ['bubbles', 66, 82, 40, 'k-rise', -2]]},
+  'reglementation-de-la-chasse': {bg:'linear-gradient(180deg,#9FD08A 0%,#4E8A4A 45%,#24502E 100%)', ...LIGHT, acc:'#1F4426', waves:DEEPW,
+    items:[['wood', 84, 34, 100, 'k-sway'], ['herb', 68, 62, 64, 'k-bob', 0], ['herb', 92, 74, 52, 'k-bob', -2], ['butterfly', 60, 42, 44, 'k-swim', -1]]},
   'reglementation-espace-aerien': {bg:'linear-gradient(180deg,#5EC6EE,#D6F1FB)', ...DARK, waves:SEAW,
     items:[['airplane', 70, 30, 90, 'k-fly'], ['helicopter', 82, 58, 100, 'k-float'], ['cloud', 60, 60, 110, 'k-drift-slow'], ['cloud', 92, 20, 80, 'k-drift-slow', -6], ['sun', 94, 72, 54, 'k-spin-slow']]},
 };
@@ -2409,7 +2437,6 @@ const qset = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
 function feteNow(d = new Date()){
   const f = QS.get('fete'); if (['halloween', 'noel', 'nouvelan', 'aucune'].includes(f)) return f === 'aucune' ? null : f;
   const m = d.getMonth() + 1, j = d.getDate();
-  if ((m === 10 && j >= 20) || (m === 11 && j <= 2)) return 'halloween';
   if (m === 12 && j >= 1 && j <= 26) return 'noel';
   if ((m === 12 && j === 31) || (m === 1 && j === 1)) return 'nouvelan';
   return null;
@@ -2544,7 +2571,7 @@ function fishing(hero){
 }
 function fisherWin(){
   const d = document.createElement('div'); d.className = 'qwin'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-label', 'Pêcheur confirmé');
-  d.innerHTML = `<div class="card">${im('trophy')}<h3>Pêcheur confirmé !</h3><p>Dix poissons sortis de l'eau. Avant d'aller pêcher en ville, jette un œil aux règles de la pêche.</p><a class="btn btn-main" href="#reglementation-de-la-peche">Réglementation de la pêche</a><button type="button" class="x" aria-label="Fermer">×</button></div>`;
+  d.innerHTML = `<div class="card">${im('trophy')}<h3>Pêcheur confirmé !</h3><p>Dix poissons sortis de l'eau. La mer n'a plus de secrets pour toi.</p><button type="button" class="x" aria-label="Fermer">×</button></div>`;
   document.body.appendChild(d); if (FW) FW.show(6);
   const close = () => d.remove(); d.querySelector('.x').onclick = close; d.querySelector('a').addEventListener('click', close); d.addEventListener('click', e => { if (e.target === d) close(); });
 }
@@ -2583,7 +2610,7 @@ setTimeout(() => { const h = decodeURIComponent(location.hash.slice(1)).split('-
 const PICON = {'readme': 'palm_tree', 'accueil': 'palm_tree', 'patch-note-du-reglement': 'memo', 'quickstart': 'passport_control', 'essentiel': 'compass', 'lexique': 'notebook', 'nos-reseaux': 'speech_balloon',
   'les-fondamentaux-du-rp': 'classical_building', 'general-legal-et-illegal': 'crossed_swords', 'groupes-illegaux': 'pirate_flag', 'police': 'police_car_light', 'defcon': 'shield', 'ems': 'ambulance',
   'mort-rp': 'headstone', 'reprise-d-entreprise': 'department_store', 'boutique': 'shopping_bags', 'code-civil': 'balance_scale', 'code-penal': 'locked', 'code-du-travail': 'hammer',
-  'code-de-la-route': 'vertical_traffic_light', 'permis-de-port-darmes': 'bullseye', 'bureau-du-procureur': 'scroll', 'reglementation-de-la-peche': 'fishing_pole', 'reglementation-espace-aerien': 'helicopter'};
+  'code-de-la-route': 'vertical_traffic_light', 'permis-de-port-darmes': 'bullseye', 'bureau-du-procureur': 'scroll', 'reglementation-de-la-chasse': 'herb', 'reglementation-espace-aerien': 'helicopter'};
 function decoIcons(root){
   (root || document).querySelectorAll('#side a, .chap a, .pager a, .fcol a').forEach(a => {
     if (a.querySelector(':scope > .pic')) return;
@@ -2680,7 +2707,7 @@ const ZTHEME = {
   defaut: {floorL: ['gem_stone'], floorR: ['oyster', 'anchor'], top: 'anchor'},
 };
 const ZPAGE = {'groupes-illegaux': 'pirate', 'general-legal-et-illegal': 'pirate', 'police': 'police', 'defcon': 'police', 'ems': 'ems', 'mort-rp': 'mort',
-  'reglementation-de-la-peche': 'peche', 'code-penal': 'loi', 'code-civil': 'loi', 'bureau-du-procureur': 'loi', 'les-fondamentaux-du-rp': 'loi',
+  'code-penal': 'loi', 'code-civil': 'loi', 'bureau-du-procureur': 'loi', 'les-fondamentaux-du-rp': 'loi',
   'reprise-d-entreprise': 'argent', 'boutique': 'argent', 'code-du-travail': 'travail', 'code-de-la-route': 'route', 'permis-de-port-darmes': 'armes', 'reglementation-espace-aerien': 'air'};
 function pageDeco(p){
   const old = document.querySelector('.zdeco'); if (old) old.remove();
@@ -3501,7 +3528,6 @@ const OCEAN_PRESETS = {
   'code-du-travail': {...RAIN, ...LAND, decor: 'justice', variant: 'travail', az: -.5, dist: 58, h: 16, ly: 6},
   'bureau-du-procureur': {...STORM, ...LAND, decor: 'justice', variant: 'procureur', az: 1.5, dist: 50, h: 12, ly: 6},
   'code-de-la-route': {...SUNSET, ...LAND, decor: 'route', az: .7, dist: 58, h: 22},
-  'reglementation-de-la-peche': {...DAY, ...BAN, decor: 'peche', az: .6, dist: 50, h: 16, ly: 3},
   'reglementation-espace-aerien': {...CLOUDY, ...BAN, decor: 'aerien', az: .4, dist: 70, h: 30, ly: 16},
 };
 
@@ -3576,7 +3602,7 @@ addEventListener('pointerdown', e => {
 const pal = $('pal'), q = $('q'), list = $('palList');
 const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 let hits = [], sel = 0;
-const SUGG = ['Perquisition', 'Blanchiment', 'Salaire', 'Braquage', 'Zone safe', 'Mort RP', 'PPA', 'Otage'];
+const SUGG = ['Perquisition', 'Blanchiment', 'Salaire', 'Braquage', 'Defcon', 'Mort RP', 'PPA', 'Otage'];
 function openPal(){ pal.hidden = false; q.value = ''; render(); q.focus(); }
 function closePal(){ pal.hidden = true; }
 function render(){
@@ -3638,11 +3664,30 @@ $('themeBtn').onclick = () => {
   try { localStorage.setItem('mirage-theme', r.dataset.theme); } catch (e) {}
 };
 try { const t = localStorage.getItem('mirage-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+$('legerBtn').setAttribute('aria-pressed', window.LEGER ? 'true' : 'false');
+$('legerBtn').onclick = () => {
+  try { localStorage.setItem('mirage-leger', window.LEGER ? '0' : '1'); } catch (e) {}
+  const u = new URL(location.href); u.searchParams.delete('leger'); location.replace(u.href);
+};
+/* mode léger automatique : si les images tombent sous ~30 par seconde, on passe en léger une fois pour toutes
+   (médiane des écarts entre images : un onglet caché ne fausse pas la mesure). Le bouton reprend la main. */
+if (!window.LEGER && window.LEGER_CHOIX == null && !new URLSearchParams(location.search).has('leger')){
+  const gaps = []; let last = 0;
+  setTimeout(() => requestAnimationFrame(function f(now){
+    if (last) gaps.push(now - last); last = now;
+    if (gaps.length < 150) return requestAnimationFrame(f);
+    gaps.sort((a, b) => a - b);
+    if (gaps[gaps.length >> 1] > 34){ try { localStorage.setItem('mirage-leger', 'auto'); } catch (e) { return; } location.reload(); }
+  }), 2500);
+}
+/* décors hors écran : animations en pause */
+const PAUSE_IO = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('zpause', !e.isIntersecting))) : null;
+function pauseOffscreen(){ if (PAUSE_IO) document.querySelectorAll('.hero, #footslot, .banner, .zdeco, .gallery, .bento').forEach(el => { if (!el.dataset.zp){ el.dataset.zp = 1; PAUSE_IO.observe(el); } }); }
 
 function setCurrent(s){ side.querySelectorAll('a').forEach(a => a.dataset.s === s ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')); }
 const SOUND = {defcon: {city: 1, siren: 1, wind: .3}, home: {waves: 1, wind: .4, birds: 1}, police: {city: 1, siren: 1, insects: .6}, 'groupes-illegaux': {rain: 1, waves: 1, wind: .8}, 'general-legal-et-illegal': {waves: 1, wind: .6, insects: .3},
   ems: {city: .4, birds: .5, wind: .3}, 'mort-rp': {rain: 2, wind: 1, waves: 1}, 'code-de-la-route': {city: 1, wind: .3}, 'code-penal': {city: .5, wind: .3}, 'code-civil': {city: .4, birds: .5},
-  'code-du-travail': {city: .7, wind: .3}, 'bureau-du-procureur': {city: .4, rain: 1}, 'permis-de-port-darmes': {wind: .5, birds: .4}, 'reglementation-de-la-peche': {waves: 1, birds: .8, wind: .5},
+  'code-du-travail': {city: .7, wind: .3}, 'bureau-du-procureur': {city: .4, rain: 1}, 'permis-de-port-darmes': {wind: .5, birds: .4}, 'reglementation-de-la-chasse': {birds: .8, wind: .6},
   'reglementation-espace-aerien': {wind: 1, birds: .3}, 'nos-reseaux': {waves: .7, birds: .5}, boutique: {waves: .6, city: .3, birds: .5}, 'reprise-d-entreprise': {city: .6, waves: .4}};
 function route(){
   const h = decodeURIComponent(location.hash.slice(1)), slug = h.split('--')[0], p = bySlug[slug];
@@ -3655,6 +3700,7 @@ function route(){
   if (typeof AUDIO !== 'undefined' && AUDIO.mood) AUDIO.mood(SOUND[p && slug !== 'readme' ? p.slug : 'home'] || {waves: 1, wind: .4, birds: .6});
   if (OCEAN){ const h3 = main.querySelector('#scene3d'), b3 = main.querySelector('.b3d'); if (h3) OCEAN.mount(h3, OCEAN_PRESETS.home); else if (b3) OCEAN.mount(b3, OCEAN_PRESETS[p ? p.slug : ''] || OCEAN_PRESETS.default); }
   document.body.classList.remove('nav-open'); $('menuBtn').setAttribute('aria-expanded', 'false');
+  pauseOffscreen(); setTimeout(pauseOffscreen, 1500);
 }
 $('menuBtn').onclick = () => { const o = document.body.classList.toggle('nav-open'); $('menuBtn').setAttribute('aria-expanded', o); };
 addEventListener('hashchange', route);
