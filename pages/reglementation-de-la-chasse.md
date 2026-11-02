@@ -12,7 +12,7 @@ La chasse n'est possible que dans les six zones de chasse. Hors zone, le gibier 
 * **Pont de Calafia**
 * **Route de Senora**
 * **Collines de Vinewood**
-* **Marais du Zancudo** (crocodiles)
+* **Marais du Zancudo**
 
 Chaque zone a une cabane d'affût.
 
@@ -42,11 +42,11 @@ Le mousquet et le sniper de chasse restent interdits hors chasse (voir [Généra
 * Pour dépecer : le permis, un **couteau de chasse** dans le sac (vendu au relais) et une bête tuée au mousquet. Les prises du chien et des cages comptent aussi.
 * Un tir ailleurs qu'à la tête ou au cou abîme la peau.
 * Les peaux et la viande se revendent au **relais de chasse**. La **boucherie de gibier** de La Mesa rachète les bêtes entières.
-* Les grosses bêtes (cerf, sanglier, mouflon, antilope) ne se chargent que dans un SUV, un tout-terrain, un utilitaire, un van ou un camion.
+* Les grosses bêtes ne se chargent que dans un SUV, un tout-terrain, un utilitaire, un van ou un camion.
 * Les gains baissent au-delà d'un certain montant gagné dans l'heure.
 
 ## CHAPITRE 5 : BÊTES DANGEREUSES ET LÉGENDAIRES
 
-* Puma, panthère, ours, loup, grizzly et crocodile attaquent. Le spray anti-ours du relais les fait fuir.
+* Certaines bêtes attaquent. Le spray du relais les fait fuir.
 * Une **bête légendaire** apparaît de temps en temps. La traque se lance auprès du garde-chasse ; la prime est partagée entre les chasseurs qui l'ont touchée.
 * Chaque semaine, un **concours** récompense la bête la plus lourde de chaque espèce (prime à réclamer au relais).
