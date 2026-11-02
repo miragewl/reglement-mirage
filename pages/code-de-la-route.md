@@ -3,12 +3,6 @@
 
 \[Mirage WL], \[2025]. Tous droits réservés. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.
 
-## Code de la route
-
-[1. Général](#chapitre-rig-information-generales)\
-[2. Contraventions](#chapitre-ric-infractions-contraventionnelles)\
-[3. Délits](#chapitre-rid-infractions-delictuelles)<br>
-
 ## 1. Général
 
 1. Le sens de circulation est à droite
@@ -20,104 +14,33 @@
 4. L'alcool au volant est complètement prohibé
 5. L'âge légal pour passer le permis est de 17 ans
 
-\
-2\. Contraventions
-------------------
+## 2. Infractions et sanctions
 
-### Excès de vitesse compris entre 0-50 km/h
+Ce barème est celui du MDT du SASP : c'est lui qui s'applique en jeu. La prison est en minutes de jeu, les points sont retirés du permis.
 
-Vitesse relevée avec appareil de mesure entre 0 et 50 km/h au-dessus de la limite autorisée
+| Infraction | Amende | Prison | Points |
+| --- | --- | --- | --- |
+| Excès de vitesse de moins de 30 km/h | 10 $ | non | 1 |
+| Excès de vitesse de 30 à 50 km/h | 20 $ | non | 3 |
+| Grand excès de vitesse (plus de 50 km/h) | 40 $ | 5 min | 6 |
+| Franchissement d'un feu rouge ou d'un stop | 80 $ | non | 4 |
+| Stationnement gênant ou dangereux | 30 $ | non | 0 |
+| Conduite dangereuse | 240 $ | 5 min | 4 |
+| Véhicule non conforme ou sans plaque | 100 $ | non | 0 |
+| Conduite sans permis | 400 $ | 5 min | 0 |
+| Conduite sous l'emprise de l'alcool | 500 $ | 10 min | 6 |
+| Conduite sous l'emprise de stupéfiants | 600 $ | 10 min | 6 |
+| Usage d'une fausse plaque | 500 $ | 5 min | 6 |
+| Délit de fuite | 700 $ | 15 min | 6 |
+| Refus d'obtempérer | 800 $ | 15 min | 6 |
 
-### Excès de vitesse de plus de 50 km/h
+## 3. Ce que recouvrent ces infractions
 
-Vitesse relevée avec appareil de mesure à plus de 50 km/h au-dessus de la limite autorisée. La mise en danger de la vie d'autrui peut être retenue
-
-### Stationnement Gênant
-
-Sur un espace non réservé au Parking d'un véhicule
-
-### Stationnement Dangereux
-
-Sur un virage, passage piéton, obstruant la visibilité des autres usagers de la route
-
-### Franchissement de ligne continue
-
-Le chevauchement de ligne continue consiste à empiéter sur la ligne axiale continue
-
-### Dépassement dangereux
-
-Le dépassement dangereux consiste à mettre en danger la vie des autres usagers de la route pendant un dépassement
-
-### Conduite en contre sens
-
-La circulation à contresens désigne le fait de circuler sur une voie/route dans le sens contraire de celui qui est imposé par la loi
-
-### Non maîtrise du véhicule
-
-La non maîtrise du véhicule englobe les comportements irresponsables d'un conducteur vis à vis de son véhicule
-
-### Non respect des règles d'éclairage
-
-Le fait de ne pas respecter les règles d'éclairage avec son véhicule. (Ex: ne pas allumer ses feux la nuit)
-
-### Utilisation abusive de l'avertisseur sonore
-
-Le fait d'utiliser de manière abusive l'avertisseur sonore servant à prévenir un danger immédiat
-
-### Non respect d'un feu tricolore
-
-Le fait de ne pas marquer d'arrêt à un feu rouge
-
-### Non respect de la signalisation
-
-Le fait de ne pas respecter la signalisation, ex : un stop, sens interdit, etc.
-
-### Téléphone au volant
-
-Le fait de téléphoner, toucher, regarder son téléphone au volant
-
-### Refus de priorité
-
-Le fait de couper la priorité à un véhicule
-
-### Refus de priorité piéton
-
-Le fait de couper la priorité à un piéton
-
-### Accélération par conducteur sur le point d'être dépassé
-
-Le fait d'accélérer afin d'empêcher un dépassement
-
-### Exécution d'un demi-tour ou d'une marche arrière sur autoroute
-
-### Conduite en état d'ivresse
-
-Conduire un véhicule en état d'ivresse manifeste
-
-### Conduite sous l'emprise de stupéfiant
-
-Conduire un véhicule sous l'emprise de stupéfiant
-
-## 3. Délits
-
-### Défaut de permis de conduire
-
-Le fait de conduire un véhicule sans avoir le permis correspondant
-
-### Conduite malgré la suspension, la rétention ou l'annulation du permis de conduire
-
-Le fait de conduire un véhicule malgré la suspension, rétention ou annulation du permis de conduire
-
-### Délit de fuite
-
-Le fait, pour tout conducteur d’un véhicule quel qu'il soit, sachant qu’il vient de causer ou d’occasionner un accident, de ne pas s’arrêter et ainsi tenter d’échapper à ses responsabilités
-
-### Mise en danger de la vie d'autrui
-
-Le fait d'exposer directement autrui à un risque immédiat de mort ou de blessures de nature à entraîner une mutilation ou une infirmité permanente par la violation manifestement délibérée d'une obligation particulière de prudence ou de sécurité imposée par la loi ou le règlement
-
-### Refus de se soumettre à un contrôle de police
-
-Le fait de se refuser de se soumettre à un contrôle des forces de l'ordre
-
-<br>
+* **Conduite dangereuse** : dépassement dangereux, franchissement de ligne continue, contresens, non-maîtrise du véhicule, refus de priorité (véhicule ou piéton), téléphone au volant, accélération pour empêcher un dépassement, demi-tour ou marche arrière sur autoroute, mise en danger de la vie d'autrui.
+* **Franchissement d'un feu rouge ou d'un stop** : comprend aussi le non-respect d'un sens interdit ou de la signalisation.
+* **Stationnement gênant ou dangereux** : sur un espace non prévu pour stationner, dans un virage, sur un passage piéton, ou en gênant la visibilité des autres usagers.
+* **Véhicule non conforme** : plaque absente, éclairage éteint la nuit, usage abusif de l'avertisseur sonore.
+* **Usage d'une fausse plaque** : plaque remplacée ou masquée pour échapper aux contrôles.
+* **Conduite sans permis** : y compris pendant une suspension, une rétention ou après l'annulation du permis.
+* **Délit de fuite** : quitter les lieux d'un accident qu'on vient de causer, sans s'arrêter.
+* **Refus d'obtempérer** : refuser de se soumettre à un contrôle des forces de l'ordre.

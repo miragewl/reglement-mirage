@@ -92,7 +92,9 @@ Afin de garantir un **équilibre économique sain**, le revenu de chaque employ�
 | Co-patron | 520 $/h | 5 880 $ | **800 $/h** |
 | Patron | 560 $/h | 7 100 $ | **900 $/h** |
 
-Pour repère : l'intérim rapporte 400 $/h, soit le salaire d'un stagiaire. Dans les services publics (Gouvernement, DOJ, SASP, EMS), le cumul est lui aussi plafonné à **900 $/h** au grade le plus élevé.
+Pour repère : l'intérim rapporte 400 $/h, soit le salaire d'un stagiaire. Dans les services publics (Gouvernement, SASP, EMS), le cumul est lui aussi plafonné à **900 $/h** au grade le plus élevé. Le **cabinet d'avocats** est une entreprise privée à 5 grades : il suit la grille ci-dessus.
+
+Une prime qui dépasserait le plafond n'est pas perdue : le surplus est **mis de côté sur l'épargne de l'employé** dans la tablette, et la direction peut le verser plus tard, une autre semaine.
 
 Les plafonds de primes incluent **l'ensemble des primes versées sur une semaine**, quelle que soit leur nature (performance, présence, événement, bonus exceptionnel, etc.).
 
@@ -109,10 +111,9 @@ Tout dépassement constaté ou tentative de contournement pourra entraîner des 
 
 ## Gestion des prix
 
-* Afin de garantir un équilibre économique sain entre les entreprises du serveur, **toute modification des prix pratiqués par une entreprise est strictement interdite sans validation préalable de l'équipe staff**.
-
-  \
-  Les patrons **n'ont pas le droit d'ajuster librement les prix de leurs produits ou services**, car cela pourrait déséquilibrer l'économie globale et nuire aux autres joueurs.
+* Afin de garantir un équilibre économique sain entre les entreprises du serveur, chaque produit a un **prix de référence**.
+* Dans la tablette, le patron peut ajuster ses prix **de 30 % au plus**, à la hausse comme à la baisse, autour de ce prix de référence. Un prix hors de cette fourchette est ramené à sa limite. Pour un produit hors de la grille, le prix de référence est son prix au moment du premier réglage.
+* Tout autre changement de prix (nouveau produit, prix hors de cette fourchette) demande la **validation préalable de l'équipe staff**. Chaque modification est enregistrée.
   {% endstep %}
 
 {% step %}
@@ -127,10 +128,11 @@ Tout dépassement constaté ou tentative de contournement pourra entraîner des 
 
 ## Impôts
 
-* Le paiement des impôts a lieu le dimanche de chaque semaine.&#x20;
-* Il est obligatoire, sans quoi des pénalités s'appliqueront \
-  (5 000 $ supplémentaires par jour de retard).
-* En cas de non paiement des impôts durant une semaine un retrait de l'entreprise peut être envisagé
+* La fiche d'imposition s'envoie au Gouvernement depuis la tablette, **le dimanche à partir de 19 h**.
+* Une fiche en retard peut encore être envoyée **jusqu'au samedi suivant, 19 h**, avec une **surtaxe de 5 000 $ par jour de retard**, ajoutée automatiquement. Le Gouvernement peut ajuster cette surtaxe.
+* Le Gouvernement valide les fiches **n'importe quel jour**, même plus tard : le montant est alors prélevé sur le compte de l'entreprise.
+* Chaque samedi à 12 h, une **taxe sur le solde du compte de l'entreprise** est prélevée automatiquement (de 0 % sous 200 000 $ à 2,5 % au-delà de 10 millions). Elle est déduite ensuite de l'impôt sur le chiffre d'affaires.
+* En cas de non paiement des impôts durant une semaine, un retrait de l'entreprise peut être envisagé.
   {% endstep %}
 
 {% step %}

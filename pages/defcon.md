@@ -12,7 +12,6 @@ Le niveau en vigueur est annoncé par le SASP avec une affiche indiquant sa date
 
 - **Fouille et palpation** : uniquement en flagrant délit, sur individus et véhicules
 - **Contrôles** : sur suspicion. Contrôle d'identité autorisé
-- **Équipement** : pack de base, pas de gilet pare-balles, pas de masque (sauf unité spéciale)
 - **Course-poursuite** : délit mineur : 1 véhicule par suspect. Délit majeur : 2 véhicules max par suspect
 - **Patrouilles** : Lincoln ou Adam
 - **Règle de tir** : 3 sommations avant d'ouvrir le feu, réponse immédiate au danger
@@ -23,7 +22,6 @@ Le niveau en vigueur est annoncé par le SASP avec une affiche indiquant sa date
 
 - **Fouille et palpation** : fouille des véhicules autorisée ; individus uniquement en flagrant délit
 - **Contrôles** : sur suspicion, barrages possibles. Contrôle d'identité autorisé
-- **Équipement** : pack de base, 1 arme lourde dans les véhicules, gilet léger, pas de masque (sauf unité spéciale)
 - **Course-poursuite** : 2 véhicules max par suspect
 - **Patrouilles** : Adam
 - **Règle de tir** : 2 sommations avant d'ouvrir le feu, réponse immédiate au danger
@@ -34,7 +32,6 @@ Le niveau en vigueur est annoncé par le SASP avec une affiche indiquant sa date
 
 - **Fouille et palpation** : autorisées sur individus et véhicules
 - **Contrôles** : barrages routiers. Contrôle d'identité obligatoire
-- **Équipement** : pack de base, 1 arme lourde selon formation, gilet lourd, masque obligatoire
 - **Course-poursuite** : 2 véhicules max par suspect
 - **Patrouilles** : Tango ; SWAT prêt à intervenir sur les délits majeurs ; renfort fédéral possible sur les délits majeurs
 - **Règle de tir** : 1 sommation avant d'ouvrir le feu, réponse immédiate au danger
@@ -45,7 +42,6 @@ Le niveau en vigueur est annoncé par le SASP avec une affiche indiquant sa date
 
 - **Fouille et palpation** : systématiques
 - **Contrôles** : fréquence intense. Contrôle d'identité obligatoire
-- **Équipement** : pack de base, 1 arme lourde selon formation, gilet et tenue lourds, masque obligatoire
 - **Course-poursuite** : 2 véhicules max par suspect
 - **Patrouilles** : Tango ; SWAT prêt à intervenir sur les délits majeurs ; patrouille fédérale autorisée
 - **Règle de tir** : pas de sommation avant d'ouvrir le feu
@@ -53,10 +49,6 @@ Le niveau en vigueur est annoncé par le SASP avec une affiche indiquant sa date
 - **Négociation** : aucune
 
 ## Détails
-
-#### Pack de base
-
-Arme de service (PPA 1), taser et équipements complémentaires (lampe torche, matraque). L'arme lourde dépend de la formation de l'agent (PPA 2 ou 3).
 
 #### Délits mineurs et majeurs
 

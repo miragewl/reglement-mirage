@@ -26,7 +26,7 @@ Cette page résume les règles qu'on ne doit jamais oublier. Elle ne remplace pa
 
 ## La vie du personnage
 
-- **Légal ou illégal, il faut choisir.** SASP, Gouvernement, DOJ, EMS, Weazel News, avocats et Dynasty sont incompatibles avec l'illégal (seule exception : un policier ripoux sous dossier validé par le staff). Changer de voie impose un wipe. [Général](general-legal-et-illegal.md)
+- **Légal ou illégal, il faut choisir.** SASP, Gouvernement, EMS, Weazel News, cabinet d'avocats et Dynasty sont incompatibles avec l'illégal (seule exception : un policier ripoux sous dossier validé par le staff). Changer de voie impose un wipe. [Général](general-legal-et-illegal.md)
 - **Une mort RP passe par un dossier.** Ticket, preuves vidéo, avertissement en scène et porte de sortie : sans dossier validé par le staff, pas de mort RP. [Mort RP](mort-rp.md)
 - **Pas de transfert avant un wipe.** Donner ses biens avant un wipe, une mort RP ou un départ est interdit. Sans connexion pendant 1 mois et demi, le wipe est automatique. [Mort RP](mort-rp.md)
 

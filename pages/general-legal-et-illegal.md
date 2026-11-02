@@ -175,10 +175,9 @@ Les joueurs impliqués dans l’illégal ne peuvent pas travailler dans :
 
 * SASP
 * Gouvernement
-* DOJ
 * EMS
 * Weazel News
-* Cabinet d’avocat
+* Cabinet d’avocats
 * Dynasty
 
 Changement de voie = wipe obligatoire dans les deux sens.
@@ -340,7 +339,7 @@ Interdiction d’installer :
 
 * Nourriture, boisson, objets légaux non lootables
 * Téléphone fouillable mais doit être rendu
-* Items SASP (bleus)
+* Items SASP
 * Interdiction de dépouiller :
   * coffres maison
   * véhicules

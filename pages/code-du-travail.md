@@ -81,7 +81,7 @@ Les entreprises et les travailleurs sont soumis à un système fiscal local.
 
 #### Article 5.1 - Barème d'imposition
 
-Le barème d’imposition est progressif et adapté aux revenus des entreprises et des individus.
+Les entreprises sont imposées à un **taux fixe propre à leur activité**, réduit selon le nombre de salariés et pour les petits chiffres d'affaires. Les citoyens, eux, sont imposés selon un **barème progressif**.
 
 #### Article 6 - Charges déductibles
 

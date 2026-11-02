@@ -311,7 +311,7 @@ Sont assimilées à des armes par nature:\
 Tous les citoyens peuvent avoir accès à une arme dès lors qu'ils sont titulaires d’un permis de port d’arme. Le permis de port d'armes est délivré par le gouvernement de San Andreas selon les modalités qu’il fixe.\
 La loi distingue 2 permis :\
 Le Permis de Port d’Armes à usage professionnels (PPA 1-2-3-4) réservé aux membres des forces de l’ordre permettant de porter des armes des catégories 1 à 3 dépendant de leur formation et leur métier.\
-Le Permis de Port d’Armes (PPA CIVIL) réservé aux citoyens permettant de porter des armes de catégorie 1 et 2 (armes blanches et armes de poing) ;
+Le Permis de Port d’Armes (PPA CIVIL) réservé aux citoyens permettant de porter des armes de catégorie 2 (armes de poing). Aucun permis n’autorise le port d’une arme de catégorie 1 (armes blanches) ;
 
 **Article 501-1.** Modalités d’obtention. Tout citoyen âgé de 21 ans révolus est éligible pour le passage du PPA .
 
@@ -351,8 +351,10 @@ Appartient à la catégorie 1 : Tout objet manifestement destiné à blesser ou 
 * Queue de billard
 * Hache en pierre
 * Hachette
+* Couteau
+* Batte de baseball
 
-Est qualifié de crime de port d’arme illégal de catégorie 1 le fait de détenir une arme de catégorie 1 sans permis de port d’arme.
+Le port d’une arme de catégorie 1 n’est couvert par aucun permis, PPA compris. Est qualifié de crime de port d’arme illégal de catégorie 1 le fait de porter une arme de catégorie 1 hors de chez soi, même si elle a été achetée en magasin.
 
 **Article 503-2.** Catégorie 2 : Armes de poing
 
@@ -363,6 +365,8 @@ Appartient à la catégorie 2 :
 * Pistolet Vintage
 * Pistolet SNS MK II
 * Pistolet en céramique
+
+Le **Pistolet Vintage** est réservé au SASP, qui s’en sert de radar de vitesse. Un civil qui en porte un est en port d’arme illégal, même avec un PPA.
 
 Est qualifié de crime de port d’arme illégal de catégorie 2 le fait de détenir une arme de catégorie 2 sans permis de port d’arme.
 

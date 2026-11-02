@@ -31,7 +31,12 @@
 ➕ Ajout du casse du casino 4 Dragons : 3 à 6 membres, 4 agents en service, un casse toutes les 48 h\
 ➕ Grossesse : déclarée par un EMS gradé après validation, 3 visites avec échographie, accouchement prématuré\
 ➕ Ajout des règles du logement : paiement par carte, crédit, location par les agents immobiliers\
-➕ Police : GPS coupé pour un agent pris en otage, vedettes SASP et EMS
+➕ Police : GPS coupé pour un agent pris en otage, vedettes SASP et EMS\
+➕ Code de la route : aligné sur le barème du MDT (amendes, prison, points)\
+➕ Armes : aucun permis n'autorise les armes blanches, le Pistolet Vintage est réservé au SASP\
+➕ Entreprises : prix ajustables de 30 % au plus, surplus de prime mis en épargne, cabinet d'avocats privé\
+➕ Impôts : fiche le dimanche dès 19 h, retard jusqu'au samedi avec surtaxe de 5 000 $ par jour, taxe sur le solde le samedi\
+➕ Defcon : retrait des consignes d'équipement
 
 ## 16/07/2025
 

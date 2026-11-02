@@ -20,7 +20,7 @@ Pour ajouter un mot, écrivez une nouvelle ligne sous la forme « - **Mot** : d�
 - **Lead** : le responsable d'un groupe ou d'un projet.
 - **SASP** : San Andreas State Police, la police du serveur (ancien LSPD).
 - **EMS** : les secours médicaux (ambulanciers, médecins).
-- **DOJ** : Department of Justice, la justice. Pas de juge pour l'instant : la Gouverneure statue.
+- **Cabinet d'avocats** : entreprise privée à 5 grades qui défend les citoyens. Pas de juge pour l'instant : la Gouverneure statue.
 - **PPA** : Permis de port d'armes. Civil pour les citoyens, professionnel pour les forces de l'ordre.
 - **Defcon** : le niveau d'alerte du SASP, de 5 (normal) à 2 (alerte maximale).
 - **Win RP** : chercher à gagner chaque scène au lieu de jouer le jeu.

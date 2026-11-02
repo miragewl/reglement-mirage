@@ -40,7 +40,7 @@ Lorsqu’une herse est placée, un véhicule doit être positionné en barrage s
 
 #### **⚠️ Fin de service**
 
-Les agents du SASP doivent obligatoirement déposer leurs armes de service (couleur bleue) en fin de service.
+Les agents du SASP doivent obligatoirement déposer leurs armes de service en fin de service.
 
 Exception : vous pouvez conserver votre badge.
 
@@ -76,7 +76,7 @@ Selon la réponse des cibles, ajustez la situation :
 
 Au bout de 10 minutes sans réponse des cibles, l’assaut est autorisé.
 
-* Vous devez prendre 100 % des ressources illégales (couleur violette)
+* Vous devez prendre 100 % des ressources illégales
 * Vous devez obligatoirement établir un inventaire et prendre des photos des ressources saisies avant la fin de la scène et en informer le suspect.
 
 #### **⚠️ Perquisition d'un logement**
