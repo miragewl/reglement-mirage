@@ -198,8 +198,9 @@ Exception : un agent du SASP peut être ripoux **uniquement sous dossier validé
 {% column %}
 Il n'y a plus de zone safe : les actions illégales sont possibles partout, y compris autour des postes du SASP, des hôpitaux, des QG, des entreprises et pendant les events.
 
-* S'en prendre au **SASP** ou aux **EMS** (agents, postes, hôpitaux, véhicules de service) entraîne des **conséquences RP lourdes** : réponse du SASP, passage en [Defcon](defcon.md), dossier fédéral possible (voir [Mort RP, Wipe, Fédéral](mort-rp.md)).  {% endcolumn %}
-  {% endcolumns %}
+* S'en prendre au **SASP** ou aux **EMS** (agents, postes, hôpitaux, véhicules de service) entraîne des **conséquences RP lourdes** : réponse du SASP, passage en [Defcon](defcon.md), dossier fédéral possible (voir [Mort RP, Wipe, Fédéral](mort-rp.md)).
+{% endcolumn %}
+{% endcolumns %}
 
 ***
 
