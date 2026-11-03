@@ -57,25 +57,6 @@
 {% columns %}
 {% column valign="middle" %}
 
-<h4 align="center">Fuite en cours de scène</h4>
-{% endcolumn %}
-
-{% column %}
-Lorsqu’une scène commence (course-poursuite, prise d’otage, etc.), il est interdit de fuir dans :
-
-* QG de gang
-* Poste de police
-* Hôpital
-
-avant la fin de la scène.
-{% endcolumn %}
-{% endcolumns %}
-
-***
-
-{% columns %}
-{% column valign="middle" %}
-
 <h4 align="center">Fear RP et comportement</h4>
 {% endcolumn %}
 
@@ -197,7 +178,7 @@ Exception : un agent du SASP peut être ripoux **uniquement sous dossier validé
 {% column %}
 Il n'y a plus de zone safe : les actions illégales sont possibles partout, y compris autour des postes du SASP, des hôpitaux, des QG, des entreprises et pendant les events.
 
-* S'en prendre au **SASP** ou aux **EMS** (agents, postes, hôpitaux, véhicules de service) entraîne des **conséquences RP lourdes** : réponse du SASP, passage en [Defcon](defcon.md), dossier fédéral possible (voir [Mort RP, Wipe, Fédéral](mort-rp.md)).
+* S'en prendre au **SASP** (agents, postes, véhicules de service) entraîne des **conséquences RP lourdes** : réponse du SASP, passage en [Defcon](defcon.md), dossier fédéral possible (voir [Mort RP, Wipe, Fédéral](mort-rp.md)).
 {% endcolumn %}
 {% endcolumns %}
 

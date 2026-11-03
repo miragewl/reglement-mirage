@@ -20,7 +20,7 @@
 ➕ Retrait de la réglementation de la pêche\
 ➕ Nouvelle page **Réglementation de la chasse** : zones, permis, armes, dépeçage, bêtes dangereuses\
 ➕ Zones interdites d'accès RP : seulement la base militaire et le porte-avions\
-➕ Fin des zones safe : l'illégal est possible partout, events compris, avec des conséquences RP lourdes en cas d'attaque contre le SASP ou les EMS\
+➕ Fin des zones safe : l'illégal est possible partout, events compris, avec des conséquences RP lourdes en cas d'attaque contre le SASP\
 ➕ Boutique : page refaite. Fin des coins, nouvelle boutique sur miragev2.com, rangs VIP, boutique en jeu en dollars, imports, compensation des anciens achats\
 ➕ SASP : être ripoux est possible, uniquement sous dossier validé par le staff\
 ➕ Nouvelle page **Mariage** : procédure auprès du Gouvernement, cérémonie symbolique et lieux de cérémonie\
@@ -36,7 +36,8 @@
 ➕ Armes : aucun permis n'autorise les armes blanches, le Pistolet Vintage est réservé au SASP\
 ➕ Entreprises : prix ajustables de 30 % au plus, surplus de prime mis en épargne, cabinet d'avocats privé\
 ➕ Impôts : fiche le dimanche dès 19 h, retard jusqu'au samedi avec surtaxe de 5 000 $ par jour, taxe sur le solde le samedi\
-➕ Defcon : retrait des consignes d'équipement
+➕ Defcon : retrait des consignes d'équipement\
+➕ Retrait de la règle « fuite en cours de scène » (QG, poste de police, hôpital) : il n'y a plus de zone safe
 
 ## 16/07/2025
 
