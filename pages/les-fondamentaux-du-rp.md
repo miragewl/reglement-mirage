@@ -259,7 +259,11 @@ Le harcèlement est interdit, en jeu comme hors jeu. Le respect des joueurs est 
 {% endcolumn %}
 
 {% column %}
-Les scènes de torture sont autorisées uniquement via le script de la chaise. Toute autre forme de torture est interdite.
+Les scènes de torture se jouent **uniquement en RP** : émotes et descriptions, sans gore excessif.
+
+* Elles demandent l'**accord des joueurs concernés** : chacun peut demander à arrêter ou à adoucir la scène.
+* Une **porte de sortie** doit toujours être laissée à la victime (aveux, rançon, fuite…).
+* Toute référence à des violences sexuelles reste strictement interdite.
 {% endcolumn %}
 {% endcolumns %}
 

@@ -39,7 +39,8 @@
 ➕ Defcon : retrait des consignes d'équipement\
 ➕ Retrait de la règle « fuite en cours de scène » (QG, poste de police, hôpital) : il n'y a plus de zone safe\
 ➕ SASP : hélicoptère 15 minutes de vol puis 15 minutes de pause, trois infractions au maximum par amende, top inter en prise d'otage\
-➕ Entreprises : descentes du SASP pour vérifier coffres, stocks et factures
+➕ Entreprises : descentes du SASP pour vérifier coffres, stocks et factures\
+➕ Torture : la chaise n'existe plus, les scènes se jouent en RP avec l'accord des joueurs et une porte de sortie
 
 ## 16/07/2025
 
