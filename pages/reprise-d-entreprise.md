@@ -57,7 +57,9 @@ Un membre d'un groupe illégal ne pourra prétendre à la reprise d'une entrepri
 * **Activités illégales au sein de l'entreprise** :
   * L'illégal est **autorisé** dans les entreprises.
   * **Seule exception : le blanchiment d'argent est strictement interdit**, quelle que soit sa forme (fausses factures, ventes fictives, primes gonflées, transferts entre entreprises, etc.).
-  * Le **stockage** de marchandises illégales dans les locaux de l'entreprise est **autorisé**. En contrepartie, l'entreprise peut faire l'objet d'une **perquisition** du SASP, dans les conditions prévues par le règlement Police (dossier d’enquête validé par le staff puis mandat).<br>
+  * Le **stockage** de marchandises illégales dans les locaux de l'entreprise est **autorisé**. En contrepartie :
+    * le SASP peut faire des **descentes** dans l'entreprise pour vérifier ses coffres, ses stocks et ses factures ;
+    * l'entreprise peut faire l'objet d'une **perquisition** du SASP, dans les conditions prévues par le règlement Police (dossier d’enquête validé par le staff puis mandat).<br>
 * **Engagement RP sérieux** :\
   Le patron doit garantir un RP de qualité et un suivi actif de son entreprise. Toute négligence ou abus de pouvoir sera sanctionnée par le Staff.
   {% endstep %}
@@ -129,7 +131,7 @@ Tout dépassement constaté ou tentative de contournement pourra entraîner des 
 ## Impôts
 
 * La fiche d'imposition s'envoie au Gouvernement depuis la tablette, **le dimanche à partir de 19 h**.
-* Une fiche en retard peut encore être envoyée **jusqu'au samedi suivant, 19 h**, avec une **surtaxe de 5 000 $ par jour de retard**, ajoutée automatiquement. Le Gouvernement peut ajuster cette surtaxe.
+* Une fiche en retard peut encore être envoyée **jusqu'au samedi suivant, 19 h**, avec une **surtaxe de 10 % de l'impôt dû par jour de retard**, ajoutée automatiquement (exemple : 3 jours de retard sur un impôt de 8 000 $ = 2 400 $ de surtaxe). Le Gouvernement peut ajuster cette surtaxe.
 * Le Gouvernement valide les fiches **n'importe quel jour**, même plus tard : le montant est alors prélevé sur le compte de l'entreprise.
 * Chaque samedi à 12 h, une **taxe sur le solde du compte de l'entreprise** est prélevée automatiquement (de 0 % sous 200 000 $ à 2,5 % au-delà de 10 millions). Elle est déduite ensuite de l'impôt sur le chiffre d'affaires.
 * En cas de non paiement des impôts durant une semaine, un retrait de l'entreprise peut être envisagé.

@@ -35,9 +35,11 @@
 ➕ Code de la route : aligné sur le barème du MDT (amendes, prison, points)\
 ➕ Armes : aucun permis n'autorise les armes blanches, le Pistolet Vintage est réservé au SASP\
 ➕ Entreprises : prix ajustables de 30 % au plus, surplus de prime mis en épargne, cabinet d'avocats privé\
-➕ Impôts : fiche le dimanche dès 19 h, retard jusqu'au samedi avec surtaxe de 5 000 $ par jour, taxe sur le solde le samedi\
+➕ Impôts : fiche le dimanche dès 19 h, retard jusqu'au samedi avec surtaxe de 10 % de l'impôt par jour, taxe sur le solde le samedi\
 ➕ Defcon : retrait des consignes d'équipement\
-➕ Retrait de la règle « fuite en cours de scène » (QG, poste de police, hôpital) : il n'y a plus de zone safe
+➕ Retrait de la règle « fuite en cours de scène » (QG, poste de police, hôpital) : il n'y a plus de zone safe\
+➕ SASP : hélicoptère 15 minutes de vol puis 15 minutes de pause, trois infractions au maximum par amende, top inter en prise d'otage\
+➕ Entreprises : descentes du SASP pour vérifier coffres, stocks et factures
 
 ## 16/07/2025
 

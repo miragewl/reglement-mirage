@@ -10,6 +10,17 @@
 Vous devez respecter le principe de négociation lors de vos échanges avec des groupes illégaux.\
 Exemple : si un groupe vous demande de retirer des barrières et des herses en échange d’otages, vous devez tenir parole et retirer le dispositif.
 
+#### **⚠️ Prise d'otage : le top inter**
+
+Lors d'une prise d'otage, si un otage est blessé ou si vous êtes témoin d'un acte de violence physique, le SWAT ou l'équipe du SASP sur place peut donner le **top inter** et lancer l'intervention.
+
+#### **⚠️ Amendes : trois infractions au maximum**
+
+* Une amende compte **trois infractions au maximum**, jamais plus.\
+  Exemple : refus d'obtempérer, petit trafic de drogue et arme blanche, et c'est tout.
+* À vous de choisir correctement les infractions retenues.
+* Le SASP peut faire preuve de fair-play selon la scène et n'en retenir qu'une ou deux.
+
 #### **⚠️ Agent pris en otage : le GPS**
 
 Chaque agent a un traceur GPS. La commande `/gps` (ou le bouton GPS du MDT) le coupe : votre position disparaît pour vos collègues, et les leurs disparaissent de votre carte.
@@ -21,6 +32,11 @@ Chaque agent a un traceur GPS. La commande `/gps` (ou le bouton GPS du MDT) le c
 #### **⚠️ Vedette**
 
 Le SASP dispose d'une vedette à la marina, partagée avec les EMS : patrouilles côtières, poursuites et interventions en mer. Elle ne sort qu'en service.
+
+#### **⚠️ Hélicoptère**
+
+* Un vol dure **15 minutes au maximum**, à compter du **décollage**.
+* L'hélicoptère ne peut être ressorti qu'après **15 minutes de pause**, à compter du moment où il est **posé au sol ou rangé au garage**.
 
 #### **⚠️ Ripoux**
 
