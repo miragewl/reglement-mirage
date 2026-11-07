@@ -7,6 +7,8 @@
 
 ## 07/11/2026
 
+➕ Nouvelle page **Barème des amendes** : toutes les amendes et GAV par catégorie, recherche, et calculateur (3 infractions au maximum, 50 % payé et 50 % en TIG)
+
 **Argent, vol et otages**\
 ➕ Argent liquide : 800 $ au maximum sur soi, saisie et interrogatoire au-dessus\
 ➕ Vol : 400 $ au maximum par personne et par jour\
