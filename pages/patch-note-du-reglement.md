@@ -11,7 +11,7 @@
 ➕ Argent liquide : 800 $ au maximum sur soi, saisie et interrogatoire au-dessus\
 ➕ Vol : 400 $ au maximum par personne et par jour\
 ➕ Otages : 800 $ au maximum par otage, 4 000 $ par scène\
-➕ Loot d'items illégaux : lors d'un transport, tout se récupère sauf les armes, uniquement pendant une scène\
+➕ Loot d'items illégaux : lors d'un transport, tout se récupère sans limite sauf les armes, uniquement pendant une scène (remplace « Loot autorisé »)\
 ➕ Loot interdit : les items EMS rejoignent les items SASP\
 ➖ Retrait de la règle sur la crypto
 

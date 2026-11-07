@@ -340,21 +340,8 @@ Exception : convoi.
 
 {% column %}
 
-* Lors d'un transport d'objets illégaux (drogue, outils, munitions, gilets pare-balles, etc.), **tout peut être récupéré**, sauf les armes.
+* Lors d'un transport d'objets illégaux (drogue, outils, munitions, gilets pare-balles, etc.), **tout peut être récupéré, sans limite**, sauf les armes.
 * Uniquement si une **scène** a lieu : on ne récupère rien si personne n'est présent en face.
-{% endcolumn %}
-{% endcolumns %}
-
-***
-
-{% columns %}
-{% column valign="middle" %}
-
-<h4 align="center">Loot autorisé</h4>
-{% endcolumn %}
-
-{% column %}
-Drogues, munitions, outils illégaux : lootables sans limite
 {% endcolumn %}
 {% endcolumns %}
 
