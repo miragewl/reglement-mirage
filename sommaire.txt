@@ -18,6 +18,7 @@ boutique | Boutique | Règlement général
 code-civil | Code civil | Règlement en jeu
 mariage | Mariage | Règlement en jeu
 code-penal | Code pénal | Règlement en jeu
+bareme-des-amendes | Barème des amendes | Règlement en jeu
 code-du-travail | Code du travail | Règlement en jeu
 code-de-la-route | Code de la route | Règlement en jeu
 permis-de-port-darmes | Permis de port d'armes | Règlement en jeu

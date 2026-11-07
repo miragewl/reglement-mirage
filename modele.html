@@ -299,6 +299,75 @@ main{min-width:0;padding-inline:clamp(16px,4vw,52px);padding-block:28px 0}
 .carrousel .c-pts button[aria-current="true"]{width:26px;background:#fff}
 .carrousel .c-num{position:absolute;top:12px;right:12px;padding:4px 10px;border-radius:99px;background:rgba(6,30,38,.62);color:#fff;font:600 12.5px/1.4 var(--body)}
 @media (max-width:640px){.carrousel .c-fl{width:36px;height:36px;font-size:20px}}
+/* barème des amendes (fonction baremes) : paliers t1 < 100 $, t2 < 1 000 $, t3 < 10 000 $, t4 au-delà */
+.bm{--t1:#2E9E5B;--t2:#C99A12;--t3:#E8742A;--t4:#D8322B;position:relative;margin:26px 0 10px}
+.bm-bar{position:sticky;top:64px;z-index:5;display:grid;gap:10px;padding:12px;margin:0 -12px 18px;border-radius:20px;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.bm-tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px}
+.bm-tabs::-webkit-scrollbar{display:none}
+.bm-tabs button{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;border:1px solid var(--line);border-radius:99px;background:var(--surface);color:var(--fg);font:700 14px/1 var(--body);cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .2s}
+.bm-tabs button:hover{border-color:var(--sea);transform:translateY(-1px)}
+.bm-tabs .pic{width:22px;height:22px;display:grid;place-items:center}
+.bm-tabs .pic img{width:22px;height:22px;margin:0;border-radius:0;filter:none}
+.bm-tabs small{font:600 11px/1 var(--mono);color:var(--muted);padding:3px 6px;border-radius:99px;background:var(--bg2)}
+.bm-tabs button[aria-selected="true"]{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.bm-tabs button[aria-selected="true"] small{background:color-mix(in srgb,var(--bg) 22%,transparent);color:var(--bg)}
+.bm-find{display:flex;align-items:center;gap:10px;padding:0 14px;height:46px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.bm-find:focus-within{border-color:var(--sea);box-shadow:0 0 0 3px color-mix(in srgb,var(--sea) 25%,transparent)}
+.bm-find svg{width:18px;height:18px;stroke:var(--muted);flex:0 0 auto}
+.bm-find input{flex:1;min-width:0;border:0;background:none;color:var(--fg);font:500 15px var(--body);outline:none}
+.bm-find .cnt{font:600 12px var(--mono);color:var(--muted);white-space:nowrap}
+.bareme > h3{display:flex;align-items:center;gap:10px;margin-top:34px}
+.bareme > h4{margin:22px 0 10px;font:700 11.5px/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.bm-list{display:grid;gap:8px}
+.bm-row{position:relative;display:flex;align-items:center;gap:14px;padding:12px 12px 12px 18px;border:1px solid var(--line);border-radius:16px;background:var(--surface);overflow:hidden;transition:border-color .2s,box-shadow .2s,transform .2s}
+.bm-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c,var(--line-2))}
+.bm-row.t1{--c:var(--t1)}.bm-row.t2{--c:var(--t2)}.bm-row.t3{--c:var(--t3)}.bm-row.t4{--c:var(--t4)}
+.bm-row:hover{border-color:color-mix(in srgb,var(--c,var(--line-2)) 55%,var(--line));box-shadow:0 10px 24px -16px rgba(8,50,60,.45)}
+.bm-row.pris{border-color:var(--c);box-shadow:0 0 0 2px color-mix(in srgb,var(--c) 35%,transparent)}
+.bm-t{flex:1;min-width:0}
+.bm-t b{display:block;font:600 15.5px/1.35 var(--body);color:var(--fg)}
+.bm-t small{display:block;margin-top:4px;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.bm-v{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.bm-amt{min-width:84px;text-align:right;font:800 18px/1.1 var(--display);color:var(--c,var(--muted));font-variant-numeric:tabular-nums;white-space:nowrap}
+.bm-row.off .bm-amt{font:600 13px var(--mono);color:var(--muted)}
+.bm-gav{padding:5px 9px;border-radius:99px;background:var(--bg2);color:var(--fg);font:600 12px/1.2 var(--mono);white-space:nowrap;max-width:210px;overflow:hidden;text-overflow:ellipsis}
+.bm-add{width:34px;height:34px;flex:0 0 auto;border:1px solid var(--line-2);border-radius:50%;background:var(--surface);color:var(--sea-deep);font:700 20px/1 var(--body);display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.bm-add:hover{background:var(--fg);border-color:var(--fg);color:var(--bg);transform:scale(1.06)}
+.bm-row.pris .bm-add{background:var(--c);border-color:var(--c);color:#fff}
+.bm [hidden]{display:none!important}
+.bm-vide{padding:26px;text-align:center;color:var(--muted);border:1px dashed var(--line-2);border-radius:16px}
+.bm-calc{position:sticky;bottom:14px;z-index:6;margin:22px -6px 0;padding:12px 14px;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:#0E2A33;color:#EAF7F5;box-shadow:0 20px 44px -18px rgba(4,24,30,.75);animation:bmIn .3s ease}
+@keyframes bmIn{from{transform:translateY(16px);opacity:0}}
+.bm-ch{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.bm-ch b{font:800 16px var(--display)}
+.bm-ch small{font:600 12px var(--mono);color:#93B4B7}
+.bm-clr{margin-left:auto;border:1px solid rgba(255,255,255,.25);border-radius:99px;padding:5px 12px;background:none;color:#EAF7F5;font:600 12.5px var(--body);cursor:pointer}
+.bm-clr:hover{background:rgba(255,255,255,.1)}
+.bm-calc ul{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:5px}
+.bm-calc li{display:flex;align-items:center;gap:10px;margin:0;padding:5px 8px 5px 12px;border-radius:12px;background:rgba(255,255,255,.07);font-size:14px}
+.content .bm-calc ul > li::before{display:none}
+.bm-calc li .n{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bm-calc li b{font:700 14.5px var(--display);white-space:nowrap}
+.bm-calc .q{display:flex;align-items:center;gap:4px;color:#93B4B7}
+.bm-calc .q input{width:64px;padding:4px 6px;border:1px solid rgba(255,255,255,.25);border-radius:8px;background:rgba(0,0,0,.2);color:#fff;font:600 13px var(--mono)}
+.bm-calc .x{width:26px;height:26px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font:700 15px/1 var(--body);cursor:pointer}
+.bm-tot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.bm-tot div{padding:7px 12px;border-radius:14px;background:rgba(255,255,255,.07)}
+.bm-tot div:first-child{background:#EC5F0C}
+.bm-tot small{display:block;font:600 11px/1.3 var(--mono);color:rgba(255,255,255,.75)}
+.bm-tot b{display:block;margin-top:2px;font:800 19px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.bm-msg{margin:10px 0 0;padding:8px 12px;border-radius:12px;background:#FFE3D0;color:#7A2C00;font:600 13.5px var(--body)}
+@media (max-width:640px){
+  .bm-bar{top:56px}
+  .bm-row{flex-wrap:wrap;gap:8px 10px}
+  .bm-v{width:100%;justify-content:flex-end}
+  .bm-amt{min-width:0;margin-right:auto;text-align:left}
+  .bm-gav{white-space:normal;max-width:none;flex:0 1 auto}
+  .bm-ch{flex-wrap:wrap;gap:4px 10px}
+  .bm-calc{bottom:74px}
+  .bm-tot b{font-size:16px}
+  .bm-calc li{flex-wrap:wrap}
+}
 .content blockquote{margin:18px 0;padding:4px 18px;border-left:3px solid var(--sea);color:var(--muted)}
 .sasp{font-weight:700;color:var(--sea)}
 .tick{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:6px;background:var(--sea);vertical-align:-3px;margin-right:8px}
@@ -1978,6 +2047,9 @@ const SCENES = {
     items:[['classical_building', 62, 56, 120, 'k-idle'], ['scroll', 74, 76, 60, 'k-float', -1], ['memo', 56, 28, 48, 'k-bob', -2]]},
   'code-penal': {bg:'linear-gradient(160deg,#0B232B,#1C4B55)', ...LIGHT, waves:DEEPW, emb:'avocat',
     items:[['balance_scale', 62, 52, 130, 'k-swing'], ['locked', 74, 78, 50, 'k-bob', -1]]},
+  'bareme-des-amendes': {bg:'linear-gradient(160deg,#0B2930,#14606B)', ...LIGHT, waves:DEEPW, emb:'sasp',
+    fx:`${star(470,60,2.4,0)}${star(640,40,2,-1)}${star(740,110,2.6,-2)}`,
+    items:[['money_bag', 72, 54, 120, 'k-float'], ['police_car_light', 90, 30, 60, 'k-pulse'], ['coin', 60, 12, 34, 'k-fall'], ['coin', 84, 12, 30, 'k-fall', -2.2], ['scroll', 92, 74, 54, 'k-bob', -1]]},
   'code-du-travail': {bg:'linear-gradient(160deg,#FFF4DE,#FFDCA0)', ...DARK, waves:SEAW, emb:'interim',
     fx:`<svg x="300" y="200" width="500" height="22" overflow="hidden"><g class="a-hazard">${Array.from({length:22}, (_, i) => `<path d="M${i*28} 22 l14 -22 h14 l-14 22Z" fill="#0E2A33"/>`).join('')}</g></svg><rect x="300" y="200" width="500" height="22" fill="none" stroke="#0E2A33" stroke-width="2"/>`,
     items:[['construction', 62, 54, 110, 'k-idle'], ['gear', 56, 24, 60, 'k-spin'], ['gear', 66, 18, 44, 'k-spin-r'], ['wrench', 75, 70, 56, 'k-wobble']]},
@@ -2627,7 +2699,7 @@ setTimeout(() => { const h = decodeURIComponent(location.hash.slice(1)).split('-
 /* ---------- v34 : mise en forme des pages du règlement ---------- */
 const PICON = {'readme': 'palm_tree', 'accueil': 'palm_tree', 'patch-note-du-reglement': 'memo', 'quickstart': 'passport_control', 'essentiel': 'compass', 'lexique': 'notebook', 'nos-reseaux': 'speech_balloon',
   'les-fondamentaux-du-rp': 'classical_building', 'general-legal-et-illegal': 'crossed_swords', 'groupes-illegaux': 'pirate_flag', 'police': 'police_car_light', 'defcon': 'shield', 'ems': 'ambulance',
-  'mort-rp': 'headstone', 'reprise-d-entreprise': 'department_store', 'boutique': 'shopping_bags', 'code-civil': 'balance_scale', 'code-penal': 'locked', 'code-du-travail': 'hammer',
+  'mort-rp': 'headstone', 'reprise-d-entreprise': 'department_store', 'boutique': 'shopping_bags', 'code-civil': 'balance_scale', 'code-penal': 'locked', 'bareme-des-amendes': 'money_bag', 'code-du-travail': 'hammer',
   'code-de-la-route': 'vertical_traffic_light', 'permis-de-port-darmes': 'bullseye', 'bureau-du-procureur': 'scroll', 'mariage': 'red_heart', 'reglementation-de-la-chasse': 'herb', 'reglementation-espace-aerien': 'helicopter'};
 function decoIcons(root){
   (root || document).querySelectorAll('#side a, .chap a, .pager a, .fcol a').forEach(a => {
@@ -2708,6 +2780,105 @@ function enhanceContent(ct){
   articleFilter(ct, cards);
   kvLists(ct);
   carrousels(ct);
+  baremes(ct);
+}
+/* barème des amendes (<div class="bareme" data-cat data-ico> dans une page) : onglets par catégorie, recherche,
+   cartes colorées selon le montant, calculateur de 3 infractions au plus avec partage 50 % payé / 50 % en TIG */
+function baremes(ct){
+  const blocs = [...ct.querySelectorAll('.bareme')]; if (!blocs.length || ct.querySelector('.bm')) return;
+  const TIG = 10, MAX = 3;
+  const fmt = n => Math.round(n).toLocaleString('fr-FR').replace(/ | /g, ' ') + ' $';
+  const lire = s => { const t = s.replace(/\s/g, ''); const m = t.match(/^(\d+)\$(par.*)?$/); return m ? {v: +m[1], u: !!m[2]} : null; };
+  const palier = v => v == null ? 'na' : v < 100 ? 't1' : v < 1000 ? 't2' : v < 10000 ? 't3' : 't4';
+  const bm = document.createElement('div'); bm.className = 'bm';
+  blocs[0].before(bm);
+  const bar = document.createElement('div'); bar.className = 'bm-bar';
+  bar.innerHTML = `<div class="bm-tabs" role="tablist"></div><label class="bm-find"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Chercher une infraction (ex. vitesse, arme, braquage)" aria-label="Chercher une infraction"><span class="cnt"></span></label>`;
+  bm.appendChild(bar);
+  const tabs = bar.querySelector('.bm-tabs'), inp = bar.querySelector('input'), cnt = bar.querySelector('.cnt');
+  const rows = [], cats = [];
+  blocs.forEach(b => {
+    bm.appendChild(b);
+    const cat = {nom: b.dataset.cat || '', el: b, rows: []}; cats.push(cat);
+    b.querySelectorAll('.tbl').forEach(w => {
+      const list = document.createElement('div'); list.className = 'bm-list';
+      w.querySelectorAll('tbody tr').forEach(tr => {
+        const td = [...tr.children].map(c => c.textContent.trim());
+        const [nom, amende = '', gav = '', note = ''] = td; if (!nom) return;
+        const a = lire(amende), r = {nom, amende, gav, note, a, cat};
+        const el = document.createElement('div'); el.className = 'bm-row ' + palier(a && a.v);
+        el.innerHTML = `<div class="bm-t"><b></b>${note ? '<small></small>' : ''}</div><div class="bm-v"><span class="bm-amt"></span>${gav ? '<span class="bm-gav"></span>' : ''}</div>`;
+        el.querySelector('b').textContent = nom; if (note) el.querySelector('small').textContent = note;
+        el.querySelector('.bm-amt').textContent = amende || 'À venir';
+        if (gav) el.querySelector('.bm-gav').textContent = /^\d+\s*min$/.test(gav) ? 'GAV ' + gav : gav === '50 %' ? 'GAV 50 %' : 'GAV : ' + gav.charAt(0).toLowerCase() + gav.slice(1);
+        if (a){ const add = document.createElement('button'); add.type = 'button'; add.className = 'bm-add'; add.setAttribute('aria-label', 'Ajouter au calcul : ' + nom); add.textContent = '+'; add.onclick = () => ajouter(r); el.querySelector('.bm-v').appendChild(add); }
+        else el.classList.add('off');
+        r.el = el; r.q = qnorm(nom + ' ' + note + ' ' + cat.nom); rows.push(r); cat.rows.push(r);
+        list.appendChild(el);
+      });
+      w.replaceWith(list);
+    });
+  });
+  const mkTab = (nom, ico, n, i) => { const t = document.createElement('button'); t.type = 'button'; t.setAttribute('role', 'tab'); t.dataset.i = i;
+    t.innerHTML = `${ico && E[ico] ? '<span class="pic" aria-hidden="true">' + im(ico) + '</span>' : ''}<span></span><small>${n}</small>`; t.querySelector('span:not(.pic)').textContent = nom; tabs.appendChild(t); return t; };
+  const tAll = mkTab('Tout', 'scroll', rows.length, -1);
+  cats.forEach((c, i) => mkTab(c.nom, c.el.dataset.ico, c.rows.length, i));
+  let cur = -1;
+  const filtre = () => {
+    const q = qnorm(inp.value.trim()), ws = q ? q.split(/\s+/) : [];
+    let shown = 0;
+    cats.forEach((c, i) => {
+      let vis = 0;
+      c.rows.forEach(r => { const ok = (!ws.length || ws.every(w => r.q.includes(w))); r.el.hidden = !ok; if (ok) vis++; });
+      c.el.querySelectorAll('h4').forEach(h => { const l = h.nextElementSibling; h.hidden = !!(l && l.classList.contains('bm-list') && ![...l.children].some(x => !x.hidden)); });
+      const on = (cur < 0 || cur === i) && vis > 0;
+      c.el.hidden = !on; if (on) shown += vis;
+    });
+    [...tabs.children].forEach(t => t.setAttribute('aria-selected', +t.dataset.i === cur ? 'true' : 'false'));
+    cnt.textContent = ws.length ? (shown ? shown + ' résultat' + (shown > 1 ? 's' : '') : 'Aucune infraction') : '';
+    vide.hidden = shown > 0;
+  };
+  tabs.addEventListener('click', e => { const t = e.target.closest('button'); if (!t) return; cur = +t.dataset.i; filtre();
+    tabs.scrollTo({left: t.offsetLeft - (tabs.clientWidth - t.offsetWidth) / 2, behavior: 'smooth'}); });
+  inp.addEventListener('input', filtre);
+  const vide = document.createElement('p'); vide.className = 'bm-vide'; vide.textContent = 'Aucune infraction ne correspond à ta recherche.'; vide.hidden = true; bm.appendChild(vide);
+  // un lien vers un titre du barème (sommaire de droite) réaffiche tout
+  ct.addEventListener('click', e => { if (e.target.closest('a[data-anchor]') && cur !== -1){ cur = -1; inp.value = ''; filtre(); } }, true);
+  /* calculateur */
+  const calc = document.createElement('aside'); calc.className = 'bm-calc'; calc.hidden = true;
+  calc.innerHTML = `<div class="bm-ch"><b>Calcul de l'amende</b><small></small><button type="button" class="bm-clr">Vider</button></div><ul></ul><div class="bm-tot"><div><small>Total</small><b class="t"></b></div><div><small>Payé (50 %)</small><b class="p"></b></div><div><small>En TIG (50 %)</small><b class="g"></b></div></div><p class="bm-msg" hidden></p>`;
+  bm.appendChild(calc);
+  const ul = calc.querySelector('ul'), msg = calc.querySelector('.bm-msg');
+  let sel = [];
+  const ajouter = r => {
+    if (sel.some(s => s.r === r)) return dire('Cette infraction est déjà dans le calcul.');
+    if (sel.length >= MAX) return dire('Une amende compte trois infractions au maximum.');
+    sel.push({r, n: 1}); maj();
+  };
+  let tm = 0; const dire = t => { msg.textContent = t; msg.hidden = false; clearTimeout(tm); tm = setTimeout(() => msg.hidden = true, 3500); calc.hidden = false; };
+  const maj = () => {
+    ul.textContent = '';
+    sel.forEach((s, i) => {
+      const li = document.createElement('li');
+      li.innerHTML = `<span class="n"></span>${s.r.a.u ? '<label class="q"><input type="number" min="1" max="9999" inputmode="numeric" aria-label="Quantité"><span>×</span></label>' : ''}<b></b><button type="button" class="x" aria-label="Retirer">×</button>`;
+      li.querySelector('.n').textContent = s.r.nom;
+      if (s.r.a.u){ const q = li.querySelector('input'); q.value = s.n; q.oninput = () => { s.n = Math.max(1, Math.min(9999, parseInt(q.value, 10) || 1)); li.querySelector('b').textContent = fmt(s.r.a.v * s.n); tot(); }; }
+      li.querySelector('b').textContent = fmt(s.r.a.v * s.n);
+      li.querySelector('.x').onclick = () => { sel.splice(i, 1); maj(); };
+      ul.appendChild(li);
+    });
+    rows.forEach(r => r.el.classList.toggle('pris', sel.some(s => s.r === r)));
+    calc.hidden = !sel.length; tot();
+  };
+  const tot = () => {
+    const t = sel.reduce((a, s) => a + s.r.a.v * s.n, 0), moitie = t / 2, nTig = Math.ceil(moitie / TIG);
+    calc.querySelector('.bm-ch small').textContent = sel.length + ' / ' + MAX + ' infractions';
+    calc.querySelector('.t').textContent = fmt(t);
+    calc.querySelector('.p').textContent = fmt(moitie);
+    calc.querySelector('.g').textContent = nTig + ' TIG';
+  };
+  calc.querySelector('.bm-clr').onclick = () => { sel = []; maj(); };
+  filtre();
 }
 /* carrousels : la piste défile au doigt (scroll-snap), flèches et points la pilotent ; défilement auto toutes les 5 s
    quand il est à l'écran, arrêté au survol, après une action du joueur, et en mode léger / animations réduites */
@@ -2755,7 +2926,7 @@ const ZTHEME = {
   defaut: {floorL: ['gem_stone'], floorR: ['oyster', 'anchor'], top: 'anchor'},
 };
 const ZPAGE = {'groupes-illegaux': 'pirate', 'general-legal-et-illegal': 'pirate', 'police': 'police', 'defcon': 'police', 'ems': 'ems', 'mort-rp': 'mort',
-  'code-penal': 'loi', 'code-civil': 'loi', 'bureau-du-procureur': 'loi', 'les-fondamentaux-du-rp': 'loi',
+  'code-penal': 'loi', 'bareme-des-amendes': 'police', 'code-civil': 'loi', 'bureau-du-procureur': 'loi', 'les-fondamentaux-du-rp': 'loi',
   'reprise-d-entreprise': 'argent', 'boutique': 'argent', 'code-du-travail': 'travail', 'code-de-la-route': 'route', 'permis-de-port-darmes': 'armes', 'reglementation-espace-aerien': 'air'};
 function pageDeco(p){
   const old = document.querySelector('.zdeco'); if (old) old.remove();
@@ -3573,6 +3744,7 @@ const OCEAN_PRESETS = {
   boutique: {...DAY, ...BAN, decor: 'shop', az: 5.6},
   'code-civil': {...DAY, ...LAND, decor: 'justice', variant: 'civil', az: .3, dist: 58, h: 16, ly: 6},
   'code-penal': {...SUNSET, ...LAND, decor: 'justice', variant: 'penal', az: .9, dist: 58, h: 14, ly: 6},
+  'bareme-des-amendes': {...NIGHT, ...LAND, decor: 'police', az: 2.4, dist: 44, h: 15, ly: 4, shift: .05},
   'code-du-travail': {...RAIN, ...LAND, decor: 'justice', variant: 'travail', az: -.5, dist: 58, h: 16, ly: 6},
   'bureau-du-procureur': {...STORM, ...LAND, decor: 'justice', variant: 'procureur', az: 1.5, dist: 50, h: 12, ly: 6},
   'code-de-la-route': {...SUNSET, ...LAND, decor: 'route', az: .7, dist: 58, h: 22},
