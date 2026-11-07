@@ -21,6 +21,27 @@ Lors d'une prise d'otage, si un otage est blessé ou si vous êtes témoin d'un 
 * À vous de choisir correctement les infractions retenues.
 * Le SASP peut faire preuve de fair-play selon la scène et n'en retenir qu'une ou deux.
 
+#### **⚠️ Amendes : des faits avérés uniquement**
+
+Une amende sanctionne uniquement des faits **avérés et prouvables**, jamais des suspicions ou des hypothèses.\
+Exemple : une personne est retrouvée dans le coma après une fusillade. Vous retenez les faits constatés (possession d'arme, etc.), pas la fusillade ni la tentative d'homicide.
+
+#### **⚠️ Délai de 6 jours**
+
+Toute amende non mise ou toute convocation non faite **6 jours après les faits** est abandonnée : le délit ou le crime est oublié et ne peut plus apparaître dans les dossiers ni ailleurs.
+
+#### **⚠️ GAV et peine**
+
+La garde à vue et la peine sont **négociables** avec un avocat, ou lors d'un interrogatoire selon les informations obtenues.
+
+#### **⚠️ Snitch interdit**
+
+Le snitch est interdit : il est interdit de tout balancer, de moucharder ou de donner trop d'informations au SASP pour s'en sortir.
+
+#### **⚠️ TIG**
+
+**1 TIG = 10 $.**
+
 #### **⚠️ Agent pris en otage : le GPS**
 
 Chaque agent a un traceur GPS. La commande `/gps` (ou le bouton GPS du MDT) le coupe : votre position disparaît pour vos collègues, et les leurs disparaissent de votre carte.
@@ -40,7 +61,7 @@ Le SASP dispose d'une vedette à la marina, partagée avec les EMS : patrouilles
 
 #### **⚠️ Ripoux**
 
-Être policier ripoux ou corrompu est possible **uniquement sous dossier** : ouvrez un ticket sur le Discord avec votre projet, il doit être validé par le staff avant toute action.\
+Être policier ripoux ou corrompu est possible **uniquement sous dossier** : faites votre demande dans un **ticket Entreprise** sur le Discord avec votre projet (les modos et supports n'y ont pas accès), il doit être validé par le staff avant toute action.\
 Sans dossier validé, tout comportement ou toute activité illégale est strictement interdit pour les membres du SASP, qu’ils soient en service, hors service ou anciens employés.
 
 #### **⚠️ Fouille**
@@ -73,6 +94,13 @@ Pour demander une perquisition, vous devez d’abord ouvrir un ticket et fournir
 Avec un mandat de perquisition, vous ne devez contrôler que les propriétés et lieux mentionnés dans le mandat et le dossier.&#x20;
 
 **Ce n’est pas un mandat d’arrêt !** Une fois sur les lieux, vous n’arrêtez pas tout le monde systématiquement : vous sécurisez et perquisitionnez le bâtiment et seulement si vous trouvez des éléments compromettants vous arrêtez le ou les propriétaires/responsables.
+
+#### **⚠️ Filature**
+
+La filature est la **première étape avant tout** et passe par un **dossier strict**.
+
+* Elle peut être demandée pour un véhicule, un lieu, une personne ou une entreprise.
+* Son but : observer, prendre des informations et constituer des preuves. Pendant une filature, vous **n'intervenez pas**.
 
 #### **⚠️ Perquisition QG, entrepôt ou entreprise**
 

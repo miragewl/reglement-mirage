@@ -23,7 +23,7 @@
 
 **⚠️** Fournir la liste des fautes RP commises, accompagnée d’un maximum de preuves (vidéos, discussions, etc.).
 
-**⚠️** La cible doit être avertie en scène RP que son comportement doit changer sous peine de mort. Cette scène doit obligatoirement être enregistrée et ajoutée au dossier.
+**⚠️** La cible doit être avertie en scène RP que son comportement doit changer sous peine de mort. Cette scène doit obligatoirement être enregistrée et ajoutée au dossier. Un délai de **24 h à 48 h** doit être laissé entre chaque scène, pour laisser au joueur le temps de changer de comportement.
 
 **⚠️** Si aucun changement n’est observé après cette scène, la mort RP pourra être validée.
 

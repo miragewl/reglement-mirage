@@ -49,3 +49,4 @@ Pour ajouter un mot, écrivez une nouvelle ligne sous la forme « - **Mot** : d�
 - **MLO** : un intérieur mappé (maison, local) avec des portes ouvrables, sans téléportation.
 - **QG** : le quartier général d'un groupe.
 - **Ripoux** : policier corrompu. Possible uniquement sous dossier validé par le staff.
+- **Snitch** : tout balancer, moucharder, donner trop d'informations. Interdit.

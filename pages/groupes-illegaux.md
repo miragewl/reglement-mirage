@@ -8,7 +8,6 @@
 * La création d’un groupe validé se fait via un ticket sur **le Discord Illégal**, et celle des **groupes indépendants** se fait **directement en jeu**. Vous devez déjà être **WL sur le serveur**.
 * Les noms de groupes doivent **obligatoirement** être des créations personnelles et originales. Les noms de groupes, gangs ou organisations existant dans la vie réelle, ainsi que ceux issus du lore de GTA (Ballas, Vagos etc..) sont interdits.
 * La limite d’un groupe validé est fixée à **16 membres maximum**.
-* À partir de **4 joueurs indépendants**, vous êtes dans l’obligation de vous déclarer sur le Discord Illégal.
 * Seules les personnes présentes dans le ticket Discord Illégal sont considérées comme membres officiels du groupe. Elles seules peuvent participer aux actions du groupe : ventes, braquages, rendez-vous, événements, etc.
 * Si un membre souhaite quitter son groupe tout en conservant son personnage, il doit obligatoirement obtenir l’accord de son lead et de son groupe. Dans le cas contraire, le groupe peut demander une **mort RP** du personnage concerné, avec l’accord préalable du staff.
 * Le lead d’un projet peut également demander la mort RP d’un membre sous certaines conditions : trahison, entrave au projet, non-respect des règles du groupe, etc. Cette décision doit obligatoirement être validée par le staff.

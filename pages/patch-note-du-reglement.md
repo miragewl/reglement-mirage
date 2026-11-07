@@ -5,6 +5,42 @@
 
 ***
 
+## 07/11/2026
+
+**Argent, vol et otages**\
+➕ Argent liquide : 800 $ au maximum sur soi, saisie et interrogatoire au-dessus\
+➕ Vol : 400 $ au maximum par personne et par jour\
+➕ Otages : 800 $ au maximum par otage, 4 000 $ par scène\
+➕ Loot d'items illégaux : lors d'un transport, tout se récupère sauf les armes, uniquement pendant une scène\
+➕ Loot interdit : les items EMS rejoignent les items SASP\
+➖ Retrait de la règle sur la crypto
+
+**Braquages**\
+➕ Délais entre les braquages, comptés à partir de la fin du braquage : pharmacie 24 h, bijouterie 48 h, Fleeca 72 h, casino 96 h, Pacific 1 semaine\
+➕ Casse du casino 4 Dragons : un seul casse toutes les 96 h pour tout le serveur\
+➕ Plans mule, récupération et tir pneu : autorisés aussi lors des braquages de pharmacie et du casino\
+➖ Temps minimum sur zone : retrait de la vente de drogue, du LTD, de l'ATM et du conteneur\
+➖ Retrait du sac à dos obligatoire hors braquage\
+➖ Retrait de l'obligation de rester sur zone après une vente PNJ\
+➖ Retrait de la revendication obligatoire du nom du groupe
+
+**Groupes illégaux et Général**\
+➖ Fin de la déclaration obligatoire à partir de 4 joueurs indépendants\
+➕ Fin des zones safe : les conséquences RP lourdes valent aussi pour le Gouvernement et les EMS\
+➕ Une personne dans le coma se transporte dans un coffre, jamais portée, un véhicule par personne\
+➕ Mort RP : 24 h à 48 h entre chaque scène d'avertissement
+
+**SASP**\
+➕ Amendes uniquement sur des faits avérés et prouvables\
+➕ Amende ou convocation non faite 6 jours après les faits : les faits sont oubliés\
+➕ GAV et peine négociables avec un avocat ou lors d'un interrogatoire\
+➕ Snitch interdit\
+➕ 1 TIG = 10 $\
+➕ Ajout de la filature (véhicule, lieu, personne, entreprise), sur dossier, pour observer sans intervenir\
+➕ Dossier ripoux à demander dans un ticket Entreprise
+
+***
+
 ## V2 (06/10/2026)
 
 ➕ Le LSPD devient le **SASP** (San Andreas State Police) dans tout le règlement\

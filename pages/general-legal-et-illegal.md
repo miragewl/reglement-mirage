@@ -85,6 +85,7 @@
 * Il est interdit de transporter une personne dans un véhicule en la portant lorsqu’il n’y a plus de place disponible.
 * Seuls les coffres de véhicules capables d’accueillir une personne peuvent être utilisés.
 * Il est interdit de placer quelqu’un dans le coffre d’un véhicule inadapté (buggy, moto, quad, etc.).
+* Une personne dans le coma doit obligatoirement être transportée **dans le coffre d’un véhicule**, jamais portée. **Un véhicule par personne dans le coma.**
 * Le PIT est strictement interdit. En cas de PIT involontaire, reprenez la poursuite de manière fair-play.
 * Monter ou descendre plus d’une marche en véhicule est interdit.
 * Il est interdit d’emprunter des chemins ou raccourcis inaccessibles à vos poursuivants.
@@ -178,7 +179,7 @@ Exception : un agent du SASP peut être ripoux **uniquement sous dossier validé
 {% column %}
 Il n'y a plus de zone safe : les actions illégales sont possibles partout, y compris autour des postes du SASP, des hôpitaux, des QG, des entreprises et pendant les events.
 
-* S'en prendre au **SASP** (agents, postes, véhicules de service) entraîne des **conséquences RP lourdes** : réponse du SASP, passage en [Defcon](defcon.md), dossier fédéral possible (voir [Mort RP, Wipe, Fédéral](mort-rp.md)).
+* S'en prendre au **SASP**, au **Gouvernement** ou aux **EMS** (agents, postes, hôpitaux, véhicules de service) entraîne des **conséquences RP lourdes** : réponse du SASP, passage en [Defcon](defcon.md), dossier fédéral possible (voir [Mort RP, Wipe, Fédéral](mort-rp.md)).
 {% endcolumn %}
 {% endcolumns %}
 
@@ -283,9 +284,8 @@ Interdiction d’installer :
 
 {% column %}
 
-* Maximum transporté RP : 10 000 $
-* Au-dessus : saisie possible du SASP
-* À partir de 30 000 $ : saisie et interrogatoire
+* Maximum transporté en argent liquide : 800 $
+* Au-dessus : saisie possible du SASP et interrogatoire
   {% endcolumn %}
   {% endcolumns %}
 
@@ -299,8 +299,7 @@ Interdiction d’installer :
 
 {% column %}
 
-* Maximum 5 000 $ par personne et par jour
-* Interdiction de forcer un autre joueur à vous envoyer de la crypto.
+* Maximum 400 $ par personne et par jour
 * Vol par erreur interdit (on t'a rendu trop par erreur par exemple)
 * Toute erreur doit être rendue ou signalée
 
@@ -320,7 +319,7 @@ Interdiction d’installer :
 
 * Nourriture, boisson, objets légaux non lootables
 * Téléphone fouillable mais doit être rendu
-* Items SASP
+* Items SASP et EMS
 * Interdiction de dépouiller :
   * coffres maison
   * véhicules
@@ -328,6 +327,21 @@ Interdiction d’installer :
   * stockages divers
 
 Exception : convoi.
+{% endcolumn %}
+{% endcolumns %}
+
+***
+
+{% columns %}
+{% column valign="middle" %}
+
+<h4 align="center">Loot d'items illégaux</h4>
+{% endcolumn %}
+
+{% column %}
+
+* Lors d'un transport d'objets illégaux (drogue, outils, munitions, gilets pare-balles, etc.), **tout peut être récupéré**, sauf les armes.
+* Uniquement si une **scène** a lieu : on ne récupère rien si personne n'est présent en face.
 {% endcolumn %}
 {% endcolumns %}
 
@@ -387,6 +401,8 @@ Les plans mule, récupération et tir pneu sont autorisés uniquement lors des a
 * Bijouterie
 * Braquage Fleeca
 * Braquage Pacific
+* Braquage de pharmacie
+* Braquage du casino
 
 #### Actions interdites
 
@@ -409,7 +425,6 @@ Pour toute activité ne figurant pas dans la liste des actions autorisées ci-de
 {% column %}
 
 * Durant un braquage
-* Si vous possédez l'item sac à dos dans l'inventaire
   {% endcolumn %}
   {% endcolumns %}
 
@@ -439,7 +454,6 @@ Pour toute activité ne figurant pas dans la liste des actions autorisées ci-de
 {% column %}
 
 * Interdiction de remonter directement en véhicule après une vente.
-* Rester sur zone jusqu'à l'arrivée d'un groupe rival ou du SASP.
   {% endcolumn %}
   {% endcolumns %}
 
@@ -453,8 +467,13 @@ Pour toute activité ne figurant pas dans la liste des actions autorisées ci-de
 
 {% column %}
 
-* Attendre 72h après avoir effectué un braquage (bijouterie, Fleeca ou Pacific) avant de pouvoir en effectuer un nouveau.
-* Casse du casino 4 Dragons : un seul casse toutes les 48 h pour tout le serveur.
+Après un braquage, vous devez attendre avant de pouvoir en effectuer un nouveau. Le délai se compte à partir de la **fin du braquage**, pas de son lancement :
+
+* Pharmacie : **24 h**
+* Bijouterie : **48 h**
+* Fleeca : **72 h**
+* Casino : **96 h** (4 jours)
+* Pacific : **1 semaine**
   {% endcolumn %}
   {% endcolumns %}
 
@@ -470,7 +489,7 @@ Pour toute activité ne figurant pas dans la liste des actions autorisées ci-de
 
 * De **3 à 6 membres du même groupe illégal**, tous présents au lancement.
 * Au moins **4 agents du SASP en service**.
-* Un seul casse toutes les **48 h** pour tout le serveur.
+* Un seul casse toutes les **96 h** pour tout le serveur, à compter de la fin du casse.
 * Le casse dure **45 minutes au maximum** : passé ce délai, le casino se referme.
 * Le SASP n'est alerté qu'une fois, à l'explosion de la chambre forte. La négociation se fait par le téléphone du casino.
 {% endcolumn %}
@@ -486,11 +505,7 @@ Pour toute activité ne figurant pas dans la liste des actions autorisées ci-de
 
 {% column %}
 
-* Vente drogue : 5 min
-* LTD : 5 min
 * Cambriolage : 5 min en cas d'alerte
-* ATM : 5 min
-* Conteneur : 10 min
 * Bijouterie : 10 min
 * Fleeca : 10 min
   {% endcolumn %}
@@ -636,7 +651,6 @@ Autorisé après 5 minutes de course-poursuite, sans sommation.
   Refus ou inaction = mort RP possible des otages et sanctions.
 * Demande non satisfaite devient une dette RP.\
   Si non réglée dans le délai, cela peut entraîner des morts RP.
-* Nom du groupe obligatoire (revendication) hors braquage banque/bijouterie/pacific.
   {% endcolumn %}
   {% endcolumns %}
 
@@ -656,8 +670,8 @@ Autorisé après 5 minutes de course-poursuite, sans sommation.
 
 Limites :
 
-* 10 000 $ max par otage
-* 50 000 $ max par scène
+* 800 $ max par otage
+* 4 000 $ max par scène
 * Pas de demande d’hélico
 * Pas de demande d’avion
 * Pas de demande d’armes
