@@ -3,7 +3,7 @@
 
 \[Mirage WL], \[2025]. Tous droits réservés. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.
 
-{% embed url="<https://docs.google.com/spreadsheets/d/e/2PACX-1vRq0mn8nFcA3S8E0CJPKU8HmU8QLAiAr-vvZ7HjIeiDS3UyzQIZX0sGRZIomWlxiYOBGNm8d1dJNJUp/pubhtml>" fullWidth="true" %}
+Les montants des amendes et des GAV sont dans le **[Barème des amendes](bareme-des-amendes.md)** : recherche par infraction et calculateur.
 
 ### CODE PÉNAL
 

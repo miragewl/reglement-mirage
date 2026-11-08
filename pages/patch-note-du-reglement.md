@@ -8,7 +8,8 @@
 ## 07/11/2026
 
 ➕ Nouvelle page **Barème des amendes** : toutes les amendes et GAV par catégorie, recherche, et calculateur (3 infractions au maximum, 50 % payé et 50 % en TIG)\
-➕ Code de la route : l'ancien tableau des infractions (barème du MDT, points de permis) est remplacé par un renvoi au Barème des amendes
+➕ Code de la route : l'ancien tableau des infractions (barème du MDT, points de permis) est remplacé par un renvoi au Barème des amendes\
+➕ Code pénal : le lien vers l'ancien tableau Google Sheets est remplacé par un renvoi au Barème des amendes
 
 **Argent, vol et otages**\
 ➕ Argent liquide : 800 $ au maximum sur soi, saisie et interrogatoire au-dessus\
