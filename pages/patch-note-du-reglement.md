@@ -9,7 +9,8 @@
 
 **SASP**\
 ➕ Tarifs du PPA : PPA civil 20 000 $, PPA pro 10 000 $, munitions 1 000 $ le chargeur de 12\
-➕ PPA pro : le SASP vérifie chaque semaine la présence des armes professionnelles et leur état, une arme absente peut entraîner le retrait du PPA pro
+➕ PPA pro : le SASP vérifie chaque semaine la présence des armes professionnelles et leur état, une arme absente peut entraîner le retrait du PPA pro\
+➕ Permis de port d'armes, article 1-5 : mêmes tarifs, l'ancien prix de l'arme (60 000 à 85 000 $) est retiré
 
 ## 07/11/2026
 

@@ -54,8 +54,11 @@ Une fois le Permis de Port d’Armes validé, la délivrance de l’arme autoris
 
 Le demandeur devra régler :
 
-* de 60 000 à 85 000 $ correspondant au coût de l’arme à feu en fonction du modèle ;
-* 20 000 $ couvrant la formation dispensée par le SASP, incluant également l’enregistrement du détenteur au registre officiel des porteurs d’armes civils.
+* 20 000 $ pour un PPA civil ;
+* 10 000 $ pour un PPA pro ;
+* 1 000 $ le chargeur de 12 munitions.
+
+Ce montant couvre l’arme, la formation dispensée par le SASP et l’enregistrement du détenteur au registre officiel des porteurs d’armes.
 
 L’arme est attribuée de manière nominative, enregistrée et numérotée au nom du titulaire du permis. Toute cession, vente ou transfert de cette arme est formellement interdit.
 
