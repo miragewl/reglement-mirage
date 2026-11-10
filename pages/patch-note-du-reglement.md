@@ -5,6 +5,12 @@
 
 ***
 
+## 10/11/2026
+
+**SASP**\
+➕ Tarifs du PPA : PPA civil 20 000 $, PPA pro 10 000 $, munitions 1 000 $ le chargeur de 12\
+➕ PPA pro : le SASP vérifie chaque semaine la présence des armes professionnelles et leur état, une arme absente peut entraîner le retrait du PPA pro
+
 ## 07/11/2026
 
 ➕ Nouvelle page **Barème des amendes** : toutes les amendes et GAV par catégorie, recherche, et calculateur (3 infractions au maximum, 50 % payé et 50 % en TIG)\

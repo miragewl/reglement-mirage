@@ -85,6 +85,18 @@ Exception : vous pouvez conserver votre badge.
 
 Les agents du SASP peuvent posséder leur arme PPA civil en dehors du service et s’en servir pour se défendre, mais ils doivent l’acheter avec leurs propres moyens et assument le risque de la perdre en cas de gunfight.
 
+#### **⚠️ PPA : tarifs**
+
+* **PPA civil : 20 000 $.**
+* **PPA pro : 10 000 $.**
+* **Munitions : 1 000 $ le chargeur de 12.**
+
+#### **⚠️ PPA pro : contrôle des armes chaque semaine**
+
+Le SASP doit vérifier **toutes les semaines** la présence des armes professionnelles et leur état.
+
+* Si l'arme n'est pas présente lors du contrôle, cela peut entraîner le retrait du PPA pro.
+
 <h2 align="center"><sub>👮Perquisition</sub></h2>
 
 #### **⚠️ Général**
